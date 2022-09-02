@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_env_from_list.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 11:38:41 by mschiman          #+#    #+#             */
-/*   Updated: 2022/05/29 11:59:43 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:43:01 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

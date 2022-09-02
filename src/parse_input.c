@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:21:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/05/30 15:36:32 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/30 20:59:21 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ static void	set_quote_vars(t_var *var, int quote, int i)
 static int	check_quotes(t_var *var)
 {
 	int	i;
+
 	var->squotes = FALSE;
 	var->dquotes = FALSE;
-
-	var->input_escape = (char *)malloc(sizeof(char) * 
+	var->input_escape = (char *)malloc(sizeof(char) *
 		(ft_strlen(var->input) + 1));
 	i = 0;
 	while (var->input[i])
@@ -84,11 +84,11 @@ int	parse_input(t_var *var)
 	open_quotes = check_quotes(var);
 	if (open_quotes == OPEN)
 	{
-		print_error(OPEN_QUOTES);
+		print_error(var, OPEN_QUOTES);
 		return (0);
 	}
 	syntax_error_check(var);
-	if (g_status == -42)
+	if (var->cmd_check == TRUE)
 	{
 		count_pipes(var);
 		fill_cmd_structures(var);

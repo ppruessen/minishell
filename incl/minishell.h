@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/05/30 17:20:23 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/01 10:06:25 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
+
+// GLOBAL VARIABEL NEEDS TO BE REMOVED BEFORE SUBMITTING
+int	debug_mode;
+void check_leaks();
 
 # include <unistd.h>
 # include <sys/wait.h>
@@ -58,6 +62,7 @@
 # define WRITE 1
 
 /* INBUILTS */
+# define NOT_SET 0
 # define EXIT 1
 # define ECHO 2
 # define ENV 3
@@ -74,15 +79,20 @@
 # define BRACES 4
 # define ASTERISK 5
 # define EXCLAMATION 6
-# define TOO_MANY_REDIR_IN 10
-# define TOO_MANY_REDIR_OUT 11
+# define TOO_MANY_REDIR_IN_ONE 10
+# define TOO_MANY_REDIR_IN_TWO 11
+# define TOO_MANY_REDIR_OUT_ONE 15
+# define TOO_MANY_REDIR_OUT_TWO 16
 # define UNEXPECTED_TOKEN_NL 20
 # define UNEXPECTED_TOKEN_PIPE 21
+# define FILE_NOT_FOUND 22
+# define CMD_NOT_FOUND 23
 
 /* Structs */
 typedef struct s_cmd
 {
 	char	**cmd;
+	char	**cmd_esc;
 	int		nb_cmds;
 	int		inbuilt;
 	int		read_from_file;
@@ -91,7 +101,10 @@ typedef struct s_cmd
 	int		write_to_pipe;
 	int		fd_to_read;
 	int		fd_to_write;
-} t_cmd;
+	char	*filename_to_read;
+	char	*filename_to_write;
+	char	*limiter;
+}	t_cmd;
 
 typedef struct s_var
 {
@@ -109,10 +122,7 @@ typedef struct s_var
 	char	*t_escape;
 	int		index;
 	t_cmd	**cmds;
-//	int		nb_cmd_structs;
 	int		(*fd)[2];
-	int		fd_to_read;
-	int		fd_to_write;
 	int		squotes;
 	int		dquotes;
 	int		pipes;
@@ -120,17 +130,20 @@ typedef struct s_var
 	char	*dollar_esc;
 	char	*dollar_value;
 	char	*dollar_esc_value;
-} t_var;
+	int		cmd_check;
+}	t_var;
 
 /* -------- Global Variable(s) -------- */
-int	g_status;
+int		g_status;
 
 /* -------- Functions --------- */
 /* src/parse_input.c */
-int	parse_input(t_var *var);
+int		parse_input(t_var *var);
 
 /* src/errors.c */
-void	print_error(int error_code);
+void	print_error(t_var *var, int error_code);
+void	print_file_error(t_var *var, int error_code);
+void	print_cmd_error(t_var *var, int error_code, char *cmd);
 
 /* src/syntax_error_check.c */
 void	syntax_error_check(t_var *var);
@@ -142,16 +155,18 @@ void	fill_cmd_structures(t_var *var);
 void	expand_variables(t_var *var);
 
 /* src/put_temp_input_to_cmd.c */
+int		whitespace_runner(char *input, char *escaped, int i);
+int		word_runner(char *input, char *escaped, int i);
 void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd);
 
-/* incl/inbuilts_progs_env */
+/* src/copy_env.c */
 void	copy_env(t_var *var, char **env);
 
 /* src/replace_str.c */
 char	*replace_str(char *full_str, char *old_part, char *new_part);
 
 /* incl/str_split.c */
-void	str_split(t_var *var, t_cmd *cmd);
+void	str_split(t_var *var, t_cmd *cmd, size_t word_num);
 
 /* src/execute_cmds.c */
 void	execute_cmds(t_var *var);
@@ -163,11 +178,15 @@ char	**create_env_from_list(t_list *env_list);
 /* export.c*  */
 void	export_var(t_var *var, char **cmd);
 /* exit.c */
-void	close_everything(t_var *var, char **cmd);
+void	clean_up(t_var *var);
+void	ms_exit(t_var *var, char **cmd);
+void	clean_env(t_var *var);
 /* unset.c */
 void	unset_env(t_var *var, char **cmd);
 /* cd.c */
-void	change_directory(char **cmd);
+void	change_directory(char **str);
+/* find_inbuilts.c */
+void	find_inbuilts(t_var *var, t_cmd *cmd, char *str);
 
 /* src/handle_here_doc.c */
 void	handle_here_doc(t_cmd *cmd);

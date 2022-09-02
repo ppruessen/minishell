@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/06/02 13:49:45 by mschiman         ###   ########.fr        #
+#    Updated: 2022/09/02 12:18:27 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ SRC = 	./src/main.c \
 		./src/inbuilts_functions/cd.c \
 		./src/inbuilts_functions/exit.c \
 		./src/inbuilts_functions/export.c \
-		./src/inbuilts_functions/unset.c
+		./src/inbuilts_functions/unset.c \
+		./src/inbuilts_functions/find_inbuilts.c \
+		./incl/leaks_checker.c
 
 NAME = minishell
 CC = gcc
@@ -38,7 +40,8 @@ $(NAME) : $(OBJS)
 		@make  -C ./incl/libft
 		@make  bonus -C ./incl/libft
 		@make all -C ./incl/inbuilts_progs
-		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
+#		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
+		$(CC) $(CFLAGS) $(SRC) -o $(NAME) -L$(LIBFT) -I $(HOME)/opt/homebrew/Cellar/readline/8.1.2/include -L $(HOME)/opt/homebrew/Cellar/readline/8.1.2/lib -l readline
 		
 all:	$(NAME)
 

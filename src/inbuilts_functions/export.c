@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/05/29 16:55:48 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/28 18:25:13 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	repl_env_list(t_var *var, char *cmd)
 			{
 				list->content = ft_strdup(cmd);
 				free(temp_str);
+				g_status = 0;
 				return (1);
 			}
 			i++;
@@ -60,24 +61,31 @@ void	export_var(t_var *var, char **cmd)
 	t_list	*list;
 
 	list = var->env_list;
-	if (cmd[0] == NULL)
+	if (cmd[1] == NULL)
 	{	
 		while (list)
 		{
 			printf("declare -x %s\n", (char *)list->content);
 			list = list->next;
 		}
+		g_status = 0;
 	}
 	i = 1;
-	while (cmd[0] != NULL)
+	while (cmd[i] != NULL)
 	{
-		if (has_equal_sign(cmd[0]) > 0)
+		if (has_equal_sign(cmd[i]) > 0)
 		{
-			if (repl_env_list(var, cmd[0]) == 0)
-				ft_lstadd_back(&var->env_list, ft_lstnew(cmd[0]));
-			if (cmd[1] != NULL && has_equal_sign(cmd[1]) == 0
-				&& ft_isdigit(cmd[1][0]) == 1)
-				printf("bash: export: `%s': not a valid identifier\n", cmd[1]);
+			if (repl_env_list(var, cmd[i]) == 0)
+			{
+				ft_lstadd_back(&var->env_list, ft_lstnew(cmd[i]));
+				g_status = 0;
+			}
+			if (cmd[i + 1] != NULL && has_equal_sign(cmd[i + 1]) == 0
+				&& ft_isdigit(cmd[i + 1][0]) == 1)
+			{
+				printf("bash: export: `%s': not a valid identifier\n", cmd[i + 1]);
+				g_status = 1;
+			}
 		}
 		i++;
 	}

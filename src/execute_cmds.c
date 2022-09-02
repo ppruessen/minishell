@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/05/30 18:08:28 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/31 21:09:48 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_cmd(t_var *var, int i)
 {
 	int	j;
 
-	printf("----------------------COMMAND[%i]------------------------\n", i);
+	printf("----------------------COMMANDS[%i]------------------------\n", i);
 	printf("var->cmds[%d]->inbuilt = %d\n", i, var->cmds[i]->inbuilt);
 	printf("var->cmds[%d]->read_from_file = %d\n", i, var->cmds[i]->read_from_file);
 	printf("var->cmds[%d]->write_to_file = %d\n", i, var->cmds[i]->write_to_file);
@@ -26,44 +26,11 @@ void	print_cmd(t_var *var, int i)
 	j = 0;
 	while(var->cmds[i]->cmd[j] != NULL)
 	{
-		printf("CMD[%d]: %s\n", j, var->cmds[i]->cmd[j]);
+		printf("CMD[%d]:\t\t %s\n", j, var->cmds[i]->cmd[j]);
+		printf("CMD_ESC[%d]:\t %s\n", j, var->cmds[i]->cmd_esc[j]);
 		j++;
 	}
 	printf("--------------------------------------------------------\n");
-}
-
-/* Function finds inbuilts and sets cmd->inbuilts to:
-// exit = 1, echo = 2, env = 3, pwd = 4, export = 5, unset = 6, cd = 7 */
-void	find_inbuilt(t_cmd *cmd, char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == 'e' && str[i + 1] == 'x' && str[i + 2] == 'i' &&
-			str[i + 3] == 't' && str[i + 4] == '\0')
-			cmd->inbuilt = EXIT;
-		else if (str[i] == 'e' && str[i + 1] == 'c' && str[i + 2] == 'h' &&
-			str[i + 3] == 'o' && str[i + 4] == '\0')
-			cmd->inbuilt = ECHO;
-		else if (str[i] == 'e' && str[i + 1] == 'n' && str[i + 2] == 'v' &&
-			str[i + 3] == '\0')
-			cmd->inbuilt = ENV;
-		else if (str[i] == 'p' && str[i + 1] == 'w' && str[i + 2] == 'd' &&
-			str[i + 3] == '\0')
-			cmd->inbuilt = PWD;
-		else if (str[i] == 'e' && str[i + 1] == 'x' && str[i + 2] == 'p' &&
-			str[i + 3] == 'o' && str[i + 4] == 'r' && str[i + 5] == 't' &&
-			str[i + 6] == '\0')
-			cmd->inbuilt = EXPORT;
-		else if (str[i] == 'u' && str[i + 1] == 'n' && str[i + 2] == 's' &&
-			str[i + 3] == 'e' && str[i + 4] == 't' && str[i + 5] == '\0')
-			cmd->inbuilt = UNSET;
-		else if (str[i] == 'c' && str[i + 1] == 'd' && str[i + 2] == '\0')
-			cmd->inbuilt = CD;
-		i++;
-	}
 }
 
 /* Function creates an absolute path from a relativ path */
@@ -123,7 +90,8 @@ static void	gen_dir_list(t_var *var)
 	}
 }
 
-/* Checks if the command is found within the path directories */
+/* Checks if the command is found within the path directories. */
+/* Returns the correct path or the cmd if path not found. */
 char	*check_and_set_path(char *cmd, t_var *var)
 {
 	char	*valid_cmd_path;
@@ -134,28 +102,32 @@ char	*check_and_set_path(char *cmd, t_var *var)
 	i = 0;
 	while (var->dir_list[i] != NULL)
 	{
+		if (cmd[0] == '\0')
+			break ;
 		valid_cmd_path = ft_strjoin(var->dir_list[i], cmd);
 		if (access(valid_cmd_path, X_OK) == 0)
 		{
+			if (debug_mode)
+				printf("Execute_cmds.c/111: Valid cmd path in check and set path: |%s|\n", valid_cmd_path);
 			free(var->dir_list);
 			free(cmd);
 			return (valid_cmd_path);
 		}
 		i++;
 	}
-	return (NULL);
+	return (cmd);
 }
 
 /* Sets the cmd path to unbuilt functions */
 char	*set_inbuilt_path(t_cmd *cmd, t_var *var)
 {
-	if (cmd->inbuilt == 2 || cmd->inbuilt == 3 || cmd->inbuilt == 4)
+	if (cmd->inbuilt == ECHO || cmd->inbuilt == ENV || cmd->inbuilt == PWD)
 		free(cmd->cmd[0]);
-	if (cmd->inbuilt == 2)
+	if (cmd->inbuilt == ECHO)
 		return(ft_strjoin(var->pwd, "/incl/inbuilts_progs/echo"));
-	else if (cmd->inbuilt == 3)
+	else if (cmd->inbuilt == ENV)
 		return(ft_strjoin(var->pwd, "/incl/inbuilts_progs/env"));
-	else if (cmd->inbuilt == 4)
+	else if (cmd->inbuilt == PWD)
 		return(ft_strjoin(var->pwd, "/incl/inbuilts_progs/pwd"));
 	return (cmd->cmd[0]);
 }
@@ -163,33 +135,36 @@ char	*set_inbuilt_path(t_cmd *cmd, t_var *var)
 /* Sets the cmd path */
 void	set_cmd_path(t_cmd *cmd, t_var *var)
 {
-	if (cmd->inbuilt == 0)
+	int	i;
+
+	i = 0;
+	while (cmd->cmd[i] && (cmd->cmd_esc[i][0] == 'F' || cmd->cmd_esc[i][0] == 'W')) //HIER?
+		i++;
+	if (cmd->cmd[i] && cmd->inbuilt == 0)
 	{
-		if (cmd->cmd[0][0] == '.')
-			cmd->cmd[0] = create_rel_path(cmd->cmd[0]);
-		else if (cmd->cmd[0][0] == '/')
+		if (cmd->cmd[i][0] == '.')
+			cmd->cmd[i] = create_rel_path(cmd->cmd[i]);
+		else if (cmd->cmd[i][0] == '/')
 			return ;
 		else
-			cmd->cmd[0] = check_and_set_path(cmd->cmd[0], var);
+			cmd->cmd[i] = check_and_set_path(cmd->cmd[i], var);
 	}
-	else
-		cmd->cmd[0] = set_inbuilt_path(cmd, var);
-
+	else if (cmd->cmd[i])
+		cmd->cmd[i] = set_inbuilt_path(cmd, var);
+	if (debug_mode)
+		printf("Execute_cmds.c/154: cmd->cmd[0] in set cmd path: |%s|\n", cmd->cmd[i]);
 }
 
 /* Function that opens the file descriptor to the read file */
 void	open_read_from_file(t_cmd *cmd)
 {
-	if (cmd->read_from_file == 1)
+	if (cmd->read_from_file == FROM_FILE)
 	{
-		if (cmd->write_to_file != 0)
-			cmd->fd_to_read = open(cmd->cmd[cmd->nb_cmds - 2], O_RDONLY);
-		else
-			cmd->fd_to_read = open(cmd->cmd[cmd->nb_cmds - 1], O_RDONLY);
+		cmd->fd_to_read = open(cmd->filename_to_read, O_RDONLY);
 		dup2(cmd->fd_to_read, STDIN_FILENO);
 		close(cmd->fd_to_read);
 	}
-	if (cmd->read_from_file == 2)
+	if (cmd->read_from_file == FROM_HERE_DOC)
 	{
 		cmd->fd_to_read = open(".bonus_tmp", O_RDWR | O_CREAT | O_TRUNC, 0644);
 		handle_here_doc(cmd);
@@ -202,16 +177,16 @@ void	open_read_from_file(t_cmd *cmd)
 /* Function that opens the file descriptor to the write file */
 void	open_write_to_file(t_cmd *cmd)
 {
-	if (cmd->write_to_file == 1)
+	if (cmd->write_to_file == INTO_FILE)
 	{
-		unlink(cmd->cmd[cmd->nb_cmds -1]);
-		cmd->fd_to_write = open(cmd->cmd[cmd->nb_cmds -1], O_WRONLY | O_CREAT, 0777);
+		unlink(cmd->filename_to_write);
+		cmd->fd_to_write = open(cmd->filename_to_write, O_WRONLY | O_CREAT, 0777);
 		dup2(cmd->fd_to_write, STDOUT_FILENO);
 		close(cmd->fd_to_write);
 	}
-	else if (cmd->write_to_file == 2)
+	else if (cmd->write_to_file == INTO_FILE_APPEND)
 	{
-		cmd->fd_to_write = open(cmd->cmd[cmd->nb_cmds -1], O_RDWR | O_CREAT | O_APPEND, 0644);
+		cmd->fd_to_write = open(cmd->filename_to_write, O_RDWR | O_CREAT | O_APPEND, 0644);
 		dup2(cmd->fd_to_write, STDOUT_FILENO);
 		close(cmd->fd_to_write);
 	}
@@ -221,20 +196,9 @@ void	open_write_to_file(t_cmd *cmd)
 void	open_redirections(t_cmd *cmd)
 {
 	if (cmd->read_from_file != 0)
-	{
 		open_read_from_file(cmd);
-		if (cmd->read_from_file == 2)
-			cmd->cmd[cmd->nb_cmds - 1] = NULL;
-	}
 	if (cmd->write_to_file != 0)
 		open_write_to_file(cmd);
-	if (cmd->write_to_file != 0 && cmd->read_from_file != 0)
-	{
-		cmd->cmd[cmd->nb_cmds - 2] = NULL;
-		cmd->cmd[cmd->nb_cmds - 1] = NULL;
-	}
-	if (cmd->write_to_file != 0)
-			cmd->cmd[cmd->nb_cmds - 1] = NULL;
 }
 
 /* Function that closes all READ pipes in child process */
@@ -290,13 +254,54 @@ void	close_pipes_in_parent(t_var *var, int i)
 /* Executes the cmd */
 void	execute_cmd(t_cmd *cmd, t_var *var, int i)
 {
+		int	j;
+		int	k;
+		char **execve_input;
+
 		if (var->pipes > 0)
 			set_pipes_in_child(var, cmd, i);
 		open_redirections(cmd);
-		if (execve(cmd->cmd[0], &cmd->cmd[0], var->env) == -1)
+		int input_members = 0;
+		j = 0;
+		while (cmd->cmd[j] != NULL)
 		{
-			printf("FEHLER IM EXECVE\n");
-			exit(0);
+			if (cmd->cmd_esc[j][0] != 'F' && (cmd->cmd_esc[j][0] != 'W'))
+				input_members++;
+			j++;
+		}
+		execve_input = (char **) malloc((input_members * sizeof(char*)) + 1);
+		if (execve_input == NULL)
+			return ;
+		execve_input[input_members] = NULL;
+		j = 0;
+		k = 0;
+		while (cmd->cmd[j])
+		{
+			if (cmd->cmd_esc[j][0] == 'F' || cmd->cmd_esc[j][0] == 'W')
+				;
+			else
+			{
+				execve_input[k] = ft_strdup(cmd->cmd[j]);
+				k++;
+			}
+//			free (cmd->cmd[j]);
+//			free (cmd->cmd_esc[j]);
+			j++;
+		}
+//		free (cmd->cmd_esc);
+//		free (cmd->cmd);
+		k = 0;
+		while (execve_input[k] != NULL)
+		{
+			if (debug_mode)
+				printf("Execute_cmds.c/297: Das wird ins excecve gegeben: |%s|\n", execve_input[k]);
+			k++;
+		}
+		if (execve(*execve_input, execve_input, var->env) == -1)
+		{
+			print_cmd_error(var, CMD_NOT_FOUND, execve_input[0]);
+			clean_up(var);
+			exit(127);
 		}
 		else
 			printf("ANDERER FEHLER IM EXECVE\n");
@@ -330,7 +335,8 @@ void	wait_function(pid_t pid)
 	if (WIFEXITED(status))
 	{
 		const int es = WEXITSTATUS(status);
-		printf("In execute_cmds.c/338: exit status was %d\n", es);
+		if (debug_mode)
+			printf("Execute_cmds.c/337: exit status was %d\n", es);
 		if (es == 255)
 			g_status = 127;
 		g_status = es;
@@ -344,24 +350,32 @@ void	execute_cmds(t_var *var)
 	int		i;
 	pid_t	pid;
 
-	printf("HERE we are 343\n");
 	if (var->pipes > 0)
 		open_filedescriptors(var);
-	printf("HERE we are 346\n");
 	i = 0;
 	if (var->cmds == NULL)
 		return ;
 	while (var->cmds[i] != NULL)
 	{
-		find_inbuilt(var->cmds[i], var->cmds[i]->cmd[0]);
-		printf("HERE we are 353\n");
-		print_cmd(var, i);
-		printf("HERE we are 355\n");
+		if (debug_mode)
+			printf("Execute_cmds.c/361: before finding inbuilts\n var->cmds[i]->cmd[0]: %s\n", var->cmds[i]->cmd[0]);
+		find_inbuilts(var, var->cmds[i], var->cmds[i]->cmd[0]);
+		if (debug_mode)
+			printf("Execute_cmds.c/364: after finding inbuilts\n var->cmds[i]->inbuilt = %d\n", var->cmds[i]->inbuilt);
+		if (var->cmds[i]->write_to_pipe == 0
+			&& (var->cmds[i]->inbuilt == EXPORT || var->cmds[i]->inbuilt == UNSET
+			|| var->cmds[i]->inbuilt == CD))
+			break ;
+		else if (var->cmds[i]->write_to_pipe == 1 
+			&& (var->cmds[i]->inbuilt == CD || var->cmds[i]->inbuilt == EXPORT
+			|| var->cmds[i]->inbuilt == UNSET || var->cmds[i]->inbuilt == EXIT))
+			i++;
+		if (debug_mode)
+			print_cmd(var, i);
 		set_cmd_path(var->cmds[i], var);
-		printf("HERE we are 357\n");
-		printf("COMMAND PATH: '%s'\n", var->cmds[i]->cmd[0]);
+//		if (debug_mode)
+//			printf("Execute_cmds.c/370: HERE we are\t COMMAND PATH SET TO: '%s'\n", var->cmds[i]->cmd[0]);
 		var->env = create_env_from_list(var->env_list);
-		printf("HERE we are 360\n");
 		pid = fork();
 		if (pid == 0)
 			execute_cmd(var->cmds[i], var, i);

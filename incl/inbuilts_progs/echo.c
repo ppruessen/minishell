@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 16:43:48 by pprussen          #+#    #+#             */
-/*   Updated: 2022/05/29 13:59:14 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/31 16:14:30 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ int	main(int argc, char **argv, char **env)
 	(void)env;
 	i = 1;
 	if (argc == 1)
-		return (-42);
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
 	newline = 1;
 	while (argv[i] != NULL)
 	{

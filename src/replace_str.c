@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   replace_str.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:04:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/05/28 18:53:00 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/30 07:59:29 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,13 +99,16 @@ int		set_vars(t_replace *rpl, char *full_str, char *old_part)
 char	*replace_str(char *full_str, char *old_part, char *new_part)
 {
 	t_replace	rpl;
-	printf("I was here1.\n");
+	if (debug_mode)
+		printf("replace_str.c/103 I was here1.\n");
 	if (full_str == NULL || old_part == NULL /*|| new_part == NULL*/)
 		return (NULL);
-	printf("I was here2.\n");
+	if (debug_mode)
+		printf("replace_str.c/107 I was here2.\n");
 	if (full_str[0] == '\0')
 		return ("");
-	printf("I was here3.\n");
+	if (debug_mode)
+		printf("replace_str.c/111 I was here3.\n");
 	init_rpl(&rpl, full_str, old_part, new_part);
 	while (full_str[rpl.i] != '\0')
 	{
