@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_cmds.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/31 21:09:48 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:26:20 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,14 @@ char	*create_rel_path(char *cmd_path)
 	getcwd(pwd, 500);
 	pwd_temp = ft_strdup(pwd);
 	cmd_path_temp = ft_strdup(cmd_path);
-	free(cmd_path);
+	free (cmd_path);
+	cmd_path = NULL;
 	pwd_temp = ft_strjoin_char(pwd_temp, '/');
 	cmd_path = ft_strjoin(pwd_temp, cmd_path_temp);
-	free(pwd_temp);
-	free(cmd_path_temp);
+	free (pwd_temp);
+	pwd_temp = NULL;
+	free (cmd_path_temp);
+	cmd_path_temp = NULL;
 	return (cmd_path);
 }
 
@@ -80,11 +83,13 @@ static void	gen_dir_list(t_var *var)
 
 	i = 0;
 	var->dir_list = ft_split(var->path, ':');
-	free(var->path);
+	free (var->path);
+	var->path = NULL;
 	while (var->dir_list[i] != NULL)
 	{
 		temp = ft_strjoin(var->dir_list[i], "/");
-		free(var->dir_list[i]);
+		free (var->dir_list[i]);
+		var->dir_list[i] = NULL;
 		var->dir_list[i] = temp;
 		i++;
 	}
@@ -107,10 +112,19 @@ char	*check_and_set_path(char *cmd, t_var *var)
 		valid_cmd_path = ft_strjoin(var->dir_list[i], cmd);
 		if (access(valid_cmd_path, X_OK) == 0)
 		{
-			if (debug_mode)
+			if (debug_mode < -3)
 				printf("Execute_cmds.c/111: Valid cmd path in check and set path: |%s|\n", valid_cmd_path);
-			free(var->dir_list);
-			free(cmd);
+			i = 0;
+			while (var->dir_list[i] != NULL)
+			{
+				free (var->dir_list[i]);
+				var->dir_list[i] = NULL;
+				i++;
+			}
+			free (var->dir_list);
+			var->dir_list = NULL;
+			free (cmd);
+			cmd = NULL;
 			return (valid_cmd_path);
 		}
 		i++;
@@ -122,7 +136,10 @@ char	*check_and_set_path(char *cmd, t_var *var)
 char	*set_inbuilt_path(t_cmd *cmd, t_var *var)
 {
 	if (cmd->inbuilt == ECHO || cmd->inbuilt == ENV || cmd->inbuilt == PWD)
+	{
 		free(cmd->cmd[0]);
+		cmd->cmd[0] = NULL;
+	}
 	if (cmd->inbuilt == ECHO)
 		return(ft_strjoin(var->pwd, "/incl/inbuilts_progs/echo"));
 	else if (cmd->inbuilt == ENV)
@@ -151,7 +168,7 @@ void	set_cmd_path(t_cmd *cmd, t_var *var)
 	}
 	else if (cmd->cmd[i])
 		cmd->cmd[i] = set_inbuilt_path(cmd, var);
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("Execute_cmds.c/154: cmd->cmd[0] in set cmd path: |%s|\n", cmd->cmd[i]);
 }
 
@@ -284,23 +301,19 @@ void	execute_cmd(t_cmd *cmd, t_var *var, int i)
 				execve_input[k] = ft_strdup(cmd->cmd[j]);
 				k++;
 			}
-//			free (cmd->cmd[j]);
-//			free (cmd->cmd_esc[j]);
 			j++;
 		}
-//		free (cmd->cmd_esc);
-//		free (cmd->cmd);
 		k = 0;
 		while (execve_input[k] != NULL)
 		{
-			if (debug_mode)
+			if (debug_mode < -3)
 				printf("Execute_cmds.c/297: Das wird ins excecve gegeben: |%s|\n", execve_input[k]);
 			k++;
 		}
 		if (execve(*execve_input, execve_input, var->env) == -1)
 		{
 			print_cmd_error(var, CMD_NOT_FOUND, execve_input[0]);
-			clean_up(var);
+//			clean_up(var);
 			exit(127);
 		}
 		else
@@ -335,7 +348,7 @@ void	wait_function(pid_t pid)
 	if (WIFEXITED(status))
 	{
 		const int es = WEXITSTATUS(status);
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("Execute_cmds.c/337: exit status was %d\n", es);
 		if (es == 255)
 			g_status = 127;
@@ -357,10 +370,10 @@ void	execute_cmds(t_var *var)
 		return ;
 	while (var->cmds[i] != NULL)
 	{
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("Execute_cmds.c/361: before finding inbuilts\n var->cmds[i]->cmd[0]: %s\n", var->cmds[i]->cmd[0]);
 		find_inbuilts(var, var->cmds[i], var->cmds[i]->cmd[0]);
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("Execute_cmds.c/364: after finding inbuilts\n var->cmds[i]->inbuilt = %d\n", var->cmds[i]->inbuilt);
 		if (var->cmds[i]->write_to_pipe == 0
 			&& (var->cmds[i]->inbuilt == EXPORT || var->cmds[i]->inbuilt == UNSET
@@ -370,10 +383,10 @@ void	execute_cmds(t_var *var)
 			&& (var->cmds[i]->inbuilt == CD || var->cmds[i]->inbuilt == EXPORT
 			|| var->cmds[i]->inbuilt == UNSET || var->cmds[i]->inbuilt == EXIT))
 			i++;
-		if (debug_mode)
+		if (debug_mode < -2)
 			print_cmd(var, i);
 		set_cmd_path(var->cmds[i], var);
-//		if (debug_mode)
+//		if (debug_mode < -3)
 //			printf("Execute_cmds.c/370: HERE we are\t COMMAND PATH SET TO: '%s'\n", var->cmds[i]->cmd[0]);
 		var->env = create_env_from_list(var->env_list);
 		pid = fork();

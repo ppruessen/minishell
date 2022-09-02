@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/02 11:51:21 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/02 19:23:19 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,23 @@ static void	init_var(t_var *var, int argc,
 	var->argc = argc;
 	var->argv = argv;
 	var->env = env;
+	var->env_list = NULL;
+	var->dir_list = NULL;
+	var->path = NULL;
+	var->prompt = NULL;
+	var->input = NULL;
+	var->input_escape = NULL;
+	var->t_input = NULL;
+	var->t_escape = NULL;
+	var->fd = NULL;
+	var->cmds = NULL;
+	var->dollar_var = NULL;
+	var->dollar_esc = NULL;
+	var->dollar_value = NULL;
+	var->dollar_esc_value = NULL;
 	copy_env(var, env);
 	ft_bzero(var->pwd, 500);
 	getcwd(var->pwd, 500);
-	var->input = NULL;
-	var->input_escape = NULL;
 	var->prompt = ft_strdup(PAMELA_PROMPT);
 }
 
@@ -60,7 +72,7 @@ static void	sig_handler(int signo)
 	{
 		g_status = 130; // strg C hat exit status 1 in der bash, Strg D hat 127
 		ioctl(STDIN_FILENO, TIOCSTI, "\n");
-		rl_replace_line("", 0);
+//		rl_replace_line("", 0);
 		rl_on_new_line();
 	}
 }
@@ -69,8 +81,9 @@ int	main(int argc, char **argv, char **env)
 {
 	t_var	var;
 
-	if (argc == 2 && argv[1][0] == '-' && argv[1][1] == 'd' &&  argv[1][2] == '\0')
-		debug_mode = 1; // REMOVE BEFORE SUBMITTING - If 1 printfs additional infos
+	if (argc == 2)
+		debug_mode = atoi(argv[1]); // REMOVE BEFORE SUBMITTING - more debug-infos for smaler numbers
+									// -1 shows leak informations
 	else
 		debug_mode = 0;
 
@@ -80,18 +93,23 @@ int	main(int argc, char **argv, char **env)
 	g_status = 0;
 	while (1)
 	{
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("\nMain.c/83 G_STATUS: %d\n", g_status);
 		var.cmd_check = TRUE;
 		var.input = readline(var.prompt);
 		if (!var.input)
 		{
-			clean_env(&var);
-			free (var.prompt);
-			if (debug_mode)
+//			clean_env(&var);
+//			free (var.prompt);
+//			var.prompt = NULL;
+			if (debug_mode < -3)
 				write(1, "Main.c/89 raus gesprungen.\n", 27);
-//			if (debug_mode)
-//				check_leaks();
+//			accurat_var_cleaner(&var);
+//			accurat_env_cleaner(&var);
+			if (debug_mode < 0)
+				accurat_finder(&var);
+			if (debug_mode < -1)
+				check_leaks();
 			exit(g_status);
 		}
 		if (var.input[0] != '\0')
@@ -101,10 +119,13 @@ int	main(int argc, char **argv, char **env)
 			if (var.cmd_check == TRUE)
 				execute_cmds(&var);
 		}
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("Main.c/100: Input string alt:\t|%s|\n", var.input);
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("Main.c/102: Exit status:\t %i\n", g_status);
+		accurat_var_cleaner(&var);
+//		if (debug_mode < 0)
+//			accurat_finder(&var);
 	}
 	return (g_status);
 }

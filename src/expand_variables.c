@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:13:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/30 17:06:19 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:45:47 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,10 @@ static void	extract_dollar_var(t_var *var)
 
 	i = 0;
 	if (var->dollar_var != NULL)
+	{
 		free(var->dollar_var);
+		var->dollar_var = NULL;
+	}
 	while (var->t_escape[i])
 	{
 		if (var->t_escape[i] == '$')

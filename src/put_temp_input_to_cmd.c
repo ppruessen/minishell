@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 14:22:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/01 10:05:34 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/02 15:56:23 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd)
 //	int		i;
 
 	word_num = count_words(var->t_input, var->t_escape);
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("put_temp_input_to_cmd.c/95: word_num: %zu\n", word_num);
 	if (word_num == 0 && cmd->read_from_file == 0 && cmd->write_to_file == 0)
 	{
@@ -99,7 +99,7 @@ void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd)
 		g_status = 0;
 		return ;
 	}
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("put_temp_input_to_cmd.c/98 word num = %zu\n", word_num);
 	cmd->cmd = (char **) malloc((word_num + 1) * sizeof(char *));
 	cmd->cmd_esc = (char **) malloc((word_num + 1) * sizeof(char *));
@@ -118,6 +118,6 @@ void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd)
 		printf("substrings: '%s'\n", cmd->cmd[i]);
 		i++;
 	}*/
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("put_temp_input_to_cmd.c/117 end put_temp_input_to_cmd\n");
 }

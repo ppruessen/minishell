@@ -21,9 +21,9 @@ static char	*extract_next_word(char *full_str, char *esc_str, int start)
 	char	*res_str;
 
 	res_str = NULL;
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("fill_cmd_structures.c/27 FULL STRING: \t|%s|\n", full_str);
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("fill_cmd_structures.c/29 ESC STRING: \t|%s|\n", esc_str);
 	quotes = 0;
 	while (ft_iswhitespace(full_str[start]) == 1)
@@ -79,20 +79,20 @@ static int	set_redirections(char *temp_input, char *temp_escaped, t_cmd *cmd,
 				temp_escaped[i + 1] = 'F';
 				start++;
 				cmd->limiter = extract_next_word(temp_input, temp_escaped, start);
-				if (debug_mode)
+				if (debug_mode < -3)
 					printf("fill_cmd_structures.c/85 limiter: |%s|\n", cmd->limiter);
 			}
 			else
 			{
 				cmd->filename_to_read = extract_next_word(temp_input, temp_escaped, start);
-				if (debug_mode)
+				if (debug_mode < -3)
 					printf("fill_cmd_structures.c/91 Filename to open: |%s|\n", cmd->filename_to_read);
 				cmd->fd_to_read = open(cmd->filename_to_read, O_RDONLY);
-				if (debug_mode)
+				if (debug_mode < -3)
 					printf("fill_cmd_structures.c/94 FD to read: %i\n", cmd->fd_to_read);
 				if (cmd->fd_to_read <= 0)
 				{
-					if (debug_mode)
+					if (debug_mode < -3)
 					{
 						printf("fill_cmd_structures.c/98 FD to read: %i\n", cmd->fd_to_read);
 						printf("fill_cmd_structures.c/99 Filename to open: |%s|\n", cmd->filename_to_read);
@@ -132,7 +132,7 @@ static int	set_redirections(char *temp_input, char *temp_escaped, t_cmd *cmd,
 		}
 	i++;
 	}
-	if (debug_mode)
+	if (debug_mode < -3)
 	{
 		printf("fill_cmd_structures.c/138 G-Status: |%i|\n", g_status);
 		printf("fill_cmd_structures.c/139 Temp input:\t |%s|\t\n", temp_input);
@@ -188,7 +188,9 @@ void	put_str_to_struct(t_var *var, t_cmd *cmd, int cmd_nb)
 		put_temp_input_to_cmd(var, cmd);
 	}
 	free(var->t_input);
-	free(var->t_escape);	
+	var->t_input = NULL;
+	free(var->t_escape);
+	var->t_escape = NULL;
 }
 
 /* Initialise cmd struct */
@@ -221,6 +223,7 @@ void	fill_cmd_structures(t_var *var)
 	i = 0;
 	while (i < var->pipes + 1)
 	{
+		var->cmds[i] = NULL;
 		var->cmds[i] = (t_cmd *)ft_calloc((var->pipes + 2), sizeof(t_cmd));
 		init_cmd(var->cmds[i]);
 		put_str_to_struct(var, var->cmds[i], i);

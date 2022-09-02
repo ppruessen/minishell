@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_inbuilts.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 18:19:56 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/30 23:12:36 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/02 15:56:23 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	find_inbuilts(t_var *var, t_cmd *cmd, char *str)
 		&& str[i + 6] == '\0')
 	{
 		cmd->inbuilt = EXPORT;
-		if (debug_mode)
+		if (debug_mode < -3)
 			printf("find_inbuilds.c/54 Export Function erkannt\n");
 		if (cmd->write_to_pipe != 1)
 			export_var(var, cmd->cmd);
@@ -70,6 +70,6 @@ void	find_inbuilts(t_var *var, t_cmd *cmd, char *str)
 			change_directory(cmd->cmd);
 	}
 	find_inbuilt_progs(cmd, str, i);
-	if (debug_mode)
+	if (debug_mode < -3)
 		printf("find_inbulits.c/70: str = %s\n", str);
 }

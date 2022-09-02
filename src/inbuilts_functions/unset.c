@@ -17,20 +17,26 @@ static void	remove_element(t_var *var, t_list *list, int i, t_list *prev)
 	if (i == 0)
 	{
 		var->env_list = list->next;
-		free(list->content);
-		free(list);
+		free (list->content);
+		list->content = NULL;
+		free (list);
+		list = NULL;
 	}
 	else if (i == ft_lstsize(var->env_list) - 1)
 	{
 		prev->next = NULL;
-		free(list->content);
-		free(list);
+		free (list->content);
+		list->content = NULL;
+		free (list);
+		list = NULL;
 	}
 	else
 	{
 		prev->next = list->next;
-		free(list->content);
-		free(list);
+		free (list->content);
+		list->content = NULL;
+		free (list);
+		list = NULL;
 	}
 }
 

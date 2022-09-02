@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/01 10:06:25 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/02 18:03:07 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,4 +190,9 @@ void	find_inbuilts(t_var *var, t_cmd *cmd, char *str);
 
 /* src/handle_here_doc.c */
 void	handle_here_doc(t_cmd *cmd);
+
+/* accurat_cleaner.c */
+void	accurat_var_cleaner(t_var *var);
+void	accurat_env_cleaner(t_var *var);
+void	accurat_finder(t_var *var);
 #endif

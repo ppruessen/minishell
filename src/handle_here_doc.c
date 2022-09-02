@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_here_doc.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:39:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/31 16:45:10 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:46:27 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ static void	get_next_line_minishell(t_cmd *cmd)
 			write(cmd->fd_to_read, line, ft_strlen(line));
 	}
 	free(line);
+	line = NULL;
 	free(cmd->limiter);
+	cmd->limiter = NULL;
 }
 
 void	handle_here_doc(t_cmd *cmd)
