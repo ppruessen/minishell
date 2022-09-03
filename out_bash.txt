@@ -1,0 +1,1096 @@
+Test: /bin/ls
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test:    /bin/ls   
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test: 		/bin/ls		
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test: /bin/pwd
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test:   /bin/pwd   	
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test:         exit
+Exit-Status: 0
+---
+Test: /sbin/ifconfig
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.125  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 2a02:3032:401:94c2:885d:3cdd:c315:32ab  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
+        inet6 2a02:3032:401:94c2:5d6e:bf3a:1ef2:b7fd  prefixlen 64  scopeid 0x0<global>
+        ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
+        RX packets 66335  bytes 51630538 (51.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72952  bytes 23800455 (23.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 20  memory 0xf7c00000-f7c20000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 104901  bytes 34511942 (34.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 104901  bytes 34511942 (34.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+Exit-Status: 0
+---
+Test: 
+Exit-Status: 0
+---
+Test:         
+Exit-Status: 0
+---
+Test: 			
+Exit-Status: 0
+---
+Test:   		  
+Exit-Status: 0
+---
+Test: 		  		
+Exit-Status: 0
+---
+Test: cd
+Exit-Status: 0
+---
+Test:       cd    
+Exit-Status: 0
+---
+Test: /bin/ls -la
+total 220
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   1968 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   3304 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test: /bin/ls       -la
+total 220
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   2647 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   4037 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test:   /bin/ls      -la  
+total 224
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   3329 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   4773 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test:         echo     -n
+Exit-Status: 0
+---
+Test: echo
+
+Exit-Status: 0
+---
+Test: 			echo		
+
+Exit-Status: 0
+---
+Test: 			echo	-nnnn	
+Exit-Status: 0
+---
+Test: 			echo	-n-n-n	
+-n-n-n
+Exit-Status: 0
+---
+Test: 			echo	-n -nn -nnn	
+Exit-Status: 0
+---
+Test:         exit   42
+Exit-Status: 42
+---
+Test: exit 42
+Exit-Status: 42
+---
+Test: exit    -42
+Exit-Status: 214
+---
+Test: exit - 42
+bash: line 1: exit: -: numeric argument required
+Exit-Status: 2
+---
+Test: /bin/ls -la
+total 228
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   4449 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   6370 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test: echo $?
+0
+Exit-Status: 0
+---
+Test: /bin/ls -doesnotexist
+/bin/ls: invalid option -- 'e'
+Try '/bin/ls --help' for more information.
+Exit-Status: 2
+---
+Test: echo $?
+0
+Exit-Status: 0
+---
+Test: echo $?
+0
+Exit-Status: 0
+---
+Test: expr $? + $?
+0
+Exit-Status: 1
+---
+Test:      "ls -la"    
+bash: line 1: ls -la: command not found
+Exit-Status: 127
+---
+Test:  echo    "cat lol.c | cat >lol.c"    
+cat lol.c | cat >lol.c
+Exit-Status: 0
+---
+Test:      "     pwd     "    
+bash: line 1:  pwd : command not found
+Exit-Status: 127
+---
+Test:      ls     '-la'    
+total 228
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   5660 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   8058 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test:      echo     '-n'    
+Exit-Status: 0
+---
+Test:      echo     '   -n'    
+ -n
+Exit-Status: 0
+---
+Test:      echo     '-n   '    
+-n 
+Exit-Status: 0
+---
+Test:      echo     ''    
+
+Exit-Status: 0
+---
+Test:      ls     ''    
+ls: cannot access '': No such file or directory
+Exit-Status: 2
+---
+Test:  echo    'dactylo'    
+dactylo
+Exit-Status: 0
+---
+Test:      '   '    
+bash: line 1:  : command not found
+Exit-Status: 127
+---
+Test:  'ls    -la |     wc   -l'    
+bash: line 1: ls -la | wc -l: command not found
+Exit-Status: 127
+---
+Test: 	unset     M 
+Exit-Status: 0
+---
+Test: 	export     M=21 
+Exit-Status: 0
+---
+Test: 	unset     'M' 
+Exit-Status: 0
+---
+Test: 	cd  
+Exit-Status: 0
+---
+Test: 	cd  notexist
+bash: line 1: cd: notexist: No such file or directory
+Exit-Status: 1
+---
+Test: 	cd  .. 
+Exit-Status: 0
+---
+Test: 	cd..  
+bash: line 1: cd..: command not found
+Exit-Status: 127
+---
+Test: 	cd  cd    
+bash: line 1: cd: cd: No such file or directory
+Exit-Status: 1
+---
+Test: 	cd  . 
+Exit-Status: 0
+---
+Test: 	cd  '.'  
+Exit-Status: 0
+---
+Test: 	cd  '..'  
+Exit-Status: 0
+---
+Test: 	cd ".."  
+Exit-Status: 0
+---
+Test: 	cd  ../../..  
+Exit-Status: 0
+---
+Test: 	pwd 
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: 	pwd 
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: 	cd .. 
+Exit-Status: 0
+---
+Test: 	pwd 
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: cd /
+Exit-Status: 0
+---
+Test: ls -la | grep mel | wc -l
+0
+Exit-Status: 0
+---
+Test: ls -la | grep mel | wctert -l
+bash: line 1: wctert: command not found
+Exit-Status: 127
+---
+Test: ls -la | grep "mel"
+Exit-Status: 1
+---
+Test: ls -la | grep mel
+Exit-Status: 1
+---
+Test: ls -la | grep 'mel'
+Exit-Status: 1
+---
+Test: 
+Exit-Status: 0
+---
+Test: $DONTEXIST
+Exit-Status: 0
+---
+Test: $LESS$VAR
+Exit-Status: 0
+---
+Test: ./minishell
+[0;35mPaMela <3 [0mExit-Status: 0
+---
+Test: /bin/echo
+
+Exit-Status: 0
+---
+Test: /bin/echo Hola Que Tal
+Hola Que Tal
+Exit-Status: 0
+---
+Test: < pwd
+bash: line 1: pwd: No such file or directory
+Exit-Status: 1
+---
+Test: cat M*le
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
+#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRC = 	./src/main.c \
+		./src/parse_input.c \
+		./src/errors.c \
+		./src/syntax_error_check.c \
+		./src/fill_cmd_structures.c \
+		./src/expand_variables.c \
+		./src/put_temp_input_to_cmd.c \
+		./src/replace_str.c \
+		./src/copy_env.c \
+		./src/str_split.c \
+		./src/execute_cmds.c \
+		./src/create_env_from_list.c \
+		./src/handle_here_doc.c \
+		./src/inbuilts_functions/cd.c \
+		./src/inbuilts_functions/exit.c \
+		./src/inbuilts_functions/export.c \
+		./src/inbuilts_functions/unset.c \
+		./src/inbuilts_functions/find_inbuilts.c \
+		./src/accurat_cleaner.c \
+		./incl/leaks_checker.c
+
+NAME = minishell
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
+LIBFT = ./incl/libft
+OBJS = ${SRC:.c=.o}
+
+$(NAME) : $(OBJS)
+		@make  -C ./incl/libft
+		@make  bonus -C ./incl/libft
+		@make all -C ./incl/inbuilts_progs
+		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
+		
+all:	$(NAME)
+
+clean:
+	@make clean -C ./incl/libft
+	@make clean -C ./incl/inbuilts_progs
+	@rm -f ${OBJS}
+
+fclean: clean
+	-rm $(NAME)
+#	-rm ./src/inbuilts/*.o
+	-rm ./src/*.o
+	-rm ./incl/libft/*.o
+	-rm ./incl/inbuilts_progs/env/*.o
+	-rm ./incl/inbuilts_functions/*.o
+#	-rm ./src/utils/*.o
+	@make fclean -C ./incl/libft
+	@make fclean -C ./incl/inbuilts_progs
+
+re: fclean all
+
+.PHONY: clean fclean re re_bonus allExit-Status: 0
+---
+Test: cat Make*file
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
+#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRC = 	./src/main.c \
+		./src/parse_input.c \
+		./src/errors.c \
+		./src/syntax_error_check.c \
+		./src/fill_cmd_structures.c \
+		./src/expand_variables.c \
+		./src/put_temp_input_to_cmd.c \
+		./src/replace_str.c \
+		./src/copy_env.c \
+		./src/str_split.c \
+		./src/execute_cmds.c \
+		./src/create_env_from_list.c \
+		./src/handle_here_doc.c \
+		./src/inbuilts_functions/cd.c \
+		./src/inbuilts_functions/exit.c \
+		./src/inbuilts_functions/export.c \
+		./src/inbuilts_functions/unset.c \
+		./src/inbuilts_functions/find_inbuilts.c \
+		./src/accurat_cleaner.c \
+		./incl/leaks_checker.c
+
+NAME = minishell
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g
+LIBFT = ./incl/libft
+OBJS = ${SRC:.c=.o}
+
+$(NAME) : $(OBJS)
+		@make  -C ./incl/libft
+		@make  bonus -C ./incl/libft
+		@make all -C ./incl/inbuilts_progs
+		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
+		
+all:	$(NAME)
+
+clean:
+	@make clean -C ./incl/libft
+	@make clean -C ./incl/inbuilts_progs
+	@rm -f ${OBJS}
+
+fclean: clean
+	-rm $(NAME)
+#	-rm ./src/inbuilts/*.o
+	-rm ./src/*.o
+	-rm ./incl/libft/*.o
+	-rm ./incl/inbuilts_progs/env/*.o
+	-rm ./incl/inbuilts_functions/*.o
+#	-rm ./src/utils/*.o
+	@make fclean -C ./incl/libft
+	@make fclean -C ./incl/inbuilts_progs
+
+re: fclean all
+
+.PHONY: clean fclean re re_bonus allExit-Status: 0
+---
+Test: cat Makefile | cat -e | cat -e
+# **************************************************************************** #$$
+#                                                                              #$$
+#                                                         :::      ::::::::    #$$
+#    Makefile                                           :+:      :+:    :+:    #$$
+#                                                     +:+ +:+         +:+      #$$
+#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #$$
+#                                                 +#+#+#+#+#+   +#+            #$$
+#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #$$
+#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #$$
+#                                                                              #$$
+# **************************************************************************** #$$
+$$
+SRC = 	./src/main.c \$$
+		./src/parse_input.c \$$
+		./src/errors.c \$$
+		./src/syntax_error_check.c \$$
+		./src/fill_cmd_structures.c \$$
+		./src/expand_variables.c \$$
+		./src/put_temp_input_to_cmd.c \$$
+		./src/replace_str.c \$$
+		./src/copy_env.c \$$
+		./src/str_split.c \$$
+		./src/execute_cmds.c \$$
+		./src/create_env_from_list.c \$$
+		./src/handle_here_doc.c \$$
+		./src/inbuilts_functions/cd.c \$$
+		./src/inbuilts_functions/exit.c \$$
+		./src/inbuilts_functions/export.c \$$
+		./src/inbuilts_functions/unset.c \$$
+		./src/inbuilts_functions/find_inbuilts.c \$$
+		./src/accurat_cleaner.c \$$
+		./incl/leaks_checker.c$$
+$$
+NAME = minishell$$
+CC = gcc$$
+CFLAGS = -Wall -Wextra -Werror -g$$
+LIBFT = ./incl/libft$$
+OBJS = ${SRC:.c=.o}$$
+$$
+$(NAME) : $(OBJS)$$
+		@make  -C ./incl/libft$$
+		@make  bonus -C ./incl/libft$$
+		@make all -C ./incl/inbuilts_progs$$
+		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)$$
+		$$
+all:	$(NAME)$$
+$$
+clean:$$
+	@make clean -C ./incl/libft$$
+	@make clean -C ./incl/inbuilts_progs$$
+	@rm -f ${OBJS}$$
+$$
+fclean: clean$$
+	-rm $(NAME)$$
+#	-rm ./src/inbuilts/*.o$$
+	-rm ./src/*.o$$
+	-rm ./incl/libft/*.o$$
+	-rm ./incl/inbuilts_progs/env/*.o$$
+	-rm ./incl/inbuilts_functions/*.o$$
+#	-rm ./src/utils/*.o$$
+	@make fclean -C ./incl/libft$$
+	@make fclean -C ./incl/inbuilts_progs$$
+$$
+re: fclean all$$
+$$
+.PHONY: clean fclean re re_bonus allExit-Status: 0
+---
+Test: cat Makefile | grep srcs | cat -e
+Exit-Status: 0
+---
+Test: cat Makefile | grep srcs | grep srcs | cat -e
+Exit-Status: 0
+---
+Test: cat | cat | cat | ls
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test: cd
+Exit-Status: 0
+---
+Test: cd $HOME
+Exit-Status: 0
+---
+Test: cd $HOME $HOME
+bash: line 1: cd: too many arguments
+Exit-Status: 1
+---
+Test: cd .
+Exit-Status: 0
+---
+Test: cd ..
+Exit-Status: 0
+---
+Test: cd .. | echo "hola"
+hola
+Exit-Status: 0
+---
+Test: cd .. | pwd
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: cd ../
+Exit-Status: 0
+---
+Test: cd ../.
+Exit-Status: 0
+---
+Test: cd ../..
+Exit-Status: 0
+---
+Test: cd ../../../../../../..
+Exit-Status: 0
+---
+Test: cd .././././.
+Exit-Status: 0
+---
+Test: cd ./
+Exit-Status: 0
+---
+Test: cd ./././.
+Exit-Status: 0
+---
+Test: cd ././././
+Exit-Status: 0
+---
+Test: cd /
+Exit-Status: 0
+---
+Test: cd / | echo "hola"
+hola
+Exit-Status: 0
+---
+Test: cd /etc
+Exit-Status: 0
+---
+Test: echo
+
+Exit-Status: 0
+---
+Test: echo 
+
+Exit-Status: 0
+---
+Test: echo "" hola
+ hola
+Exit-Status: 0
+---
+Test: echo ""$HOME
+/home/dactylo
+Exit-Status: 0
+---
+Test: echo "$DONTEXIST" "Makefile"
+ Makefile
+Exit-Status: 0
+---
+Test: echo "$DONTEXIST""Makefile"
+Makefile
+Exit-Status: 0
+---
+Test: echo "$DONTEXIST"Makefile
+Makefile
+Exit-Status: 0
+---
+Test: echo "-n" Hola
+HolaExit-Status: 0
+---
+Test: echo "ME"
+ME
+Exit-Status: 0
+---
+Test: echo "echo"
+echo
+Exit-Status: 0
+---
+Test: echo "hola"
+hola
+Exit-Status: 0
+---
+Test: echo "hola"
+hola
+Exit-Status: 0
+---
+Test: echo $
+$
+Exit-Status: 0
+---
+Test: echo $?
+0
+Exit-Status: 0
+---
+Test: echo $? | echo $? | echo $?
+0
+Exit-Status: 0
+---
+Test: echo $DONTEXIST Hola
+Hola
+Exit-Status: 0
+---
+Test: echo $HOLA
+
+Exit-Status: 0
+---
+Test: echo $HOME
+/home/dactylo
+Exit-Status: 0
+---
+Test: echo $HOME9
+
+Exit-Status: 0
+---
+Test: echo $hola
+
+Exit-Status: 0
+---
+Test: echo 'echo'
+echo
+Exit-Status: 0
+---
+Test: echo *t
+out_bash.txt out_minishell.txt
+Exit-Status: 0
+---
+Test: echo *t hola
+out_bash.txt out_minishell.txt hola
+Exit-Status: 0
+---
+Test: echo --------n
+--------n
+Exit-Status: 0
+---
+Test: echo -n
+Exit-Status: 0
+---
+Test: echo -n -n
+Exit-Status: 0
+---
+Test: echo -n -n Hola Que
+Hola QueExit-Status: 0
+---
+Test: echo -n -nnn -nnnn
+Exit-Status: 0
+---
+Test: echo -n -nnn hola -nnnn
+hola -nnnnExit-Status: 0
+---
+Test: echo -n -nnn-nnnn
+-nnn-nnnnExit-Status: 0
+---
+Test: echo -n Hola
+HolaExit-Status: 0
+---
+Test: echo -n-nnn -nnnn
+-n-nnn -nnnn
+Exit-Status: 0
+---
+Test: echo -nHola
+-nHola
+Exit-Status: 0
+---
+Test: echo -nnn --------n
+--------nExit-Status: 0
+---
+Test: echo -nnn --------nnnn
+--------nnnnExit-Status: 0
+---
+Test: echo -nnn -----nn---nnnn
+-----nn---nnnnExit-Status: 0
+---
+Test: echo -nnnn $hola
+Exit-Status: 0
+---
+Test: echo -nnnnn
+Exit-Status: 0
+---
+Test: echo -p
+-p
+Exit-Status: 0
+---
+Test: echo Hola
+Hola
+Exit-Status: 0
+---
+Test: echo Hola -n
+Hola -n
+Exit-Status: 0
+---
+Test: echo Hola Que Tal
+Hola Que Tal
+Exit-Status: 0
+---
+Test: echo Le path de mon HOME est $HOME
+Le path de mon HOME est /home/dactylo
+Exit-Status: 0
+---
+Test: echo ME
+ME
+Exit-Status: 0
+---
+Test: echo echo
+echo
+Exit-Status: 0
+---
+Test: echo hola
+hola
+Exit-Status: 0
+---
+Test: echo hola
+hola
+Exit-Status: 0
+---
+Test: echo hola | cat
+hola
+Exit-Status: 0
+---
+Test: echo hola | cat | cat | cat | cat | cat | grep hola
+hola
+Exit-Status: 0
+---
+Test: echo hola | echo que tal
+que tal
+Exit-Status: 0
+---
+Test: echo hola |cat
+hola
+Exit-Status: 0
+---
+Test: echo hola|cat
+hola
+Exit-Status: 0
+---
+Test: echo my shit terminal is [$TERM4
+my shit terminal is [
+Exit-Status: 0
+---
+Test: echo my shit terminal is [$TERM4]
+my shit terminal is []
+Exit-Status: 0
+---
+Test: echo my shit terminal is [$TERM]
+my shit terminal is [xterm-256color]
+Exit-Status: 0
+---
+Test: echo oui | echo non | echo hola | grep hola
+hola
+Exit-Status: 0
+---
+Test: echo oui | echo non | echo hola | grep non
+Exit-Status: 1
+---
+Test: echo oui | echo non | echo hola | grep oui
+Exit-Status: 1
+---
+Test: echo | echo
+
+Exit-Status: 0
+---
+Test: env | echo hola
+hola
+Exit-Status: 0
+---
+Test: exit
+Exit-Status: 0
+---
+Test: exit "666"
+Exit-Status: 154
+---
+Test: exit +0
+Exit-Status: 0
+---
+Test: exit +42
+Exit-Status: 42
+---
+Test: exit +666
+Exit-Status: 154
+---
+Test: exit -9223372036854775808
+Exit-Status: 0
+---
+Test: exit 0
+Exit-Status: 0
+---
+Test: exit 000042
+Exit-Status: 42
+---
+Test: exit 259
+Exit-Status: 3
+---
+Test: exit 26632
+Exit-Status: 8
+---
+Test: exit 42
+Exit-Status: 42
+---
+Test: exit 666
+Exit-Status: 154
+---
+Test: exit | ls
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test: export HOL=A=""
+Exit-Status: 0
+---
+Test: export hola | unset hola | echo $?
+0
+Exit-Status: 0
+---
+Test: export | echo hola
+hola
+Exit-Status: 0
+---
+Test: ifconfig | grep ":"
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 2a02:3032:401:94c2:885d:3cdd:c315:32ab  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
+        inet6 2a02:3032:401:94c2:5d6e:bf3a:1ef2:b7fd  prefixlen 64  scopeid 0x0<global>
+        ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+Exit-Status: 0
+---
+Test: ifconfig | grep hola
+Exit-Status: 1
+---
+Test: ls
+eval.sh
+incl
+Makefile
+minishell
+out_bash.txt
+out_minishell.txt
+README.md
+src
+Exit-Status: 0
+---
+Test: ls *.*
+eval.sh
+out_bash.txt
+out_minishell.txt
+README.md
+Exit-Status: 0
+---
+Test: ls -la | grep "."
+total 268
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
+-rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+-rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
+-rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
+-rw-rw-r-- 1 dactylo dactylo  20751 Sep  3 10:22 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo  31067 Sep  3 10:22 out_minishell.txt
+-rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+Exit-Status: 0
+---
+Test: ls hola
+ls: cannot access 'hola': No such file or directory
+Exit-Status: 2
+---
+Test: ls | exit
+Exit-Status: 0
+---
+Test: ls | ls hola
+ls: cannot access 'hola': No such file or directory
+Exit-Status: 2
+---
+Test: ls | ls | echo hola | rev
+aloh
+Exit-Status: 0
+---
+Test: pwd
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd hola
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd hola que tal
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd ls
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd ls env
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd pwd pwd
+/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
+Exit-Status: 0
+---
+Test: pwd | echo hola
+hola
+Exit-Status: 0
+---
+Test: unset $HOLA
+Exit-Status: 0
+---
+Test: unset HOL$?A
+Exit-Status: 0
+---
+Test: unset HOLA9
+Exit-Status: 0
+---
+Test: unset HOLA_
+Exit-Status: 0
+---
+Test: unset HOL_A
+Exit-Status: 0
+---
+Test: unset INEXISTANT
+Exit-Status: 0
+---
+Test: unset _HOLA
+Exit-Status: 0
+---
+Test: unset _______
+Exit-Status: 0
+---
+Test: unset cd
+Exit-Status: 0
+---
+Test: unset echo
+Exit-Status: 0
+---
+Test: unset export
+Exit-Status: 0
+---
+Test: unset pwd
+Exit-Status: 0
+---
+Test: unset sudo
+Exit-Status: 0
+---
+Test: unset unset
+Exit-Status: 0
+---
+Test: whoami | grep $USER
+dactylo
+Exit-Status: 0
+---
+Test: < Makefile grep main
+SRC = 	./src/main.c \
+Exit-Status: 0
+---
+Test: < src/main.c < eval.sh < Makefile grep main
+SRC = 	./src/main.c \
+Exit-Status: 0
+---
+Test: < eval.sh grep main < src/main.c < Makefile
+SRC = 	./src/main.c \
+Exit-Status: 0
+---
+Test: < "Makefile" grep main
+SRC = 	./src/main.c \
+Exit-Status: 0
+---
+Test: < "Makefile " grep main
+bash: line 1: Makefile : No such file or directory
+Exit-Status: 1
+---
+Test: "<" Makefile grep main
+bash: line 1: <: command not found
+Exit-Status: 127
+---
+Test: $?
+bash: line 1: 0: command not found
+Exit-Status: 127
+---
+Test: echo $?
+0
+Exit-Status: 0
+---

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/02 19:23:19 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/03 10:26:00 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,7 @@ int	main(int argc, char **argv, char **env)
 			printf("Main.c/100: Input string alt:\t|%s|\n", var.input);
 		if (debug_mode < -3)
 			printf("Main.c/102: Exit status:\t %i\n", g_status);
-		accurat_var_cleaner(&var);
+//		accurat_var_cleaner(&var);
 //		if (debug_mode < 0)
 //			accurat_finder(&var);
 	}
