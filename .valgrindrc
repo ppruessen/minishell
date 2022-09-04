@@ -1,3 +1,5 @@
 --memcheck: --leak-check=full
 --memcheck: --show-leak-kinds=all
 --memcheck: --suppressions=./.valgrind_readline.supp
+
+--log-file="valgrind_leaks_file"
