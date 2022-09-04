@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/03 10:14:10 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 19:06:49 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,19 @@ typedef struct s_var
 	char	*dollar_esc_value;
 	int		cmd_check;
 }	t_var;
+
+typedef struct	s_replace
+{
+	int		i;
+	int		j;
+	int		start;
+	int		end;
+	char	*new_str;
+	int		strlen_full;
+	int		strlen_old_part;
+	int		strlen_new_part;
+	int		strlen_new_str;
+}	t_replace;
 
 /* -------- Global Variable(s) -------- */
 int		g_status;

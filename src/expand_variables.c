@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_variables.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:13:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/02 16:45:47 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 19:04:29 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,22 +196,13 @@ void	expand_variables(t_var *var)
 		var->dollar_esc = NULL;
 		var->dollar_esc_value = NULL;
 		extract_dollar_var(var);
-//		printf("Input string alt:\t|%s|\n", var->input);
-//		printf("Zahlenkolonne alt:\t|%s|\n", var->dollar_esc);
 		if (expand_special_dollar(var) == NULL)
 			var->dollar_value = expand_env(var);
-//		printf("Var Dollar var :\t|%s|\n", var->dollar_var);
-//		printf("soll ersetzt werden durch:\t|%s|\n", var->dollar_value);
 		var->t_input = replace_str(var->t_input, var->dollar_var,
 				var->dollar_value);
 		find_esc_value(var);
-//		printf("Var Dollar escape:\t|%s|\n", var->dollar_esc);
-//		printf("soll ersetzt werden durch:\t|%s|\n", var->dollar_esc_value);
 		var->t_escape = replace_str(var->t_escape, var->dollar_esc,
 				var->dollar_esc_value);
-//		printf("Input string neu:\t|%s|\n", var->t_input);
-//		printf("Zahlenkolonne neu:\t|%s|\n", var->dollar_esc_value);
 		i++;
 	}
-//	printf("Expand variables fertig!\n");
 }

@@ -10,6 +10,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test:    /bin/ls   
@@ -24,6 +25,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: 		/bin/ls		
@@ -38,6 +40,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: /bin/pwd
@@ -112,15 +115,15 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	status: active
 awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
 	options=400<CHANNEL_IO>
-	ether 9a:cc:cf:03:ef:22 
-	inet6 fe80::98cc:cfff:fe03:ef22%awdl0 prefixlen 64 scopeid 0xd 
+	ether 4e:ff:c8:10:73:b8 
+	inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 scopeid 0xd 
 	nd6 options=201<PERFORMNUD,DAD>
 	media: autoselect
 	status: active
 llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	options=400<CHANNEL_IO>
-	ether 9a:cc:cf:03:ef:22 
-	inet6 fe80::98cc:cfff:fe03:ef22%llw0 prefixlen 64 scopeid 0xe 
+	ether 4e:ff:c8:10:73:b8 
+	inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 scopeid 0xe 
 	nd6 options=201<PERFORMNUD,DAD>
 	media: autoselect
 	status: active
@@ -178,66 +181,69 @@ Test:       cd
 Exit-Status: 0
 ---
 Test: /bin/ls -la
-total 424
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 456
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   5082  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff   6083  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff   5142  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff   6209  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: /bin/ls       -la
-total 424
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 456
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   6120  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff   7121  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff   6246  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff   7313  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test:   /bin/ls      -la  
-total 424
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 464
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   7161  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff   8162  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff   7353  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff   8420  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test:         echo     -n
@@ -275,24 +281,25 @@ bash: exit: -: numeric argument required
 Exit-Status: 255
 ---
 Test: /bin/ls -la
-total 440
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 472
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   8642  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff   9635  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff   8900  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff   9959  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: echo $?
@@ -328,24 +335,25 @@ bash:  pwd : command not found
 Exit-Status: 127
 ---
 Test:      ls     '-la'    
-total 440
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 472
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  10151  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff  11128  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff  10475  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff  11518  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test:      echo     '-n'    
@@ -444,7 +452,7 @@ Test: cd /
 Exit-Status: 0
 ---
 Test: ls -la | grep mel | wc -l
-      17
+      18
 Exit-Status: 0
 ---
 Test: ls -la | grep mel | wctert -l
@@ -452,63 +460,66 @@ bash: wctert: command not found
 Exit-Status: 127
 ---
 Test: ls -la | grep "mel"
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  12903  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff  13824  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff  13293  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff  14280  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: ls -la | grep mel
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  13931  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff  14852  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff  14387  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff  15374  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: ls -la | grep 'mel'
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  14961  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff  15882  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff  15483  4 Sep 19:16 out_bash.txt
+-rw-r--r--   1 mel  staff  16470  4 Sep 19:16 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: 
@@ -757,6 +768,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: cd
@@ -1089,6 +1101,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: export HOL=A=""
@@ -1144,13 +1157,13 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	media: autoselect
 	status: active
 awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
-	ether 9a:cc:cf:03:ef:22 
-	inet6 fe80::98cc:cfff:fe03:ef22%awdl0 prefixlen 64 scopeid 0xd 
+	ether 4e:ff:c8:10:73:b8 
+	inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 scopeid 0xd 
 	media: autoselect
 	status: active
 llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
-	ether 9a:cc:cf:03:ef:22 
-	inet6 fe80::98cc:cfff:fe03:ef22%llw0 prefixlen 64 scopeid 0xe 
+	ether 4e:ff:c8:10:73:b8 
+	inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 scopeid 0xe 
 	media: autoselect
 	status: active
 bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
@@ -1189,6 +1202,7 @@ out_bash.txt
 out_minishell.txt
 parse_valgrind_suppressions.sh
 src
+valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: ls *.*
@@ -1204,24 +1218,25 @@ Contents
 Exit-Status: 0
 ---
 Test: ls -la | grep "."
-total 520
-drwxr-xr-x  17 mel  staff    544  4 Sep 15:58 .
+total 560
+drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  13 mel  staff    416  4 Sep 14:36 .git
--rw-r--r--   1 mel  staff    148  4 Sep 14:36 .valgrind_commands
+drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
+-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_commands
 -rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readline.supp
--rw-r--r--   1 mel  staff    116  4 Sep 14:36 .valgrindrc
+-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
 -rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
 -rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
 -rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 15:56 incl
+drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
 -rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 15:56 minishell
+-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
 drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  31154  4 Sep 15:58 out_bash.txt
--rw-r--r--   1 mel  staff  32082  4 Sep 15:58 out_minishell.txt
+-rw-r--r--   1 mel  staff  31802  4 Sep 19:17 out_bash.txt
+-rw-r--r--   1 mel  staff  32796  4 Sep 19:17 out_minishell.txt
 -rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_suppressions.sh
-drwxr-xr-x  31 mel  staff    992  4 Sep 15:56 src
+drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
+-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: ls hola
