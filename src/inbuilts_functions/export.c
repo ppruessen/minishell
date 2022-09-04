@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 21:00:53 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 21:38:36 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	export_var(t_var *var, char **cmd)
 		{
 			if (repl_env_list(var, cmd[i]) == 0)
 			{
-				ft_lstadd_back(&var->env_list, ft_lstnew(cmd[i]));
+				ft_lstadd_back(&var->env_list, ft_lstnew(ft_strdup(cmd[i])));
 				g_status = 0;
 			}
 			if (cmd[i + 1] != NULL && has_equal_sign(cmd[i + 1]) == 0

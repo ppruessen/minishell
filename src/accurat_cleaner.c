@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:29:40 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 20:19:28 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:09:29 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,18 +106,24 @@ void	accurat_env_cleaner(t_var *var)
 {
 	// VAR->ENV_LIST
 	t_list	*temp_next;
+	int	i = 0;
 
 	if (var->env_list != NULL)
 	{
 		while(var->env_list != NULL)
 		{
+			printf("var->env_list->content = %s\n", (char *)var->env_list->content);
 			free (var->env_list->content);
 			var->env_list->content = NULL;
 			temp_next = var->env_list->next;
+			if (var->env_list->next == NULL)
+				printf("var-env-list-next = NULL: i = %d\n", i);
 			free (var->env_list);
 			var->env_list = NULL;
 			var->env_list = temp_next;
+			i++;
 		}
+		printf("i = %d\n", i);
 	}
 	if (var->prompt != NULL)
 	{
@@ -125,18 +131,22 @@ void	accurat_env_cleaner(t_var *var)
 		var->prompt = NULL;
 	}
 	// VAR->ENV
-	// int	i = 0;
-	// if (var->env != NULL)
-	// {
-	// 	while (var->env[i] != NULL)
-	// 	{
-	// 		free (var->env[i]);
-	// 		var->env[i] = NULL;
-	// 		i++;
-	// 	}
-	// 	free (var->env);
-	// 	var->env = NULL;
-	// }
+	i = 0;
+	if (var->env != NULL)
+	{
+		while (var->env[i] != NULL)
+		{
+			printf("ACCURAT ENV CLEANER i = %d\n", i);
+			free (var->env[i]);
+//			var->env[i] = NULL;
+			i++;
+			if (var->env[i] == NULL)
+				printf("var->env == NULL\n");
+		}
+		printf("ENDE ACCURAT ENV CLEANER\n");
+		free (var->env);
+		var->env = NULL;
+	}
 }
 
 void	accurat_finder(t_var *var)
