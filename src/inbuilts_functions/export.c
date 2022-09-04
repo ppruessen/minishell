@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 13:49:49 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 15:54:25 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	repl_env_list(t_var *var, char *cmd)
 				free (list->content);
 				list->content = NULL;
 				list->content = ft_strdup(cmd);
-				free(temp_str);
-				temp_str = NULL;
+//				free(temp_str);
+//				temp_str = NULL;
 				g_status = 0;
 				return (1);
 			}

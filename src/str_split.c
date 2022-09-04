@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_split.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:48:42 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/02 15:56:23 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 15:48:32 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int	find_start(t_var *var, int start)
 			return (start + 1);
 		else if (var->t_escape[start] == '0' && var->t_escape[start + 1] == '0')
 			return (start);
+//		printf("I was here strsplit line 30 var->t_escape[start]: |%i|\n", start);
 		start++;
 	}
 	return (start);
@@ -55,7 +56,11 @@ static int	find_end(t_var *var, int end)
 				return (end + 1);
 		}
 		else if (var->t_escape[end] == '0' && var->t_escape[end + 1] == '0')
+		{
+			if (var->t_escape[end + 2] == '\0')
+				return (end);
 			return (end + 1);
+		}
 		end++;
 	}
 	return (end);
@@ -88,10 +93,17 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 		if (var->t_escape[start] == '0' && var->t_escape[end] == '0'
 			&& var->t_escape[end + 1] == '3' && (var->t_input[end + 1] == ' '
 				|| var->t_input[end + 1] == '\n' 
-				|| var->t_input[end + 1] == '\t'))
+				|| var->t_input[end + 1] == '\t'
+				|| var->t_input [end + 1] == '\0'))
 		{
 			if (debug_mode < -3)
 				printf("str_split.c/201: str_dup\n");
+			cmd->cmd[i] = ft_strdup("");
+			cmd->cmd_esc[i] = ft_strdup("00");
+		}
+		else if (var->t_escape[start] == '0' && var->t_escape[end] == '0'
+			&& var->t_escape[end + 1] == '\0')
+		{
 			cmd->cmd[i] = ft_strdup("");
 			cmd->cmd_esc[i] = ft_strdup("00");
 		}
@@ -119,7 +131,7 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 			if (debug_mode < -3)
 				printf("str_split.c/189: cmd->cmd_esc[%zu]: \t%s\n", i, cmd->cmd_esc[i]);
 		}
-		start = end + 1;
+		start = end;
 		i++;
 	}
 }
