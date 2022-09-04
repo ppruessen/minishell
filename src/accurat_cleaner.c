@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:29:40 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 14:13:06 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 20:19:28 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,56 +14,61 @@
 
 void	accurat_var_cleaner(t_var *var)
 {
-	int	i[2];
+	int	i;
+	int	j;
 
-	i[0] = 0;
+	i = 0;
 	if (var->cmds != NULL)
 	{
-		while (var->cmds[i[0]] != NULL)
+		while (var->cmds[i] != NULL)
 		{
 			//	VAR->CMDS->CMD
-			if (var->cmds[i[0]]->cmd != NULL)
+			if (var->cmds[i]->cmd != NULL)
 			{
-				i[1] = 0;
-				while (var->cmds[i[0]]->cmd[i[1]] != NULL)
+				j = 0;
+				while (var->cmds[i]->cmd[j] != NULL)
 				{
-					free (var->cmds[i[0]]->cmd[i[1]]);
-					var->cmds[i[0]]->cmd[i[1]] = NULL;
-					i[1]++;
+					free (var->cmds[i]->cmd[j]);
+					var->cmds[i]->cmd[j] = NULL;
+					j++;
 				}
+				free (var->cmds[i]->cmd);
+				var->cmds[i]->cmd = NULL;
 			}
 			// VAR->CMDS->CMD_ESC
-			if (var->cmds[i[0]]->cmd_esc != NULL)
+			if (var->cmds[i]->cmd_esc != NULL)
 			{
-				i[1] = 0;
-				while (var->cmds[i[0]]->cmd_esc[i[1]] != NULL)
+				j = 0;
+				while (var->cmds[i]->cmd_esc[j] != NULL)
 				{
-					free (var->cmds[i[0]]->cmd_esc[i[1]]);
-					var->cmds[i[0]]->cmd_esc[i[1]] = NULL;
-					i[1]++;
+					free (var->cmds[i]->cmd_esc[j]);
+					var->cmds[i]->cmd_esc[j] = NULL;
+					j++;
 				}
+				free (var->cmds[i]->cmd_esc);
+				var->cmds[i]->cmd_esc = NULL;
 			}
 			// VAR->CMDS->FILENAME_TO_READ
-			if (var->cmds[i[0]]->filename_to_read != NULL)
+			if (var->cmds[i]->filename_to_read != NULL)
 			{
-				free (var->cmds[i[0]]->filename_to_read);
-				var->cmds[i[0]]->filename_to_read = NULL;
+				free (var->cmds[i]->filename_to_read);
+				var->cmds[i]->filename_to_read = NULL;
 			}
 			// VAR->CMDS->FILENAME_TO_WRITE
-			if (var->cmds[i[0]]->filename_to_write != NULL)
+			if (var->cmds[i]->filename_to_write != NULL)
 			{
-				free (var->cmds[i[0]]->filename_to_write);
-				var->cmds[i[0]]->filename_to_write = NULL;
+				free (var->cmds[i]->filename_to_write);
+				var->cmds[i]->filename_to_write = NULL;
 			}
 			// VAR->CMDS->LIMITER
-			if (var->cmds[i[0]]->limiter != NULL)
+			if (var->cmds[i]->limiter != NULL)
 			{
-				free (var->cmds[i[0]]->limiter);
-				var->cmds[i[0]]->limiter = NULL;
+				free (var->cmds[i]->limiter);
+				var->cmds[i]->limiter = NULL;
 			}
-			i[0]++;
-			free (var->cmds[i[0]]);
-			var->cmds[i[0]] = NULL;
+			free (var->cmds[i]);
+			var->cmds[i] = NULL;
+			i++;
 		}
 	}
 	// VAR->CMDS
@@ -132,59 +137,59 @@ void	accurat_env_cleaner(t_var *var)
 	// 	free (var->env);
 	// 	var->env = NULL;
 	// }
-	free (var->cmds);
 }
 
 void	accurat_finder(t_var *var)
 {
-	int	i[2];
+	int	i;
+	int	j;
 
 	printf("-------------------- Accurat_Var_Finder Function -----------------------\n");
-	i[0] = 0;
+	i = 0;
 	if (var->cmds != NULL)
 	{
-		while (var->cmds[i[0]] != NULL)
+		while (var->cmds[i] != NULL)
 		{
 			//	VAR->CMDS->CMD
-			if (var->cmds[i[0]]->cmd != NULL)
+			if (var->cmds[i]->cmd != NULL)
 			{
-				i[1] = 0;
-				while (var->cmds[i[0]]->cmd[i[1]] != NULL)
+				j = 0;
+				while (var->cmds[i]->cmd[j] != NULL)
 				{
-					printf("var.cmds[%d].cmd[%d] = %s\n", i[0], i[1], var->cmds[i[0]]->cmd[i[1]]);
-					i[1]++;
+					printf("var.cmds[%d].cmd[%d] = %s\n", i, j, var->cmds[i]->cmd[j]);
+					j++;
 				}
 			}
 			// VAR->CMDS->CMD_ESC
-			if (var->cmds[i[0]]->cmd_esc != NULL)
+			if (var->cmds[i]->cmd_esc != NULL)
 			{
-				i[1] = 0;
-				while (var->cmds[i[0]]->cmd_esc[i[1]] != NULL)
+				j = 0;
+				while (var->cmds[i]->cmd_esc[j] != NULL)
 				{
-					printf("var.cmds[%d].cmd_esc[%d] = %s\n", i[0], i[1], var->cmds[i[0]]->cmd_esc[i[1]]);
-					i[1]++;
+					printf("var.cmds[%d].cmd_esc[%d] = %s\n", i, j, var->cmds[i]->cmd_esc[j]);
+					j++;
 				}
 			}
 			// VAR->CMDS->FILENAME_TO_READ
-			if (var->cmds[i[0]]->filename_to_read != NULL)
-				printf("filename to read: %s\n", var->cmds[i[0]]->filename_to_read);
+			if (var->cmds[i]->filename_to_read != NULL)
+				printf("filename to read: %s\n", var->cmds[i]->filename_to_read);
 			// VAR->CMDS->FILENAME_TO_WRITE
-			if (var->cmds[i[0]]->filename_to_write != NULL)
-				printf("filename to write: %s\n", var->cmds[i[0]]->filename_to_write);
+			if (var->cmds[i]->filename_to_write != NULL)
+				printf("filename to write: %s\n", var->cmds[i]->filename_to_write);
 			// VAR->CMDS->LIMITER
-			if (var->cmds[i[0]]->limiter != NULL)
-				printf("limiter: %s\n", var->cmds[i[0]]->limiter);
-			i[0]++;
+			if (var->cmds[i]->limiter != NULL)
+				printf("limiter: %s\n", var->cmds[i]->limiter);
+			i++;
 		}
 	}
 	// VAR->ENV
-	i[0] = 0;
+	i = 0;
 	if (var->env != NULL)
 	{
-		while (var->env[i[0]] != NULL)
+		while (var->env[i] != NULL)
 		{
-			printf("var->env[%d] = %s\n", i[0], var->env[i[0]]);
-			i[0]++;
+			printf("var->env[%d] = %s\n", i, var->env[i]);
+			i++;
 		}
 	}
 	// VAR->ENV_LIST
@@ -197,13 +202,13 @@ void	accurat_finder(t_var *var)
 	}
 	var->env_list = temp;
 	// VAR->DIR_LIST
-	i[0] = 0;
+	i = 0;
 	if (var->dir_list != NULL)
 	{
-		while (var->dir_list[i[0]] != NULL)
+		while (var->dir_list[i] != NULL)
 		{
-			printf("var->dir_list[%d] = %s\n", i[0], var->dir_list[i[0]]);
-			i[0]++;
+			printf("var->dir_list[%d] = %s\n", i, var->dir_list[i]);
+			i++;
 		}
 	}
 	// VAR->PATH
@@ -230,11 +235,11 @@ void	accurat_finder(t_var *var)
 	// VAR->FD[2]
 	if (var->fd != NULL)
 	{
-		i[0] = 0;
-		while (i[0] < var->pipes)
+		i = 0;
+		while (i < var->pipes)
 		{
 			printf("fd nicht null\n");
-			i[0]++;
+			i++;
 		}
 	}
 	// VAR->DOLLAR_VAR

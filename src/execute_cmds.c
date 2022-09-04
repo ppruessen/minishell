@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 11:34:10 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 20:11:31 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -382,16 +382,21 @@ void	execute_cmds(t_var *var)
 		else if (var->cmds[i]->write_to_pipe == 1 
 			&& (var->cmds[i]->inbuilt == CD || var->cmds[i]->inbuilt == EXPORT
 			|| var->cmds[i]->inbuilt == UNSET || var->cmds[i]->inbuilt == EXIT))
+		{
 			i++;
+		}
 		if (debug_mode < -2)
 			print_cmd(var, i);
-		set_cmd_path(var->cmds[i], var);
 //		if (debug_mode < -3)
 //			printf("Execute_cmds.c/370: HERE we are\t COMMAND PATH SET TO: '%s'\n", var->cmds[i]->cmd[0]);
-		var->env = create_env_from_list(var->env_list);
+//		var->env = create_env_from_list(var->env_list);
 		pid = fork();
 		if (pid == 0)
+		{
+			set_cmd_path(var->cmds[i], var);
+			var->env = create_env_from_list(var->env_list);
 			execute_cmd(var->cmds[i], var, i);
+		}
 		else
 		{
 			if (var->pipes > 0)

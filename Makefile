@@ -6,7 +6,7 @@
 #    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #
+#    Updated: 2022/09/04 20:57:33 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRC = 	./src/main.c \
 
 NAME = minishell
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -O0
 LIBFT = ./incl/libft
 OBJS = ${SRC:.c=.o}
 

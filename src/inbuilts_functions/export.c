@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 15:54:25 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/04 21:00:53 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,13 @@ int	repl_env_list(t_var *var, char *cmd)
 	{
 		temp_str = (char *)list->content;
 		i = 0;
-		while (temp_str[i] == cmd[i])
+		while (temp_str[i] && cmd[i] && temp_str[i] == cmd[i])
 		{
 			if (temp_str[i] == '=' && cmd[i] == '=')
 			{
-				free (list->content);
-				list->content = NULL;
+//				free (list->content);
+//				list->content = NULL;
+				printf("LIST->CONTENT WIRD ERSETZT\n");
 				list->content = ft_strdup(cmd);
 //				free(temp_str);
 //				temp_str = NULL;
