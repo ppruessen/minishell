@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/02 16:49:07 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 13:49:49 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	repl_env_list(t_var *var, char *cmd)
 		{
 			if (temp_str[i] == '=' && cmd[i] == '=')
 			{
+				free (list->content);
+				list->content = NULL;
 				list->content = ft_strdup(cmd);
 				free(temp_str);
 				temp_str = NULL;

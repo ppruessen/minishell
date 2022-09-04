@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   accurat_cleaner.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:29:40 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/02 18:43:38 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 14:13:06 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,18 @@ void	accurat_var_cleaner(t_var *var)
 		free (var->input_escape);
 		var->input_escape = NULL;
 	}
+	// VAR->T_INPUT
+	if (var->t_input != NULL)
+	{
+		free (var->t_input);
+		var->t_input = NULL;
+	}
+	// VAR_>T_ESCAPE
+		if (var->t_escape != NULL)
+	{
+		free (var->t_escape);
+		var->t_escape = NULL;
+	}
 }
 
 void	accurat_env_cleaner(t_var *var)
@@ -108,18 +120,18 @@ void	accurat_env_cleaner(t_var *var)
 		var->prompt = NULL;
 	}
 	// VAR->ENV
-	int	i = 0;
-	if (var->env != NULL)
-	{
-		while (var->env[i] != NULL)
-		{
-			free (var->env[i]);
-			var->env[i] = NULL;
-			i++;
-		}
-		free (var->env);
-		var->env = NULL;
-	}
+	// int	i = 0;
+	// if (var->env != NULL)
+	// {
+	// 	while (var->env[i] != NULL)
+	// 	{
+	// 		free (var->env[i]);
+	// 		var->env[i] = NULL;
+	// 		i++;
+	// 	}
+	// 	free (var->env);
+	// 	var->env = NULL;
+	// }
 	free (var->cmds);
 }
 

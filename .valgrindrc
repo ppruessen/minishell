@@ -1,4 +1,3 @@
 --memcheck: --leak-check=full
 --memcheck: --show-leak-kinds=all
---memcheck: --suppressions=./readline.supp
---memcheck: -s
+--memcheck: --suppressions=./.valgrind_readline.supp

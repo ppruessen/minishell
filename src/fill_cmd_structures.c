@@ -187,10 +187,14 @@ void	put_str_to_struct(t_var *var, t_cmd *cmd, int cmd_nb)
 		expand_variables(var);
 		put_temp_input_to_cmd(var, cmd);
 	}
-	free(var->t_input);
-	var->t_input = NULL;
-	free(var->t_escape);
-	var->t_escape = NULL;
+//	free(var->t_input);
+//	var->t_input = NULL;
+//	free(var->t_escape);
+//	var->t_escape = NULL;
+	// free (var->input);
+	// var->input = NULL;
+	// free (var->input_escape);
+	// var->input_escape = NULL;
 }
 
 /* Initialise cmd struct */

@@ -3,8 +3,11 @@ Test: /bin/ls
 eval.sh
 incl
 Makefile
+minimalraw.log
 minishell
 out_minishell.txt
+parse_valgrind_suppressions.sh
+readline.supp
 README.md
 src
 [0;35mPaMela <3 [0mExit-Status: 0
@@ -14,9 +17,12 @@ Test:    /bin/ls
 eval.sh
 incl
 Makefile
+minimalraw.log
 minishell
 out_bash.txt
 out_minishell.txt
+parse_valgrind_suppressions.sh
+readline.supp
 README.md
 src
 [0;35mPaMela <3 [0mExit-Status: 0
@@ -26,9 +32,12 @@ Test: 		/bin/ls
 eval.sh
 incl
 Makefile
+minimalraw.log
 minishell
 out_bash.txt
 out_minishell.txt
+parse_valgrind_suppressions.sh
+readline.supp
 README.md
 src
 [0;35mPaMela <3 [0mExit-Status: 0
@@ -51,13 +60,14 @@ Test: /sbin/ifconfig
 [0;35mPaMela <3 [0m/sbin/ifconfig
 eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.1.125  netmask 255.255.255.0  broadcast 192.168.1.255
-        inet6 2a02:3032:401:94c2:885d:3cdd:c315:32ab  prefixlen 64  scopeid 0x0<global>
         inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
-        inet6 2a02:3032:401:94c2:5d6e:bf3a:1ef2:b7fd  prefixlen 64  scopeid 0x0<global>
+        inet6 2a02:3032:400:1f18:b161:2375:957f:ec4d  prefixlen 64  scopeid 0x0<global>
+        inet6 2a02:3032:400:1f18::1  prefixlen 128  scopeid 0x0<global>
+        inet6 2a02:3032:400:1f18:7b86:6c28:8933:a1fd  prefixlen 64  scopeid 0x0<global>
         ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
-        RX packets 66335  bytes 51630538 (51.6 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 72952  bytes 23800455 (23.8 MB)
+        RX packets 301687  bytes 136530754 (136.5 MB)
+        RX errors 0  dropped 4  overruns 0  frame 0
+        TX packets 561223  bytes 225715378 (225.7 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
         device interrupt 20  memory 0xf7c00000-f7c20000  
 
@@ -65,9 +75,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         inet 127.0.0.1  netmask 255.0.0.0
         inet6 ::1  prefixlen 128  scopeid 0x10<host>
         loop  txqueuelen 1000  (Local Loopback)
-        RX packets 104901  bytes 34511942 (34.5 MB)
+        RX packets 758276  bytes 329467803 (329.4 MB)
         RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 104901  bytes 34511942 (34.5 MB)
+        TX packets 758276  bytes 329467803 (329.4 MB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 [0;35mPaMela <3 [0mExit-Status: 0
@@ -102,50 +112,62 @@ Test:       cd
 ---
 Test: /bin/ls -la
 [0;35mPaMela <3 [0m/bin/ls -la
-total 220
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+total 308
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  4 12:16 .
 drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
 -rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 12:26 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  4 12:15 incl
 -rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo   1950 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   2628 Sep  3 10:22 out_minishell.txt
+-rw-r--r-- 1 dactylo dactylo  68267 Sep  3 11:41 minimalraw.log
+-rwxrwxr-x 1 dactylo dactylo 174344 Sep  4 12:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   2212 Sep  4 12:16 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   2890 Sep  4 12:16 out_minishell.txt
+-rwxrwxr-x 1 dactylo dactylo   2631 Sep  3 11:23 parse_valgrind_suppressions.sh
+-rw-rw-r-- 1 dactylo dactylo   8464 Sep  3 11:42 readline.supp
 -rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  4 12:15 src
+-rw-rw-r-- 1 dactylo dactylo    121 Sep  3 11:56 .valgrindrc
 [0;35mPaMela <3 [0mExit-Status: 0
 ---
 Test: /bin/ls       -la
 [0;35mPaMela <3 [0m/bin/ls -la
-total 220
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+total 308
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  4 12:16 .
 drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
 -rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 12:26 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  4 12:15 incl
 -rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo   2623 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   3361 Sep  3 10:22 out_minishell.txt
+-rw-r--r-- 1 dactylo dactylo  68267 Sep  3 11:41 minimalraw.log
+-rwxrwxr-x 1 dactylo dactylo 174344 Sep  4 12:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   3153 Sep  4 12:16 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   3891 Sep  4 12:16 out_minishell.txt
+-rwxrwxr-x 1 dactylo dactylo   2631 Sep  3 11:23 parse_valgrind_suppressions.sh
+-rw-rw-r-- 1 dactylo dactylo   8464 Sep  3 11:42 readline.supp
 -rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  4 12:15 src
+-rw-rw-r-- 1 dactylo dactylo    121 Sep  3 11:56 .valgrindrc
 [0;35mPaMela <3 [0mExit-Status: 0
 ---
 Test:   /bin/ls      -la  
 [0;35mPaMela <3 [0m/bin/ls -la
-total 224
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+total 316
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  4 12:16 .
 drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
 -rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 12:26 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  4 12:15 incl
 -rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo   3302 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   4097 Sep  3 10:22 out_minishell.txt
+-rw-r--r-- 1 dactylo dactylo  68267 Sep  3 11:41 minimalraw.log
+-rwxrwxr-x 1 dactylo dactylo 174344 Sep  4 12:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   4100 Sep  4 12:16 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   4895 Sep  4 12:16 out_minishell.txt
+-rwxrwxr-x 1 dactylo dactylo   2631 Sep  3 11:23 parse_valgrind_suppressions.sh
+-rw-rw-r-- 1 dactylo dactylo   8464 Sep  3 11:42 readline.supp
 -rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  4 12:15 src
+-rw-rw-r-- 1 dactylo dactylo    121 Sep  3 11:56 .valgrindrc
 [0;35mPaMela <3 [0mExit-Status: 0
 ---
 Test:         echo     -n
@@ -194,18 +216,22 @@ Exit-Status: 255
 ---
 Test: /bin/ls -la
 [0;35mPaMela <3 [0m/bin/ls -la
-total 228
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+total 316
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  4 12:16 .
 drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
 -rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 12:26 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  4 12:15 incl
 -rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo   4431 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   5694 Sep  3 10:22 out_minishell.txt
+-rw-r--r-- 1 dactylo dactylo  68267 Sep  3 11:41 minimalraw.log
+-rwxrwxr-x 1 dactylo dactylo 174344 Sep  4 12:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   5497 Sep  4 12:16 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   6760 Sep  4 12:16 out_minishell.txt
+-rwxrwxr-x 1 dactylo dactylo   2631 Sep  3 11:23 parse_valgrind_suppressions.sh
+-rw-rw-r-- 1 dactylo dactylo   8464 Sep  3 11:42 readline.supp
 -rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  4 12:15 src
+-rw-rw-r-- 1 dactylo dactylo    121 Sep  3 11:56 .valgrindrc
 [0;35mPaMela <3 [0mExit-Status: 0
 ---
 Test: echo $?
@@ -251,18 +277,22 @@ bash:  pwd : command not found
 ---
 Test:      ls     '-la'    
 [0;35mPaMela <3 [0mls '-la'
-total 228
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
+total 320
+drwxrwxr-x 5 dactylo dactylo   4096 Sep  4 12:16 .
 drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
 -rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
+drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 12:26 .git
+drwxrwxr-x 4 dactylo dactylo   4096 Sep  4 12:15 incl
 -rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo   5632 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   7382 Sep  3 10:22 out_minishell.txt
+-rw-r--r-- 1 dactylo dactylo  68267 Sep  3 11:41 minimalraw.log
+-rwxrwxr-x 1 dactylo dactylo 174344 Sep  4 12:16 minishell
+-rw-rw-r-- 1 dactylo dactylo   6966 Sep  4 12:16 out_bash.txt
+-rw-rw-r-- 1 dactylo dactylo   8716 Sep  4 12:16 out_minishell.txt
+-rwxrwxr-x 1 dactylo dactylo   2631 Sep  3 11:23 parse_valgrind_suppressions.sh
+-rw-rw-r-- 1 dactylo dactylo   8464 Sep  3 11:42 readline.supp
 -rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
+drwxrwxr-x 3 dactylo dactylo   4096 Sep  4 12:15 src
+-rw-rw-r-- 1 dactylo dactylo    121 Sep  3 11:56 .valgrindrc
 [0;35mPaMela <3 [0mExit-Status: 0
 ---
 Test:      echo     '-n'    
@@ -389,921 +419,21 @@ Test: cd /
 ---
 Test: ls -la | grep mel | wc -l
 [0;35mPaMela <3 [0mls -la | grep mel | wc -l
-0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 139
 ---
 Test: ls -la | grep mel | wctert -l
 [0;35mPaMela <3 [0mls -la | grep mel | wctert -l
-bash: wctert: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 139
 ---
 Test: ls -la | grep "mel"
 [0;35mPaMela <3 [0mls -la | grep "mel"
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 139
 ---
 Test: ls -la | grep mel
 [0;35mPaMela <3 [0mls -la | grep mel
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 139
 ---
 Test: ls -la | grep 'mel'
 [0;35mPaMela <3 [0mls -la | grep 'mel'
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: 
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: $DONTEXIST
-[0;35mPaMela <3 [0m$DONTEXIST
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: $LESS$VAR
-[0;35mPaMela <3 [0m$LESS$VAR
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ./minishell
-[0;35mPaMela <3 [0m./minishell
-[0;35mPaMela <3 [0m[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: /bin/echo
-[0;35mPaMela <3 [0m/bin/echo
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: /bin/echo Hola Que Tal
-[0;35mPaMela <3 [0m/bin/echo Hola Que Tal
-Hola Que Tal
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < pwd
-[0;35mPaMela <3 [0m< pwd
-bash: pwd: No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: cat M*le
-[0;35mPaMela <3 [0mcat Makefile
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SRC = 	./src/main.c \
-		./src/parse_input.c \
-		./src/errors.c \
-		./src/syntax_error_check.c \
-		./src/fill_cmd_structures.c \
-		./src/expand_variables.c \
-		./src/put_temp_input_to_cmd.c \
-		./src/replace_str.c \
-		./src/copy_env.c \
-		./src/str_split.c \
-		./src/execute_cmds.c \
-		./src/create_env_from_list.c \
-		./src/handle_here_doc.c \
-		./src/inbuilts_functions/cd.c \
-		./src/inbuilts_functions/exit.c \
-		./src/inbuilts_functions/export.c \
-		./src/inbuilts_functions/unset.c \
-		./src/inbuilts_functions/find_inbuilts.c \
-		./src/accurat_cleaner.c \
-		./incl/leaks_checker.c
-
-NAME = minishell
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
-LIBFT = ./incl/libft
-OBJS = ${SRC:.c=.o}
-
-$(NAME) : $(OBJS)
-		@make  -C ./incl/libft
-		@make  bonus -C ./incl/libft
-		@make all -C ./incl/inbuilts_progs
-		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
-		
-all:	$(NAME)
-
-clean:
-	@make clean -C ./incl/libft
-	@make clean -C ./incl/inbuilts_progs
-	@rm -f ${OBJS}
-
-fclean: clean
-	-rm $(NAME)
-#	-rm ./src/inbuilts/*.o
-	-rm ./src/*.o
-	-rm ./incl/libft/*.o
-	-rm ./incl/inbuilts_progs/env/*.o
-	-rm ./incl/inbuilts_functions/*.o
-#	-rm ./src/utils/*.o
-	@make fclean -C ./incl/libft
-	@make fclean -C ./incl/inbuilts_progs
-
-re: fclean all
-
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cat Make*file
-[0;35mPaMela <3 [0mcat Makefile
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SRC = 	./src/main.c \
-		./src/parse_input.c \
-		./src/errors.c \
-		./src/syntax_error_check.c \
-		./src/fill_cmd_structures.c \
-		./src/expand_variables.c \
-		./src/put_temp_input_to_cmd.c \
-		./src/replace_str.c \
-		./src/copy_env.c \
-		./src/str_split.c \
-		./src/execute_cmds.c \
-		./src/create_env_from_list.c \
-		./src/handle_here_doc.c \
-		./src/inbuilts_functions/cd.c \
-		./src/inbuilts_functions/exit.c \
-		./src/inbuilts_functions/export.c \
-		./src/inbuilts_functions/unset.c \
-		./src/inbuilts_functions/find_inbuilts.c \
-		./src/accurat_cleaner.c \
-		./incl/leaks_checker.c
-
-NAME = minishell
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
-LIBFT = ./incl/libft
-OBJS = ${SRC:.c=.o}
-
-$(NAME) : $(OBJS)
-		@make  -C ./incl/libft
-		@make  bonus -C ./incl/libft
-		@make all -C ./incl/inbuilts_progs
-		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)
-		
-all:	$(NAME)
-
-clean:
-	@make clean -C ./incl/libft
-	@make clean -C ./incl/inbuilts_progs
-	@rm -f ${OBJS}
-
-fclean: clean
-	-rm $(NAME)
-#	-rm ./src/inbuilts/*.o
-	-rm ./src/*.o
-	-rm ./incl/libft/*.o
-	-rm ./incl/inbuilts_progs/env/*.o
-	-rm ./incl/inbuilts_functions/*.o
-#	-rm ./src/utils/*.o
-	@make fclean -C ./incl/libft
-	@make fclean -C ./incl/inbuilts_progs
-
-re: fclean all
-
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cat Makefile | cat -e | cat -e
-[0;35mPaMela <3 [0mcat Makefile | cat -e | cat -e
-# **************************************************************************** #$$
-#                                                                              #$$
-#                                                         :::      ::::::::    #$$
-#    Makefile                                           :+:      :+:    :+:    #$$
-#                                                     +:+ +:+         +:+      #$$
-#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #$$
-#                                                 +#+#+#+#+#+   +#+            #$$
-#    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #$$
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   ########.fr        #$$
-#                                                                              #$$
-# **************************************************************************** #$$
-$$
-SRC = 	./src/main.c \$$
-		./src/parse_input.c \$$
-		./src/errors.c \$$
-		./src/syntax_error_check.c \$$
-		./src/fill_cmd_structures.c \$$
-		./src/expand_variables.c \$$
-		./src/put_temp_input_to_cmd.c \$$
-		./src/replace_str.c \$$
-		./src/copy_env.c \$$
-		./src/str_split.c \$$
-		./src/execute_cmds.c \$$
-		./src/create_env_from_list.c \$$
-		./src/handle_here_doc.c \$$
-		./src/inbuilts_functions/cd.c \$$
-		./src/inbuilts_functions/exit.c \$$
-		./src/inbuilts_functions/export.c \$$
-		./src/inbuilts_functions/unset.c \$$
-		./src/inbuilts_functions/find_inbuilts.c \$$
-		./src/accurat_cleaner.c \$$
-		./incl/leaks_checker.c$$
-$$
-NAME = minishell$$
-CC = gcc$$
-CFLAGS = -Wall -Wextra -Werror -g$$
-LIBFT = ./incl/libft$$
-OBJS = ${SRC:.c=.o}$$
-$$
-$(NAME) : $(OBJS)$$
-		@make  -C ./incl/libft$$
-		@make  bonus -C ./incl/libft$$
-		@make all -C ./incl/inbuilts_progs$$
-		$(CC) $(CFLAGS) $(SRC) -L$(LIBFT) -lft -lreadline -o $(NAME)$$
-		$$
-all:	$(NAME)$$
-$$
-clean:$$
-	@make clean -C ./incl/libft$$
-	@make clean -C ./incl/inbuilts_progs$$
-	@rm -f ${OBJS}$$
-$$
-fclean: clean$$
-	-rm $(NAME)$$
-#	-rm ./src/inbuilts/*.o$$
-	-rm ./src/*.o$$
-	-rm ./incl/libft/*.o$$
-	-rm ./incl/inbuilts_progs/env/*.o$$
-	-rm ./incl/inbuilts_functions/*.o$$
-#	-rm ./src/utils/*.o$$
-	@make fclean -C ./incl/libft$$
-	@make fclean -C ./incl/inbuilts_progs$$
-$$
-re: fclean all$$
-$$
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cat Makefile | grep srcs | cat -e
-[0;35mPaMela <3 [0mcat Makefile | grep srcs | cat -e
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cat Makefile | grep srcs | grep srcs | cat -e
-[0;35mPaMela <3 [0mcat Makefile | grep srcs | grep srcs | cat -e
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cat | cat | cat | ls
-[0;35mPaMela <3 [0mcat | cat | cat | ls
-eval.sh
-incl
-Makefile
-minishell
-out_bash.txt
-out_minishell.txt
-README.md
-src
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd
-[0;35mPaMela <3 [0mcd
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd $HOME
-[0;35mPaMela <3 [0mcd $HOME
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd $HOME $HOME
-[0;35mPaMela <3 [0mcd $HOME $HOME
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd .
-[0;35mPaMela <3 [0mcd .
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ..
-[0;35mPaMela <3 [0mcd ..
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd .. | echo "hola"
-[0;35mPaMela <3 [0mcd .. | echo "hola"
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd .. | pwd
-[0;35mPaMela <3 [0mcd .. | pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ../
-[0;35mPaMela <3 [0mcd ../
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ../.
-[0;35mPaMela <3 [0mcd ../.
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ../..
-[0;35mPaMela <3 [0mcd ../..
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ../../../../../../..
-[0;35mPaMela <3 [0mcd ../../../../../../..
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd .././././.
-[0;35mPaMela <3 [0mcd .././././.
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ./
-[0;35mPaMela <3 [0mcd ./
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ./././.
-[0;35mPaMela <3 [0mcd ./././.
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd ././././
-[0;35mPaMela <3 [0mcd ././././
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd /
-[0;35mPaMela <3 [0mcd /
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd / | echo "hola"
-[0;35mPaMela <3 [0mcd / | echo "hola"
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: cd /etc
-[0;35mPaMela <3 [0mcd /etc
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo
-[0;35mPaMela <3 [0mecho
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo 
-[0;35mPaMela <3 [0mecho
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "" hola
-[0;35mPaMela <3 [0mecho "" hola
- hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo ""$HOME
-[0;35mPaMela <3 [0mecho ""$HOME
-/home/dactylo 
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "$DONTEXIST" "Makefile"
-[0;35mPaMela <3 [0mecho "$DONTEXIST" "Makefile"
- Makefile
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "$DONTEXIST""Makefile"
-[0;35mPaMela <3 [0mecho "$DONTEXIST""Makefile"
-Makefile 
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "$DONTEXIST"Makefile
-[0;35mPaMela <3 [0mecho "$DONTEXIST"Makefile
-Makefile 
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "-n" Hola
-[0;35mPaMela <3 [0mecho "-n" Hola
-Hola[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "ME"
-[0;35mPaMela <3 [0mecho "ME"
-ME
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "echo"
-[0;35mPaMela <3 [0mecho "echo"
-echo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "hola"
-[0;35mPaMela <3 [0mecho "hola"
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo "hola"
-[0;35mPaMela <3 [0mecho "hola"
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $
-[0;35mPaMela <3 [0mecho $
-$
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $?
-[0;35mPaMela <3 [0mecho $?
-0
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $? | echo $? | echo $?
-[0;35mPaMela <3 [0mecho $? | echo $? | echo $?
-0
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $DONTEXIST Hola
-[0;35mPaMela <3 [0mecho $DONTEXIST Hola
-Hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $HOLA
-[0;35mPaMela <3 [0mecho $HOLA
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $HOME
-[0;35mPaMela <3 [0mecho $HOME
-/home/dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $HOME9
-[0;35mPaMela <3 [0mecho $HOME9
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo $hola
-[0;35mPaMela <3 [0mecho $hola
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo 'echo'
-[0;35mPaMela <3 [0mecho 'echo'
-echo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo *t
-[0;35mPaMela <3 [0mecho out_bash.txt out_minishell.txt
-out_bash.txt out_minishell.txt
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo *t hola
-[0;35mPaMela <3 [0mecho out_bash.txt out_minishell.txt hola
-out_bash.txt out_minishell.txt hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo --------n
-[0;35mPaMela <3 [0mecho --------n
---------n
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n
-[0;35mPaMela <3 [0mecho -n
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n -n
-[0;35mPaMela <3 [0mecho -n -n
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n -n Hola Que
-[0;35mPaMela <3 [0mecho -n -n Hola Que
-Hola Que[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n -nnn -nnnn
-[0;35mPaMela <3 [0mecho -n -nnn -nnnn
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n -nnn hola -nnnn
-[0;35mPaMela <3 [0mecho -n -nnn hola -nnnn
-hola -nnnn[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n -nnn-nnnn
-[0;35mPaMela <3 [0mecho -n -nnn-nnnn
--nnn-nnnn[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n Hola
-[0;35mPaMela <3 [0mecho -n Hola
-Hola[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -n-nnn -nnnn
-[0;35mPaMela <3 [0mecho -n-nnn -nnnn
--n-nnn -nnnn
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nHola
-[0;35mPaMela <3 [0mecho -nHola
--nHola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nnn --------n
-[0;35mPaMela <3 [0mecho -nnn --------n
---------n[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nnn --------nnnn
-[0;35mPaMela <3 [0mecho -nnn --------nnnn
---------nnnn[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nnn -----nn---nnnn
-[0;35mPaMela <3 [0mecho -nnn -----nn---nnnn
------nn---nnnn[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nnnn $hola
-[0;35mPaMela <3 [0mecho -nnnn $hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -nnnnn
-[0;35mPaMela <3 [0mecho -nnnnn
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo -p
-[0;35mPaMela <3 [0mecho -p
--p
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo Hola
-[0;35mPaMela <3 [0mecho Hola
-Hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo Hola -n
-[0;35mPaMela <3 [0mecho Hola -n
-Hola -n
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo Hola Que Tal
-[0;35mPaMela <3 [0mecho Hola Que Tal
-Hola Que Tal
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo Le path de mon HOME est $HOME
-[0;35mPaMela <3 [0mecho Le path de mon HOME est $HOME
-Le path de mon HOME est /home/dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo ME
-[0;35mPaMela <3 [0mecho ME
-ME
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo echo
-[0;35mPaMela <3 [0mecho echo
-echo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola
-[0;35mPaMela <3 [0mecho hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola
-[0;35mPaMela <3 [0mecho hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola | cat
-[0;35mPaMela <3 [0mecho hola | cat
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola | cat | cat | cat | cat | cat | grep hola
-[0;35mPaMela <3 [0mecho hola | cat | cat | cat | cat | cat | grep hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola | echo que tal
-[0;35mPaMela <3 [0mecho hola | echo que tal
-que tal
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola |cat
-[0;35mPaMela <3 [0mecho hola |cat
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo hola|cat
-[0;35mPaMela <3 [0mecho hola|cat
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo my shit terminal is [$TERM4
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM4
-my shit terminal is [
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo my shit terminal is [$TERM4]
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM4]
-my shit terminal is []
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo my shit terminal is [$TERM]
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM]
-my shit terminal is [xterm-256color]
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo oui | echo non | echo hola | grep hola
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: echo oui | echo non | echo hola | grep non
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep non
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: echo oui | echo non | echo hola | grep oui
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep oui
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: echo | echo
-[0;35mPaMela <3 [0mecho | echo
-
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: env | echo hola
-[0;35mPaMela <3 [0menv | echo hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: exit
-[0;35mPaMela <3 [0mexit
-Exit-Status: 0
----
-Test: exit "666"
-[0;35mPaMela <3 [0mexit "666"
-Exit-Status: 154
----
-Test: exit +0
-[0;35mPaMela <3 [0mexit +0
-Exit-Status: 0
----
-Test: exit +42
-[0;35mPaMela <3 [0mexit +42
-Exit-Status: 42
----
-Test: exit +666
-[0;35mPaMela <3 [0mexit +666
-Exit-Status: 154
----
-Test: exit -9223372036854775808
-[0;35mPaMela <3 [0mexit -9223372036854775808
-Exit-Status: 0
----
-Test: exit 0
-[0;35mPaMela <3 [0mexit 0
-Exit-Status: 0
----
-Test: exit 000042
-[0;35mPaMela <3 [0mexit 000042
-Exit-Status: 42
----
-Test: exit 259
-[0;35mPaMela <3 [0mexit 259
-Exit-Status: 3
----
-Test: exit 26632
-[0;35mPaMela <3 [0mexit 26632
-Exit-Status: 8
----
-Test: exit 42
-[0;35mPaMela <3 [0mexit 42
-Exit-Status: 42
----
-Test: exit 666
-[0;35mPaMela <3 [0mexit 666
-Exit-Status: 154
----
-Test: exit | ls
-[0;35mPaMela <3 [0mexit | ls
-eval.sh
-incl
-Makefile
-minishell
-out_bash.txt
-out_minishell.txt
-README.md
-src
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: export HOL=A=""
-[0;35mPaMela <3 [0mexport HOL=A=""
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: export hola | unset hola | echo $?
-[0;35mPaMela <3 [0mexport hola | unset hola | echo $?
-0
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: export | echo hola
-[0;35mPaMela <3 [0mexport | echo hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ifconfig | grep ":"
-[0;35mPaMela <3 [0mifconfig | grep ":"
-eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet6 2a02:3032:401:94c2:885d:3cdd:c315:32ab  prefixlen 64  scopeid 0x0<global>
-        inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
-        inet6 2a02:3032:401:94c2:5d6e:bf3a:1ef2:b7fd  prefixlen 64  scopeid 0x0<global>
-        ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ifconfig | grep hola
-[0;35mPaMela <3 [0mifconfig | grep hola
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: ls
-[0;35mPaMela <3 [0mls
-eval.sh
-incl
-Makefile
-minishell
-out_bash.txt
-out_minishell.txt
-README.md
-src
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ls *.*
-[0;35mPaMela <3 [0mls eval.sh out_bash.txt out_minishell.txt README.md
-eval.sh
-out_bash.txt
-out_minishell.txt
-README.md
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ls -la | grep "."
-[0;35mPaMela <3 [0mls -la | grep "."
-total 268
-drwxrwxr-x 5 dactylo dactylo   4096 Sep  3 10:21 .
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:02 ..
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  3 10:19 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  3 10:19 .git
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  3 10:15 incl
--rwxrwxr-x 1 dactylo dactylo   2167 Sep  3 10:14 Makefile
--rwxrwxr-x 1 dactylo dactylo 174328 Sep  3 10:16 minishell
--rw-rw-r-- 1 dactylo dactylo  20727 Sep  3 10:22 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo  30391 Sep  3 10:22 out_minishell.txt
--rw-rw-r-- 1 dactylo dactylo     11 Sep  3 10:02 README.md
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  3 10:15 src
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: ls hola
-[0;35mPaMela <3 [0mls hola
-/usr/bin/ls: cannot access 'hola': No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 2
----
-Test: ls | exit
-[0;35mPaMela <3 [0mls | exit
-Exit-Status: 0
----
-Test: ls | ls hola
-[0;35mPaMela <3 [0mls | ls hola
-/usr/bin/ls: cannot access 'hola': No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 2
----
-Test: ls | ls | echo hola | rev
-[0;35mPaMela <3 [0mls | ls | echo hola | rev
-aloh
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd hola
-[0;35mPaMela <3 [0mpwd hola
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd hola que tal
-[0;35mPaMela <3 [0mpwd hola que tal
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd ls
-[0;35mPaMela <3 [0mpwd ls
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd ls env
-[0;35mPaMela <3 [0mpwd ls env
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd pwd pwd
-[0;35mPaMela <3 [0mpwd pwd pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: pwd | echo hola
-[0;35mPaMela <3 [0mpwd | echo hola
-hola
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset $HOLA
-[0;35mPaMela <3 [0munset $HOLA
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset HOL$?A
-[0;35mPaMela <3 [0munset HOL$?A
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset HOLA9
-[0;35mPaMela <3 [0munset HOLA9
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset HOLA_
-[0;35mPaMela <3 [0munset HOLA_
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset HOL_A
-[0;35mPaMela <3 [0munset HOL_A
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset INEXISTANT
-[0;35mPaMela <3 [0munset INEXISTANT
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset _HOLA
-[0;35mPaMela <3 [0munset _HOLA
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset _______
-[0;35mPaMela <3 [0munset _______
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset cd
-[0;35mPaMela <3 [0munset cd
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset echo
-[0;35mPaMela <3 [0munset echo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset export
-[0;35mPaMela <3 [0munset export
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset pwd
-[0;35mPaMela <3 [0munset pwd
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset sudo
-[0;35mPaMela <3 [0munset sudo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: unset unset
-[0;35mPaMela <3 [0munset unset
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: whoami | grep $USER
-[0;35mPaMela <3 [0mwhoami | grep $USER
-dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < Makefile grep main
-[0;35mPaMela <3 [0m< Makefile grep main
-SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < src/main.c < eval.sh < Makefile grep main
-[0;35mPaMela <3 [0m< src/main.c < eval.sh < Makefile grep main
-SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < eval.sh grep main < src/main.c < Makefile
-[0;35mPaMela <3 [0m< eval.sh grep main < src/main.c < Makefile
-SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < "Makefile" grep main
-[0;35mPaMela <3 [0m< "Makefile" grep main
-SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
----
-Test: < "Makefile " grep main
-[0;35mPaMela <3 [0m< "Makefile " grep main
-bash: Makefile : No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
----
-Test: "<" Makefile grep main
-[0;35mPaMela <3 [0m"<" Makefile grep main
-bash: <: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
----
-Test: $?
-[0;35mPaMela <3 [0m$?
-bash: 0: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
----
-Test: echo $?
-[0;35mPaMela <3 [0mecho $?
-0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 139
 ---

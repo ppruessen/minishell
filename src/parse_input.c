@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:21:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/30 20:59:21 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/04 12:02:50 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

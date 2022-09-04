@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/03 10:26:00 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 14:05:11 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ int	main(int argc, char **argv, char **env)
 //			var.prompt = NULL;
 			if (debug_mode < -3)
 				write(1, "Main.c/89 raus gesprungen.\n", 27);
-//			accurat_var_cleaner(&var);
-//			accurat_env_cleaner(&var);
+			accurat_var_cleaner(&var);
+			accurat_env_cleaner(&var);
 			if (debug_mode < 0)
 				accurat_finder(&var);
 			if (debug_mode < -1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:12:23 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/02 19:23:12 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 14:05:17 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	ms_exit(t_var *var, char **cmd)
 //		write(1, "exit\n", 5);
 	}
 //	clean_up(var);
-//	accurat_var_cleaner(var);
-//	accurat_env_cleaner(var);
+	accurat_var_cleaner(var);
+	accurat_env_cleaner(var);
 	if (debug_mode < 0)
 		accurat_finder(var);
 	if (debug_mode < -1)

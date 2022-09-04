@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_cmds.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/02 18:26:20 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/04 11:34:10 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -286,7 +286,7 @@ void	execute_cmd(t_cmd *cmd, t_var *var, int i)
 				input_members++;
 			j++;
 		}
-		execve_input = (char **) malloc((input_members * sizeof(char*)) + 1);
+		execve_input = (char **) malloc(((input_members + 1) * sizeof(char*)) + 1);
 		if (execve_input == NULL)
 			return ;
 		execve_input[input_members] = NULL;
