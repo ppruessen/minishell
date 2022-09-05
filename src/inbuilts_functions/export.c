@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 21:38:36 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/05 11:43:56 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	repl_env_list(t_var *var, char *cmd)
 		{
 			if (temp_str[i] == '=' && cmd[i] == '=')
 			{
-//				free (list->content);
-//				list->content = NULL;
+				free (list->content);
+				list->content = NULL;
 				printf("LIST->CONTENT WIRD ERSETZT\n");
 				list->content = ft_strdup(cmd);
 //				free(temp_str);
@@ -63,6 +63,7 @@ void	export_var(t_var *var, char **cmd)
 {
 	int		i;
 	t_list	*list;
+	char	*temp;
 
 	list = var->env_list;
 	if (cmd[1] == NULL)
@@ -81,7 +82,11 @@ void	export_var(t_var *var, char **cmd)
 		{
 			if (repl_env_list(var, cmd[i]) == 0)
 			{
-				ft_lstadd_back(&var->env_list, ft_lstnew(ft_strdup(cmd[i])));
+				temp = ft_strdup(cmd[i]);
+				printf("ADRESS OF TEMP : %p or %p\n", &temp, temp);
+				ft_lstadd_back(&var->env_list, ft_lstnew(temp));
+//				free (cmd[i]);
+//				cmd[i] = NULL;
 				g_status = 0;
 			}
 			if (cmd[i + 1] != NULL && has_equal_sign(cmd[i + 1]) == 0

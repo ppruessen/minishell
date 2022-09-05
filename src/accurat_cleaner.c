@@ -6,12 +6,17 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:29:40 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 22:09:29 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/05 11:54:08 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
 
+/**
+ * @brief Function to clean the t_var structure
+ * 
+ * @param var 
+ */
 void	accurat_var_cleaner(t_var *var)
 {
 	int	i;
@@ -101,7 +106,11 @@ void	accurat_var_cleaner(t_var *var)
 		var->t_escape = NULL;
 	}
 }
-
+/**
+ * @brief Function to free the env variables.
+ * 
+ * @param var
+ */
 void	accurat_env_cleaner(t_var *var)
 {
 	// VAR->ENV_LIST
@@ -112,18 +121,18 @@ void	accurat_env_cleaner(t_var *var)
 	{
 		while(var->env_list != NULL)
 		{
-			printf("var->env_list->content = %s\n", (char *)var->env_list->content);
+//			printf("var->env_list->content = %s\n", (char *)var->env_list->content);
 			free (var->env_list->content);
 			var->env_list->content = NULL;
 			temp_next = var->env_list->next;
-			if (var->env_list->next == NULL)
-				printf("var-env-list-next = NULL: i = %d\n", i);
+//			if (var->env_list->next == NULL)
+//				printf("var-env-list-next = NULL: i = %d\n", i);
 			free (var->env_list);
 			var->env_list = NULL;
 			var->env_list = temp_next;
 			i++;
 		}
-		printf("i = %d\n", i);
+//		printf("i = %d\n", i);
 	}
 	if (var->prompt != NULL)
 	{
@@ -131,24 +140,32 @@ void	accurat_env_cleaner(t_var *var)
 		var->prompt = NULL;
 	}
 	// VAR->ENV
-	i = 0;
-	if (var->env != NULL)
-	{
-		while (var->env[i] != NULL)
-		{
-			printf("ACCURAT ENV CLEANER i = %d\n", i);
-			free (var->env[i]);
-//			var->env[i] = NULL;
-			i++;
-			if (var->env[i] == NULL)
-				printf("var->env == NULL\n");
-		}
-		printf("ENDE ACCURAT ENV CLEANER\n");
-		free (var->env);
-		var->env = NULL;
-	}
+	// i = 0;
+	// if (var->env != NULL)
+	// {
+	// 	if (var->env[i] != NULL)
+	// 	{
+	// 		while (var->env[i] != NULL)
+	// 		{
+	// 			printf("ACCURAT ENV CLEANER i = %d\n", i);
+	// 			free (var->env[i]);
+	// 			var->env[i] = NULL;
+	// 			i++;
+	// 			if (var->env[i] == NULL)
+	// 				printf("var->env == NULL\n");
+	// 		}
+	// 	}
+	// 	printf("ENDE ACCURAT ENV CLEANER\n");
+	// 	free (var->env);
+	// 	var->env = NULL;
+	//}
 }
 
+/**
+ * @brief Function to find variables that are not NULL
+ * 
+ * @param var 
+ */
 void	accurat_finder(t_var *var)
 {
 	int	i;

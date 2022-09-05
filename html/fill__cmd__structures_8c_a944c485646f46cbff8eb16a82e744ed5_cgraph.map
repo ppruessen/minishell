@@ -1,0 +1,15 @@
+<map id="put_str_to_struct" name="put_str_to_struct">
+<area shape="rect" id="node1" title=" " alt="" coords="5,180,136,205"/>
+<area shape="rect" id="node2" href="$expand__variables_8c.html#a286b77b84732d34fdacb01c91b520ff4" title=" " alt="" coords="205,80,342,105"/>
+<area shape="rect" id="node7" href="$ft__strlcpy_8c.html#aa053827b3a2ea3d0118783d6fb59d178" title=" " alt="" coords="574,205,657,231"/>
+<area shape="rect" id="node9" href="$put__temp__input__to__cmd_8c.html#ada5244f10ac9f2b436e5bb50f5af175c" title=" " alt="" coords="184,155,363,180"/>
+<area shape="rect" id="node13" href="$fill__cmd__structures_8c.html#a74f51db270a2ffa9ed6bc0226816a723" title=" " alt="" coords="211,256,335,281"/>
+<area shape="rect" id="node3" href="$replace__str_8c.html#a5556219e6c6f5bb46e81d91463e480cf" title=" " alt="" coords="411,55,505,80"/>
+<area shape="rect" id="node4" href="$replace__str_8c.html#aa90fbfc125bf61050ccf58d5938319bf" title=" " alt="" coords="553,5,677,31"/>
+<area shape="rect" id="node6" href="$replace__str_8c.html#a7fc216fc49443a88bb7ced66f0e34d7f" title=" " alt="" coords="577,55,654,80"/>
+<area shape="rect" id="node5" href="$ft__calloc_8c.html#a55cb9602200ccf92a7f43e58c6ee2679" title=" " alt="" coords="735,105,811,131"/>
+<area shape="rect" id="node8" href="$ft__strlen_8c.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="735,205,810,231"/>
+<area shape="rect" id="node10" href="$str__split_8c.html#a9cdf20bcba3d5740cd7c7f9cbac3a318" title=" " alt="" coords="421,155,495,180"/>
+<area shape="rect" id="node11" href="$ft__strdup_8c.html#aebe73f27c70c56ac5053f860ef5436c9" title=" " alt="" coords="576,156,655,181"/>
+<area shape="rect" id="node12" href="$ft__memcpy_8c.html#a41a6f05af30cf85ff63a08e383826322" title=" " alt="" coords="725,156,820,181"/>
+</map>

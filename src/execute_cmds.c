@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 20:11:31 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/05 11:35:23 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -383,6 +383,8 @@ void	execute_cmds(t_var *var)
 			&& (var->cmds[i]->inbuilt == CD || var->cmds[i]->inbuilt == EXPORT
 			|| var->cmds[i]->inbuilt == UNSET || var->cmds[i]->inbuilt == EXIT))
 		{
+//			free (var->cmds[i]->cmd[0]);
+//			var->cmds[i]->cmd[0] = NULL;
 			i++;
 		}
 		if (debug_mode < -2)
