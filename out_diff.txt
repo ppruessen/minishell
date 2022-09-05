@@ -1,45 +1,72 @@
 Test: /bin/ls							Test: /bin/ls
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt						      <
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test:    /bin/ls   						Test:    /bin/ls   
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: 		/bin/ls						Test: 		/bin/ls		
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
@@ -115,15 +142,15 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST>	en0: flags=8863<UP
 	status: active							status: active
 awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTIC	awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTIC
 	options=400<CHANNEL_IO>						options=400<CHANNEL_IO>
-	ether 4e:ff:c8:10:73:b8 					ether 4e:ff:c8:10:73:b8 
-	inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 sc		inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 sc
+	ether e6:85:27:d6:d2:f3 					ether e6:85:27:d6:d2:f3 
+	inet6 fe80::e485:27ff:fed6:d2f3%awdl0 prefixlen 64 sc		inet6 fe80::e485:27ff:fed6:d2f3%awdl0 prefixlen 64 sc
 	nd6 options=201<PERFORMNUD,DAD>					nd6 options=201<PERFORMNUD,DAD>
 	media: autoselect						media: autoselect
 	status: active							status: active
 llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST	llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST
 	options=400<CHANNEL_IO>						options=400<CHANNEL_IO>
-	ether 4e:ff:c8:10:73:b8 					ether 4e:ff:c8:10:73:b8 
-	inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 sco		inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 sco
+	ether e6:85:27:d6:d2:f3 					ether e6:85:27:d6:d2:f3 
+	inet6 fe80::e485:27ff:fed6:d2f3%llw0 prefixlen 64 sco		inet6 fe80::e485:27ff:fed6:d2f3%llw0 prefixlen 64 sco
 	nd6 options=201<PERFORMNUD,DAD>					nd6 options=201<PERFORMNUD,DAD>
 	media: autoselect						media: autoselect
 	status: active							status: active
@@ -181,69 +208,99 @@ Test:       cd    						Test:       cd
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: /bin/ls -la						Test: /bin/ls -la
-total 456							total 456
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   5142  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff   5124  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff   6209  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff   5129  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 728							total 728
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff    5319  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff    5301  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff    7000  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff    5306  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: /bin/ls       -la						Test: /bin/ls       -la
-total 456							total 456
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   6246  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff   6222  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff   7313  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff   6233  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 736						      |	total 728
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff    7037  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff    7013  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff    8718  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff    7024  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test:   /bin/ls      -la  					Test:   /bin/ls      -la  
-total 464						      |	total 456
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   7353  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff   7326  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff   8420  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff   7340  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 744							total 744
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff    8758  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff    8731  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   10439  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff    8745  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test:         echo     -n					Test:         echo     -n
@@ -281,25 +338,35 @@ bash: exit: -: numeric argument required			bash: exit: -: numeric argument requi
 Exit-Status: 255						Exit-Status: 255
 ---								---
 Test: /bin/ls -la						Test: /bin/ls -la
-total 472							total 472
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff   8900  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff   8882  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff   9959  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff   8879  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 752						      |	total 744
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   10919  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   10901  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   12592  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   10898  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: echo $?							Test: echo $?
@@ -335,25 +402,35 @@ bash:  pwd : command not found					bash:  pwd : command not found
 Exit-Status: 127						Exit-Status: 127
 ---								---
 Test:      ls     '-la'    					Test:      ls     '-la'    
-total 472							total 472
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  10475  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff  10447  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff  11518  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff  10438  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 760							total 760
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   13108  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   13080  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   14765  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   13071  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test:      echo     '-n'    					Test:      echo     '-n'    
@@ -391,7 +468,7 @@ Test: 	unset     M 						Test: 	unset     M
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: 	export     M=21 					Test: 	export     M=21 
-Exit-Status: 0						      |	Exit-Status: 134
+Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: 	unset     'M' 						Test: 	unset     'M' 
 Exit-Status: 0							Exit-Status: 0
@@ -452,7 +529,7 @@ Test: cd /							Test: cd /
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep mel | wc -l					Test: ls -la | grep mel | wc -l
-      18							      18
+      28							      28
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep mel | wctert -l				Test: ls -la | grep mel | wctert -l
@@ -460,66 +537,96 @@ bash: wctert: command not found					bash: wctert: command not found
 Exit-Status: 127						Exit-Status: 127
 ---								---
 Test: ls -la | grep "mel"					Test: ls -la | grep "mel"
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  13293  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff  13267  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff  14280  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff  13210  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   16540  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   16514  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   18139  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   16455  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep mel						Test: ls -la | grep mel
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  14387  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff  14363  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff  15374  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff  14304  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   18248  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   18224  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   19847  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   18163  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep 'mel'					Test: ls -la | grep 'mel'
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  15483  4 Sep 19:16 out_bash.txt    |	-rw-r--r--   1 mel  staff  15457  4 Sep 19:16 out_bash.txt
--rw-r--r--   1 mel  staff  16470  4 Sep 19:16 out_minishell.t |	-rw-r--r--   1 mel  staff  15400  4 Sep 19:16 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   19958  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   19932  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   21557  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   19873  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: 								Test: 
@@ -555,7 +662,7 @@ Test: cat M*le							Test: cat M*le
 #    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 	#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 
 #                                                 +#+#+#+#+#+	#                                                 +#+#+#+#+#+
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#   	#    Created: 2021/05/14 11:48:46 by mschiman          #+#   
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #	#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #
+#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #	#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #
 #                                                            	#                                                            
 # ***********************************************************	# ***********************************************************
 
@@ -582,7 +689,7 @@ SRC = 	./src/main.c \						SRC = 	./src/main.c \
 
 NAME = minishell						NAME = minishell
 CC = gcc							CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g				CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -O0				CFLAGS = -Wall -Wextra -Werror -g -O0
 LIBFT = ./incl/libft						LIBFT = ./incl/libft
 OBJS = ${SRC:.c=.o}						OBJS = ${SRC:.c=.o}
 
@@ -623,7 +730,7 @@ Test: cat Make*file						Test: cat Make*file
 #    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 	#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 
 #                                                 +#+#+#+#+#+	#                                                 +#+#+#+#+#+
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#   	#    Created: 2021/05/14 11:48:46 by mschiman          #+#   
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #	#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #
+#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #	#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #
 #                                                            	#                                                            
 # ***********************************************************	# ***********************************************************
 
@@ -650,7 +757,7 @@ SRC = 	./src/main.c \						SRC = 	./src/main.c \
 
 NAME = minishell						NAME = minishell
 CC = gcc							CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g				CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -O0				CFLAGS = -Wall -Wextra -Werror -g -O0
 LIBFT = ./incl/libft						LIBFT = ./incl/libft
 OBJS = ${SRC:.c=.o}						OBJS = ${SRC:.c=.o}
 
@@ -691,7 +798,7 @@ Test: cat Makefile | cat -e | cat -e				Test: cat Makefile | cat -e | cat -e
 #    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 	#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+ 
 #                                                 +#+#+#+#+#+	#                                                 +#+#+#+#+#+
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#   	#    Created: 2021/05/14 11:48:46 by mschiman          #+#   
-#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #	#    Updated: 2022/09/03 10:13:59 by pprussen         ###   #
+#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #	#    Updated: 2022/09/04 20:57:33 by pprussen         ###   #
 #                                                            	#                                                            
 # ***********************************************************	# ***********************************************************
 $$								$$
@@ -718,7 +825,7 @@ SRC = 	./src/main.c \$$					SRC = 	./src/main.c \$$
 $$								$$
 NAME = minishell$$						NAME = minishell$$
 CC = gcc$$							CC = gcc$$
-CFLAGS = -Wall -Wextra -Werror -g$$				CFLAGS = -Wall -Wextra -Werror -g$$
+CFLAGS = -Wall -Wextra -Werror -g -O0$$				CFLAGS = -Wall -Wextra -Werror -g -O0$$
 LIBFT = ./incl/libft$$						LIBFT = ./incl/libft$$
 OBJS = ${SRC:.c=.o}$$						OBJS = ${SRC:.c=.o}$$
 $$								$$
@@ -757,17 +864,26 @@ Test: cat Makefile | grep srcs | grep srcs | cat -e		Test: cat Makefile | grep s
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: cat | cat | cat | ls					Test: cat | cat | cat | ls
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
@@ -912,11 +1028,11 @@ echo								echo
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: echo *t							Test: echo *t
-out_bash.txt out_minishell.txt					out_bash.txt out_minishell.txt
+out.txt out_bash.txt out_minishell.txt result to_do.txt		out.txt out_bash.txt out_minishell.txt result to_do.txt
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: echo *t hola						Test: echo *t hola
-out_bash.txt out_minishell.txt hola				out_bash.txt out_minishell.txt hola
+out.txt out_bash.txt out_minishell.txt result to_do.txt hola	out.txt out_bash.txt out_minishell.txt result to_do.txt hola
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: echo --------n						Test: echo --------n
@@ -1090,22 +1206,31 @@ Test: exit 666							Test: exit 666
 Exit-Status: 154						Exit-Status: 154
 ---								---
 Test: exit | ls							Test: exit | ls
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: export HOL=A=""						Test: export HOL=A=""
-Exit-Status: 0						      |	Exit-Status: 134
+Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: export hola | unset hola | echo $?			Test: export hola | unset hola | echo $?
 0								0
@@ -1157,13 +1282,13 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST>	en0: flags=8863<UP
 	media: autoselect						media: autoselect
 	status: active							status: active
 awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTIC	awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTIC
-	ether 4e:ff:c8:10:73:b8 					ether 4e:ff:c8:10:73:b8 
-	inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 sc		inet6 fe80::4cff:c8ff:fe10:73b8%awdl0 prefixlen 64 sc
+	ether e6:85:27:d6:d2:f3 					ether e6:85:27:d6:d2:f3 
+	inet6 fe80::e485:27ff:fed6:d2f3%awdl0 prefixlen 64 sc		inet6 fe80::e485:27ff:fed6:d2f3%awdl0 prefixlen 64 sc
 	media: autoselect						media: autoselect
 	status: active							status: active
 llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST	llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST
-	ether 4e:ff:c8:10:73:b8 					ether 4e:ff:c8:10:73:b8 
-	inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 sco		inet6 fe80::4cff:c8ff:fe10:73b8%llw0 prefixlen 64 sco
+	ether e6:85:27:d6:d2:f3 					ether e6:85:27:d6:d2:f3 
+	inet6 fe80::e485:27ff:fed6:d2f3%llw0 prefixlen 64 sco		inet6 fe80::e485:27ff:fed6:d2f3%llw0 prefixlen 64 sco
 	media: autoselect						media: autoselect
 	status: active							status: active
 bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTIC	bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTIC
@@ -1191,17 +1316,26 @@ Test: ifconfig | grep hola					Test: ifconfig | grep hola
 Exit-Status: 1							Exit-Status: 1
 ---								---
 Test: ls							Test: ls
+Doxyfile							Doxyfile
 Makefile							Makefile
 README.md							README.md
 eval.sh								eval.sh
+html								html
 incl								incl
 minimalraw.log							minimalraw.log
 minishell							minishell
 minishell.dSYM							minishell.dSYM
+out.txt								out.txt
+out1								out1
+out2								out2
+out3								out3
+out4								out4
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+result								result
 src								src
+to_do.txt							to_do.txt
 valgrind_leaks_file						valgrind_leaks_file
 Exit-Status: 0							Exit-Status: 0
 ---								---
@@ -1209,34 +1343,46 @@ Test: ls *.*							Test: ls *.*
 README.md							README.md
 eval.sh								eval.sh
 minimalraw.log							minimalraw.log
+out.txt								out.txt
 out_bash.txt							out_bash.txt
 out_minishell.txt						out_minishell.txt
 parse_valgrind_suppressions.sh					parse_valgrind_suppressions.sh
+to_do.txt							to_do.txt
 
 minishell.dSYM:							minishell.dSYM:
 Contents							Contents
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep "."						Test: ls -la | grep "."
-total 560						      |	total 552
-drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .			drwxr-xr-x  18 mel  staff    576  4 Sep 19:16 .
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..		drwxr-xr-x   3 mel  staff     96  4 Sep 14:36 ..
-drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git		drwxr-xr-x  15 mel  staff    480  4 Sep 16:11 .git
--rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma	-rw-r--r--   1 mel  staff    171  4 Sep 16:11 .valgrind_comma
--rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl	-rw-r--r--   1 mel  staff   8641  4 Sep 14:36 .valgrind_readl
--rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc	-rw-r--r--   1 mel  staff    150  4 Sep 16:11 .valgrindrc
--rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile		-rwxr-xr-x   1 mel  staff   2167  4 Sep 14:36 Makefile
--rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md		-rw-r--r--   1 mel  staff     11  4 Sep 14:36 README.md
--rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh		-rwxr-xr-x   1 mel  staff  11104  4 Sep 14:36 eval.sh
-drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl		drwxr-xr-x   8 mel  staff    256  4 Sep 19:16 incl
--rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log	-rw-r--r--   1 mel  staff  68267  4 Sep 14:36 minimalraw.log
--rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell		-rwxr-xr-x   1 mel  staff  82726  4 Sep 19:16 minishell
-drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM	drwxr-xr-x   3 mel  staff     96  4 Sep 14:37 minishell.dSYM
--rw-r--r--   1 mel  staff  31802  4 Sep 19:17 out_bash.txt    |	-rw-r--r--   1 mel  staff  31778  4 Sep 19:17 out_bash.txt
--rw-r--r--   1 mel  staff  32796  4 Sep 19:17 out_minishell.t |	-rw-r--r--   1 mel  staff  31716  4 Sep 19:17 out_minishell.t
--rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_	-rwxr-xr-x   1 mel  staff   2631  4 Sep 14:36 parse_valgrind_
-drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src		drwxr-xr-x  31 mel  staff    992  4 Sep 19:16 src
--rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_	-rw-r--r--   1 mel  staff  13585  4 Sep 16:11 valgrind_leaks_
+total 856							total 856
+drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .		drwxr-xr-x    28 mel  staff     896  5 Sep 16:48 .
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..		drwxr-xr-x     3 mel  staff      96  4 Sep 14:36 ..
+-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp	-rw-r--r--     1 mel  staff      30  5 Sep 13:19 .bonus_tmp
+drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git		drwxr-xr-x    15 mel  staff     480  5 Sep 13:08 .git
+-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co	-rw-r--r--     1 mel  staff     171  4 Sep 16:11 .valgrind_co
+-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re	-rw-r--r--     1 mel  staff    9301  5 Sep 13:08 .valgrind_re
+-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc	-rw-r--r--     1 mel  staff     116  4 Sep 21:03 .valgrindrc
+-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile	-rw-r--r--     1 mel  staff  112637  5 Sep 13:08 Doxyfile
+-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile	-rwxr-xr-x     1 mel  staff    2171  4 Sep 21:03 Makefile
+-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md	-rw-r--r--     1 mel  staff      11  4 Sep 14:36 README.md
+-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh	-rwxr-xr-x     1 mel  staff   11104  4 Sep 14:36 eval.sh
+drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html		drwxr-xr-x  1026 mel  staff   32832  5 Sep 13:08 html
+drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl		drwxr-xr-x     8 mel  staff     256  5 Sep 16:45 incl
+-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l	-rw-r--r--     1 mel  staff   68267  4 Sep 14:36 minimalraw.l
+-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell	-rwxr-xr-x     1 mel  staff   82662  5 Sep 16:45 minishell
+drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS	drwxr-xr-x     3 mel  staff      96  4 Sep 14:37 minishell.dS
+-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt	-rw-r--r--     1 mel  staff     440  5 Sep 14:08 out.txt
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out1
+-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2		-rwxr-xr-x     1 mel  staff       0  5 Sep 13:24 out2
+-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3		-rwxr-xr-x     1 mel  staff      17  5 Sep 13:28 out3
+-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4		-rwxr-xr-x     1 mel  staff    2171  5 Sep 13:28 out4
+-rw-r--r--     1 mel  staff   37148  5 Sep 16:48 out_bash.txt |	-rw-r--r--     1 mel  staff   37124  5 Sep 16:48 out_bash.txt
+-rw-r--r--     1 mel  staff   38752  5 Sep 16:48 out_minishel |	-rw-r--r--     1 mel  staff   37058  5 Sep 16:48 out_minishel
+-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri	-rwxr-xr-x     1 mel  staff    2631  4 Sep 14:36 parse_valgri
+-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result		-rwxr-xr-x     1 mel  staff     624  5 Sep 13:30 result
+drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src		drwxr-xr-x    31 mel  staff     992  5 Sep 16:45 src
+-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt	-rw-r--r--     1 mel  staff    3426  5 Sep 15:12 to_do.txt
+-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea	-rw-r--r--     1 mel  staff   13585  4 Sep 16:11 valgrind_lea
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls hola							Test: ls hola

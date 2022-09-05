@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:04:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 19:16:24 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/05 16:52:00 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	malloc_new_str(t_replace *rpl)
 		(rpl->end - rpl->start) + rpl->strlen_new_part;
 	rpl->new_str = (char *) ft_calloc((rpl->strlen_new_str + 1), sizeof (char));
 	if (rpl->new_str == NULL)
-		exit (0); //exit & error
+		exit (0);
 }
 
 int		set_vars(t_replace *rpl, char *full_str, char *old_part)
@@ -85,15 +85,15 @@ char	*replace_str(char *full_str, char *old_part, char *new_part)
 {
 	t_replace	rpl;
 	if (debug_mode < -3)
-		printf("replace_str.c/103 I was here1.\n");
-	if (full_str == NULL || old_part == NULL /*|| new_part == NULL*/)
+		printf("replace_str.c/88.\n");
+	if (full_str == NULL || old_part == NULL)
 		return (NULL);
 	if (debug_mode < -3)
-		printf("replace_str.c/107 I was here2.\n");
+		printf("replace_str.c/92.\n");
 	if (full_str[0] == '\0')
 		return ("");
 	if (debug_mode < -3)
-		printf("replace_str.c/111 I was here3.\n");
+		printf("replace_str.c/96.\n");
 	init_rpl(&rpl, full_str, old_part, new_part);
 	while (full_str[rpl.i] != '\0')
 	{
@@ -105,7 +105,5 @@ char	*replace_str(char *full_str, char *old_part, char *new_part)
 	malloc_new_str(&rpl);
 	replace_string_2(&rpl, full_str, new_part);
 	free(full_str);
-//	free(old_part);
-//	free(new_part);
 	return (rpl.new_str);
 }

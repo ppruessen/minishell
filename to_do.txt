@@ -1,0 +1,102 @@
+// immer den ersten quote den er findet entfernen, wenn ungerade Anzahl
+// wenn gerade anzahl beide weg
+
+Syntax error <<< raus gehen keine Fehlermeldung
+>>> syntax error near unexpected token `>'
+--------------------- IMPORTANT ------------------
+// Schneidet nicht richtig, siehe ls >>> out.txt im debug modus
+# exec_test 'ls>out.txt'
+	# exec_test 'ls>>out.txt'
+	# exec_test 'ls>> out.txt'
+	# exec_test '<<stop grep hallo>>out.txt'
+	# exec_test 'grep main<Makefile>out.txt'
+	# exec_test '<Makefile grep main>out.txt'
+	# exec_test 'grep main<"Makefile">out.txt'
+
+echo $HOME$USER
+	sollte beide $Variablen ersetzen und ausgeben, macht aber gar nichts
+
+	Try ctrl-C after running a blocking command like cat or grep without arguments
+		wir bekommen zwei new promots
+
+---------------------------------------------------
+
+	---- PAMELA -----
+	PaMela <3 /bin/ls/filethat
+	bash: /bin/ls/filethat: command not found
+	PaMela <3 echo $?
+	127
+	---- BASH -------
+	bash-3.2$ /bin/ls/filethat
+	bash: /bin/ls/filethat: Not a directory
+	bash-3.2$ echo $?
+	126
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+cd .. | pwd
+	sollte cd .. ignorieren und den aktuellen pfad ausgeben  -->solved
+--> siehe execute_cmds.c Z. 363, und find_inbuilts.c ->if (cmd->write_to_pipe != 1)
+
+echo "$"HOME
+	da kommt laut Test $HOME @�! raus   -----> jetzt $HOME
+echo "$"""
+	da kommt laut Test $ @�! raus ------> jetzt $
+echo ""hola
+	da kommt laut Test hola !0���������c�@�! raus --->jetzt hola
+--- ich hab diese komischen Zeichen händisch getestet, da sieht man sie nicht, vllt geben wir die eval.sh doch nicht mit. 
+echo $"HOME"
+	da kommt laut Test $HOME raus. Richtig wäre: HOME ---> keine Ahnung wie die Logik dahinter sein soll??
+echo hola""
+	da kommt laut Test hola !0���������c�@�! raus --->jetzt hola
+echo hola""""""""""""
+	da kommt laut Test hola c[@�! #�����W��O��{��C�� #��O���{��C �@�! #��O���{��C  raus. --->jetzt hola
+
+< Makefile grep main
+	keine Ausgabe bzw. segmentation fault  ----> jetzt SRC =   ./src/main.c \
+
+bash-3.2$ echo $?bla
+0bla --->bei uns ist es nur der error code
+
+bash-3.2$ enset m |pwd
+/Users/mel
+bash: enset: command not found ---->Was macht Pamela? Pamela meldet command not found nicht
+
+
+Test: /bin/doesnotexist -doesnotexist ✗  "/bin/doesnotexist -doesnotexist" 
+
+Your output : 
+--------------------
+bash: /bin/doesnotexist: command not found
+--------------------
+Expected output : 
+--------------------
+bash: /bin/doesnotexist: No such file or directory
+--------------------
+
+cat <pwd geht nicht. Wichtig? Andere Fälle mit < Zeichen?
+
+exit | ls soll raus oder nicht? Muss auf jeden Fall ls machen
+
+----------------		ERLEDIGT		----------------------------------------
+Inbuild Funktionen werden nicht aufgerufen
+	Offensichtlich werden die Inbuild Funktionen nicht aufgerufen und es wird
+	ein Child Prozess erstellt und ins execve geroutet.
+
+Exit Funktion konnte keine Vorzeichen erkennen
+	Die Exit Funktion gab als Ausgabe bei + oder - : "kein Numerisches Argument"
+
+CD ohne Parameter ergibt einen Segmentation Fault ---> alles gut, nicht mehr
+
+cd .. | echo "hola"
+	sollte hola ausgeben   ----> macht es
+
+Exit Codes stimmen nicht
+	Scheinbar wird der exit code am Anfang jeder Eingabe auf -42 irgendwo gesetzt.
+	$? gibt dann einen falschen exit code (214) aus, wenn ein Befehl normal hätte
+	funktionieren sollen.
+	$? Gleich am Anfang gibt -42, sollte 0 sein.
+
+echo $
+	segmentation fault

@@ -3,40 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/05 10:53:10 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/05 13:58:54 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
 
-//TODO ls -la | grep mel | grep file | grep Make >>file68 | ls
-// grep mel << stop | grep ist
-// Reihenfolge bei redirections kann beliebig sein, lösen!
-//bei mehreren >outfiles werden alle dateien erstellt und dann in die letzte geschrieben
-//bei mehreren <inputfiles wird nur vom letzten geöffnet und gelesen
-//wenn es ein input file nicht gibt wird direkt abgebrochen
-// wie lösen wir das in dem codierten input string?
-
-//	fixed: <  <"Makefile" grep main ---->   zsh: parse error near `<'
-//			Fehlermeldung eventuell noch anpassen, aber meiner Meinung nach hat das keine Priorität
-// <"Makefile" grep main crasht
-// <<< Makefile grep main ----> neue Zeile ohne Fehlermeldung
-// "<" Makefile grep main ----> segmentation fault   ERLEDIGT
-//			bash Ausgabe: "bash: <: command not found"
-// "<" wird in box gepackt, aber es gibt am Ende der CMD-Liste keine NULL, da count_words die "<" nicht mitzählt
-// die leeren "" partly solved: str_split Zeile 45 return "" statt NULL und set_cmd path check
-// Achtung, die leeren "" müssen auch in pipes funktionieren -> sollte laufen?!
+//echo $USER$HOME
+//<out3<out4 grep main
+//SRC =   ./src/main.c 
+//<  <"Makefile" grep main
+//bash: syntax error near unexpected token `<'
 // cat | cat | ls läuft nicht wie in bash
-// leaks bei str D oder exit ?
-// echo $? ganz am Anfang gibt leider -42 aus
-// Die "" funktionieren als erstes Argument leider nicht, wie kann man das abfangen?
-// sonst zb bei ls "" funktioniert es
-// Exit stati von strg D oder strg C sind nicht wie in den bash
-// Nach einem command not found muss man manchmal zwei mal exit eingeben
-// unexpected token funktionieren nicht mehr -> Syntax Error nochmal checken
+//PATH="ls -la export vergisst die schließenden "
+
 
 /* Initialise the var-struct variables */
 static void	init_var(t_var *var, int argc, 
@@ -70,7 +53,7 @@ static void	sig_handler(int signo)
 {
 	if (signo == SIGINT)
 	{
-		g_status = 130; // strg C hat exit status 1 in der bash, Strg D hat 127
+		g_status = 1; // strg C hat exit status 1 in der bash, Strg D hat 127
 		ioctl(STDIN_FILENO, TIOCSTI, "\n");
 //		rl_replace_line("", 0);
 		rl_on_new_line();

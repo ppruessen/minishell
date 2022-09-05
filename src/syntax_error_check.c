@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:30:11 by mschiman          #+#    #+#             */
-/*   Updated: 2022/08/30 21:02:59 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/05 17:03:12 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,15 @@ static int	syntax_error_check_redir(t_var *var)
 	int	i;
 
 	i = 0;
+	if (debug_mode < -3)
+		printf("Syntax Error Check 82:\n%s\n%s\n", var->input, var->input_escape);
 	while (var->input[i] != '\0')
 	{
 		if (var->input[i] == '>' && var->input_escape[i] == '3')
 		{
 			if (var->input[i + 1] == '>' && var->input_escape[i + 1] == '3')
 			{
-				if (var->input[i] == '>' && var->input_escape[i] == '3')
+				if (var->input[i + 2] == '>' && var->input_escape[i] == '3')
 				{
 					print_error(var, TOO_MANY_REDIR_OUT_TWO);
 					return (1);

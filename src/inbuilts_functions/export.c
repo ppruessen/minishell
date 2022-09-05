@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/05 11:43:56 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/05 16:53:11 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	has_equal_sign(char *str)
 	res = 0;
 	while (str[i] != '\0' && str[0] != '=')
 	{
-		if (str[i] == '=' && ft_isalpha(str[i - 1]) == 1)
+		if (str[i] == '=')
 			res++;
 		i++;
 	}
@@ -45,10 +45,7 @@ int	repl_env_list(t_var *var, char *cmd)
 			{
 				free (list->content);
 				list->content = NULL;
-				printf("LIST->CONTENT WIRD ERSETZT\n");
 				list->content = ft_strdup(cmd);
-//				free(temp_str);
-//				temp_str = NULL;
 				g_status = 0;
 				return (1);
 			}
@@ -76,25 +73,28 @@ void	export_var(t_var *var, char **cmd)
 		g_status = 0;
 	}
 	i = 1;
-	while (cmd[i] != NULL)
+	while (cmd[i] != NULL && cmd[i][0] != '\0') //check ob die zweite condition nicht woanders crasht
 	{
+		cmd[i] = replace_str(cmd[i], "'", "");
+		cmd[i] = replace_str(cmd[i], "\"", "");
 		if (has_equal_sign(cmd[i]) > 0)
 		{
-			if (repl_env_list(var, cmd[i]) == 0)
+			if (ft_isdigit(cmd[i][0]) == 1)
 			{
-				temp = ft_strdup(cmd[i]);
-				printf("ADRESS OF TEMP : %p or %p\n", &temp, temp);
-				ft_lstadd_back(&var->env_list, ft_lstnew(temp));
-//				free (cmd[i]);
-//				cmd[i] = NULL;
-				g_status = 0;
-			}
-			if (cmd[i + 1] != NULL && has_equal_sign(cmd[i + 1]) == 0
-				&& ft_isdigit(cmd[i + 1][0]) == 1)
-			{
-				printf("bash: export: `%s': not a valid identifier\n", cmd[i + 1]);
+				printf("bash: export: `%s': not a valid identifier\n", cmd[i]);
 				g_status = 1;
 			}
+			else if (repl_env_list(var, cmd[i]) == 0)
+			{
+				temp = ft_strdup(cmd[i]);
+				ft_lstadd_back(&var->env_list, ft_lstnew(temp));
+				g_status = 0;
+			}
+		}
+		else if (has_equal_sign(cmd[i]) == 0 && ft_isdigit(cmd[i][0]) == 1)
+		{
+			printf("bash: export: `%s': not a valid identifier\n", cmd[i]);
+			g_status = 1;
 		}
 		i++;
 	}

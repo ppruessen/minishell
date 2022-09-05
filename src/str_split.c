@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:48:42 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/04 15:48:32 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/05 19:53:59 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static int	find_start(t_var *var, int start)
 {
+	//if (start > 0 && var->t_escape[start] == 'F')
+	//	start++;
 	while (var->t_input[start])
 	{
 		if (var->t_input[start] != ' ' && var->t_input[start] != '\t'
@@ -27,7 +29,6 @@ static int	find_start(t_var *var, int start)
 			return (start + 1);
 		else if (var->t_escape[start] == '0' && var->t_escape[start + 1] == '0')
 			return (start);
-//		printf("I was here strsplit line 30 var->t_escape[start]: |%i|\n", start);
 		start++;
 	}
 	return (start);
@@ -42,8 +43,15 @@ static int	find_end(t_var *var, int end)
 			return (end);
 		else if (var->t_escape[end] == 'F')
 		{
-			if (var->t_escape[end + 1] != 'F')
+		/*	if (ft_iswhitespace(var->t_input[end + 1]) == 1)
+			{
 				return (end + 1);
+			}
+			else */if (var->t_escape[end + 1] != 'F')
+				return (end + 1);
+			//	return (end);
+		//	else if (var->t_escape[end + 1] == 'F')
+		//		;
 		}
 		else if (var->t_escape[end] == 'W')
 		{
@@ -74,22 +82,21 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 
 	if (debug_mode < -3)
 	{
-		printf("str_split.c/141:\tvar->t_input =\t%s\n", var->t_input);
-		printf("str_split.c/142:\tvar->t_escape =\t%s\n", var->t_escape);
-		printf("str_split.c/143:\tword_num =\t%zu\n", word_num);
-		printf("str_split.c/144:\tcmd->nb_cmds =\t%d\n", cmd->nb_cmds);
+		printf("str_split.c/76:\tvar->t_input =\t%s\n", var->t_input);
+		printf("str_split.c/77:\tvar->t_escape =\t%s\n", var->t_escape);
+		printf("str_split.c/78:\tword_num =\t%zu\n", word_num);
+		printf("str_split.c/79:\tcmd->nb_cmds =\t%d\n", cmd->nb_cmds);
 	}
 	start = 0;
 	i = 0;
 	while (i < word_num)
 	{
-		
 		start = find_start(var, start);
 		if (debug_mode < -3)
-			printf("str_split.c/191: start: %d\n", start);
+			printf("str_split.c/88: start: %d\n", start);
 		end	= find_end(var, start);
 		if (debug_mode < -3)
-			printf("str_split.c/194: end: %d\n", end);
+			printf("str_split.c/91: end: %d\n", end);
 		if (var->t_escape[start] == '0' && var->t_escape[end] == '0'
 			&& var->t_escape[end + 1] == '3' && (var->t_input[end + 1] == ' '
 				|| var->t_input[end + 1] == '\n' 
@@ -97,7 +104,7 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 				|| var->t_input [end + 1] == '\0'))
 		{
 			if (debug_mode < -3)
-				printf("str_split.c/201: str_dup\n");
+				printf("str_split.c/99: str_dup\n");
 			cmd->cmd[i] = ft_strdup("");
 			cmd->cmd_esc[i] = ft_strdup("00");
 		}
@@ -112,24 +119,28 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 			if (var->t_escape[start] == '0' && var->t_escape[end] == '0')
 			{
 				if (debug_mode < -3)
-					printf("str_split.c/210: empty quotes\n");
+					printf("str_split.c/114: empty quotes\n");
 				start = find_start(var, start + 2);
 				end	= find_end(var, start);
 				if (debug_mode < -3)
-					printf("str_split.c/214: start: %d\n", start);
+					printf("str_split.c/118: start: %d\n", start);
 				if (debug_mode < -3)
-					printf("str_split.c/216: end: %d\n", end);
+					printf("str_split.c/120: end: %d\n", end);
 			}
 			cmd->cmd[i] = (char *) ft_calloc((end - start + 1), sizeof(char));
 			cmd->cmd_esc[i] = (char *) ft_calloc((end - start + 1), sizeof(char));
 			if (!cmd->cmd[i] || !cmd->cmd_esc[i])
 				return ;
+			if (start == end)
+			{
+				ft_strjoin_char(cmd->cmd[i], var->t_input[start]);
+			}
 			ft_strlcpy(cmd->cmd[i], &var->t_input[start], end - start + 1);
 			ft_strlcpy(cmd->cmd_esc[i], &var->t_escape[start], end - start + 1);
 			if (debug_mode < -3)
-				printf("str_split.c/189: cmd->cmd[%zu]: \t%s\n", i, cmd->cmd[i]);
+				printf("str_split.c/129: cmd->cmd[%zu]: \t%s\n", i, cmd->cmd[i]);
 			if (debug_mode < -3)
-				printf("str_split.c/189: cmd->cmd_esc[%zu]: \t%s\n", i, cmd->cmd_esc[i]);
+				printf("str_split.c/131: cmd->cmd_esc[%zu]: \t%s\n", i, cmd->cmd_esc[i]);
 		}
 		start = end;
 		i++;
