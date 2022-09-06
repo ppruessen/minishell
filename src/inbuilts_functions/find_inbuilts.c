@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 18:19:56 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 19:45:55 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/06 11:21:23 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	find_inbuilts(t_var *var, t_cmd *cmd, char *str)
 		if (debug_mode < -3)
 			printf("find_inbuilds.c/54 Export Function erkannt\n");
 		if (cmd->write_to_pipe != 1)
-			export_var(var, cmd->cmd);
+			export_var(var, cmd->cmd, cmd->cmd_esc);
 	}	
 	else if (str[i] == 'u' && str[i + 1] == 'n' && str[i + 2] == 's'
 		&& str[i + 3] == 'e' && str[i + 4] == 't' && str[i + 5] == '\0')

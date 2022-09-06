@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 12:06:33 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/05 16:53:11 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/06 11:25:58 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ int	repl_env_list(t_var *var, char *cmd)
 	return (0);
 }
 
-void	export_var(t_var *var, char **cmd)
+void	export_var(t_var *var, char **cmd, char **cmd_esc)
 {
 	int		i;
+	int		j;
 	t_list	*list;
 	char	*temp;
 
@@ -75,8 +76,13 @@ void	export_var(t_var *var, char **cmd)
 	i = 1;
 	while (cmd[i] != NULL && cmd[i][0] != '\0') //check ob die zweite condition nicht woanders crasht
 	{
-		cmd[i] = replace_str(cmd[i], "'", "");
-		cmd[i] = replace_str(cmd[i], "\"", "");
+		j = 0;
+		while (cmd_esc[i][j] && cmd_esc[i][j] != '0')
+			j++;
+		if (cmd[i][j] == '\'')
+			cmd[i] = replace_str(cmd[i], "'", "");
+		if (cmd[i][j] == '"')
+			cmd[i] = replace_str(cmd[i], "\"", "");
 		if (has_equal_sign(cmd[i]) > 0)
 		{
 			if (ft_isdigit(cmd[i][0]) == 1)

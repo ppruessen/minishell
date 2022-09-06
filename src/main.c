@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/05 13:58:54 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/06 09:54:46 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
 
-//echo $USER$HOME
-//<out3<out4 grep main
+//echo $USER$HOME			// Hendrik interpretiert nur den ersten Teil
+//<out3<out4 grep main		// kann Hendrik auch nicht
 //SRC =   ./src/main.c 
 //<  <"Makefile" grep main
 //bash: syntax error near unexpected token `<'

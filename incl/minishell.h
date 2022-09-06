@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 19:06:49 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/06 11:21:41 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,7 +189,7 @@ char	**create_env_from_list(t_list *env_list);
 
 /* incl/inbuilts_functions */
 /* export.c*  */
-void	export_var(t_var *var, char **cmd);
+void	export_var(t_var *var, char **cmd, char **cmd_esc);
 /* exit.c */
 void	clean_up(t_var *var);
 void	ms_exit(t_var *var, char **cmd);

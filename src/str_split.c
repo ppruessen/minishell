@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_split.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 20:48:42 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/05 19:53:59 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/06 10:55:11 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,10 +131,6 @@ void	str_split(t_var *var, t_cmd *cmd, size_t word_num)
 			cmd->cmd_esc[i] = (char *) ft_calloc((end - start + 1), sizeof(char));
 			if (!cmd->cmd[i] || !cmd->cmd_esc[i])
 				return ;
-			if (start == end)
-			{
-				ft_strjoin_char(cmd->cmd[i], var->t_input[start]);
-			}
 			ft_strlcpy(cmd->cmd[i], &var->t_input[start], end - start + 1);
 			ft_strlcpy(cmd->cmd_esc[i], &var->t_escape[start], end - start + 1);
 			if (debug_mode < -3)
