@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/06 22:44:37 by mschiman         ###   ########.fr        #
+#    Updated: 2022/09/04 20:57:33 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,13 +23,6 @@ SRC = 	./src/main.c \
 		./src/execute_cmds.c \
 		./src/create_env_from_list.c \
 		./src/handle_here_doc.c \
-		./src/pipes.c \
-		./src/redir.c \
-		./src/init.c \
-		./src/expand_var_utils.c \
-		./src/fd.c \
-		./src/dir_list.c \
-		./src/path.c \
 		./src/inbuilts_functions/cd.c \
 		./src/inbuilts_functions/exit.c \
 		./src/inbuilts_functions/export.c \

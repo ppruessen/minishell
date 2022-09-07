@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 11:21:41 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/07 13:37:06 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,10 +162,16 @@ void	print_cmd_error(t_var *var, int error_code, char *cmd);
 void	syntax_error_check(t_var *var);
 
 /* src/fill_cmd_structures.c */
+char	*extract_next_word(char *full_str, char *esc_str, int start);
 void	fill_cmd_structures(t_var *var);
 
 /* src/expand_variables.c */
 void	expand_variables(t_var *var);
+
+/*src/expand_var_utils.c*/
+char	*expand_env(t_var *var);
+char	*expand_special_dollar(t_var *var);
+int		mark_variables_to_expand(t_var *var);
 
 /* src/put_temp_input_to_cmd.c */
 int		whitespace_runner(char *input, char *escaped, int i);
@@ -181,11 +187,40 @@ char	*replace_str(char *full_str, char *old_part, char *new_part);
 /* incl/str_split.c */
 void	str_split(t_var *var, t_cmd *cmd, size_t word_num);
 
+/*incl/dir_list.c*/
+void	free_dir_list_cmd(char **dir_list, char *cmd);
+void	gen_dir_list(t_var *var);
+
 /* src/execute_cmds.c */
 void	execute_cmds(t_var *var);
 
 /* src/create_env_from_list.c */
 char	**create_env_from_list(t_list *env_list);
+
+/*src/fd.c*/
+void	open_filedescriptors(t_var *var);
+void	open_read_from_file(t_cmd *cmd);
+void	open_write_to_file(t_cmd *cmd);
+
+/*src/redir.c*/
+int		set_redirections(char *temp_input, char *temp_escaped, t_cmd *cmd, t_var *var);
+void	open_redirections(t_cmd *cmd);
+
+/*src/path.c*/
+char	*create_rel_path(char *cmd_path);
+void	get_path(t_var *var);
+char	*check_and_set_path(char *cmd, t_var *var);
+char	*set_inbuilt_path(t_cmd *cmd, t_var *var);
+void	set_cmd_path(t_cmd *cmd, t_var *var);
+
+/*src/pipes.c*/
+void	set_pipe_status(t_var *var, t_cmd *cmd, int cmd_nb);
+void	close_all_read_pipes(t_var *var);
+void	set_pipes_in_child(t_var *var, t_cmd *cmd, int i);
+void	close_pipes_in_parent(t_var *var, int i);
+
+/*src/init.c*/
+void	init_cmd(t_cmd *cmd);
 
 /* incl/inbuilts_functions */
 /* export.c*  */

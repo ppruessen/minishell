@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:44:56 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 17:00:50 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/08/30 21:35:57 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	print_file_error(t_var *var, int error_code)
 {
 	if (error_code == FILE_NOT_FOUND)
 		printf("No such file or directory\n");
+//	g_status = 127; vllt falsch
 	g_status = 1;
 	var->cmd_check = FALSE;
 }
