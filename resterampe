@@ -1,0 +1,24 @@
+void	print_cmd(t_var *var, int i)
+{
+	int	j;
+
+	printf("----------------------COMMANDS[%i]------------------------\n", i);
+	printf("var->cmds[%d]->inbuilt = %d\n", i, var->cmds[i]->inbuilt);
+	printf("var->cmds[%d]->read_from_file = %d\n", i,
+		var->cmds[i]->read_from_file);
+	printf("var->cmds[%d]->write_to_file = %d\n", i,
+		var->cmds[i]->write_to_file);
+	printf("var->cmds[%d]->read_from_pipe = %d\n", i,
+		var->cmds[i]->read_from_pipe);
+	printf("var->cmds[%d]->write_to_pipe = %d\n", i,
+		var->cmds[i]->write_to_pipe);
+	printf("var->pipes = %d\n", var->pipes);
+	j = 0;
+	while (var->cmds[i]->cmd[j] != NULL)
+	{
+		printf("CMD[%d]:\t\t %s\n", j, var->cmds[i]->cmd[j]);
+		printf("CMD_ESC[%d]:\t %s\n", j, var->cmds[i]->cmd_esc[j]);
+		j++;
+	}
+	printf("--------------------------------------------------------\n");
+}
