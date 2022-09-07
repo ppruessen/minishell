@@ -1,0 +1,22 @@
+SRC = 	./src/main.c \
+		./src/parse_input.c \
+		./src/errors.c \
+		./src/syntax_error_check.c \
+		./src/fill_cmd_structures.c \
+		./src/expand_variables.c \
+		./src/put_temp_input_to_cmd.c \
+		./src/replace_str.c \
+		./src/copy_env.c \
+		./src/str_split.c \
+		./src/execute_cmds.c \
+		./src/create_env_from_list.c \
+		./src/handle_here_doc.c \
+		./src/inbuilts_functions/cd.c \
+		./src/inbuilts_functions/exit.c \
+		./src/inbuilts_functions/export.c \
+		./src/inbuilts_functions/unset.c \
+		./src/inbuilts_functions/find_inbuilts.c \
+		./src/accurat_cleaner.c \
+#	-rm ./src/inbuilts/*.o
+	-rm ./src/*.o
+#	-rm ./src/utils/*.o

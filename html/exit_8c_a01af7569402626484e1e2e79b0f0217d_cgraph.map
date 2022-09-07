@@ -1,0 +1,11 @@
+<map id="ms_exit" name="ms_exit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,153,80,179"/>
+<area shape="rect" id="node2" href="$accurat__cleaner_8c.html#ab41a733a0b9e0129967a4aae89d57e24" title="Function to free the env variables." alt="" coords="128,5,284,31"/>
+<area shape="rect" id="node3" href="$accurat__cleaner_8c.html#a8a24309dea3ccfb1654bd8948dc81554" title="Function to find variables that are not NULL." alt="" coords="149,55,263,80"/>
+<area shape="rect" id="node4" href="$accurat__cleaner_8c.html#a43996d94cc2c79270f04f935a90d8f4b" title="Function to clean the t_var structure." alt="" coords="129,104,283,129"/>
+<area shape="rect" id="node5" href="$leaks__checker_8c.html#a2b5fad0f1a29d68e9ebe033253c24fb9" title=" " alt="" coords="155,153,257,179"/>
+<area shape="rect" id="node6" href="$exit_01copy_8c.html#a8eb32ededf515be995a3af69dd5c38d4" title=" " alt="" coords="166,203,246,228"/>
+<area shape="rect" id="node8" href="$ft__atoll_8c.html#ad6f788f37346d62cf2385526153b5d08" title=" " alt="" coords="173,252,239,277"/>
+<area shape="rect" id="node9" href="$ft__isdigit_8c.html#a2cf15b8a1a277d1e2ce3654101a2003d" title=" " alt="" coords="167,301,245,327"/>
+<area shape="rect" id="node7" href="$exit_01copy_8c.html#acde4807b96df725087426099bade4af7" title=" " alt="" coords="332,203,420,228"/>
+</map>

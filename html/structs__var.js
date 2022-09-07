@@ -1,0 +1,26 @@
+var structs__var =
+[
+    [ "argc", "structs__var.html#ad1447518f4372828b8435ae82e48499e", null ],
+    [ "argv", "structs__var.html#af2efa898e9eed6fe6715279cb1ec35b0", null ],
+    [ "cmd_check", "structs__var.html#abb1d5076e418d3a0fe1934ff92e93186", null ],
+    [ "cmds", "structs__var.html#a84ebd0c1c9bd31fcda942b2aa634685d", null ],
+    [ "dir_list", "structs__var.html#a2aabf14f4d157385b2836ec9153576eb", null ],
+    [ "dollar_esc", "structs__var.html#a49a15fa48399fca7792a34d88cd426f0", null ],
+    [ "dollar_esc_value", "structs__var.html#a6765c50f7d4b43fe53a36e807cfdf8ab", null ],
+    [ "dollar_value", "structs__var.html#ac9e70ffcd71e34379ad224b980f736aa", null ],
+    [ "dollar_var", "structs__var.html#a3cb0980cdebec6c805b1e9df7cb0cc31", null ],
+    [ "dquotes", "structs__var.html#a151eec861d22e68ba54810859acc9ec0", null ],
+    [ "env", "structs__var.html#a45c1547b79d23d508a01a427c3171ca4", null ],
+    [ "env_list", "structs__var.html#a5a7f0fdb9958e8fbf37bbfd11108a858", null ],
+    [ "fd", "structs__var.html#ab49a9504592527cefe2d431d03218fbd", null ],
+    [ "index", "structs__var.html#a750b5d744c39a06bfb13e6eb010e35d0", null ],
+    [ "input", "structs__var.html#ab7a32d1060db5fb76b1bd8aa2abced98", null ],
+    [ "input_escape", "structs__var.html#aeca23620d553772d51852cd5ffa5c0b1", null ],
+    [ "path", "structs__var.html#a44196e6a5696d10442c29e639437196e", null ],
+    [ "pipes", "structs__var.html#a954b6b21a84f63385d1664752db1df74", null ],
+    [ "prompt", "structs__var.html#a881961d263cfa8c42ca67419559b3c00", null ],
+    [ "pwd", "structs__var.html#a746844b2fc0eab7ccf5dd562e3f740a1", null ],
+    [ "squotes", "structs__var.html#a154ef9263d2f71155f17711f97ac32d2", null ],
+    [ "t_escape", "structs__var.html#ad1749894dbe51e2360ad59ddadace4d2", null ],
+    [ "t_input", "structs__var.html#ace030bea266cad8f64f901f529bd3c12", null ]
+];
