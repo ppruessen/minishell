@@ -1,588 +1,592 @@
 Test: /bin/ls
-[0;35mPaMela <3 [0m/bin/ls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:    /bin/ls   
-[0;35mPaMela <3 [0m/bin/ls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 		/bin/ls		
-[0;35mPaMela <3 [0m/bin/ls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: /bin/pwd
-[0;35mPaMela <3 [0m/bin/pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test:   /bin/pwd   	
-[0;35mPaMela <3 [0m/bin/pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test:         exit
-[0;35mPaMela <3 [0mexit
 Exit-Status: 0
 ---
 Test: /sbin/ifconfig
-[0;35mPaMela <3 [0m/sbin/ifconfig
-eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.1.125  netmask 255.255.255.0  broadcast 192.168.1.255
-        inet6 2a02:3032:403:5a13:a501:cb8e:a6a8:6ed1  prefixlen 64  scopeid 0x0<global>
-        inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
-        inet6 2a02:3032:403:5a13:865:97b7:bb4:1c06  prefixlen 64  scopeid 0x0<global>
-        ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
-        RX packets 61885  bytes 15625713 (15.6 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 145475  bytes 51305857 (51.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-        device interrupt 20  memory 0xf7c00000-f7c20000  
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 195412  bytes 77513449 (77.5 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 195412  bytes 77513449 (77.5 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-[0;35mPaMela <3 [0mExit-Status: 0
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+	inet 127.0.0.1 netmask 0xff000000 
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+	nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+anpi0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether f6:41:38:14:b7:ab 
+	inet6 fe80::f441:38ff:fe14:b7ab%anpi0 prefixlen 64 scopeid 0x4 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: none
+	status: inactive
+anpi1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether f6:41:38:14:b7:ac 
+	inet6 fe80::f441:38ff:fe14:b7ac%anpi1 prefixlen 64 scopeid 0x5 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: none
+	status: inactive
+en3: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether f6:41:38:14:b7:8b 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: none
+	status: inactive
+en4: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether f6:41:38:14:b7:8c 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: none
+	status: inactive
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 36:d9:b1:eb:96:00 
+	media: autoselect <full-duplex>
+	status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 36:d9:b1:eb:96:04 
+	media: autoselect <full-duplex>
+	status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+	ether 36:d9:b1:eb:96:00 
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x0
+	member: en1 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 8 priority 0 path cost 0
+	member: en2 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 9 priority 0 path cost 0
+	nd6 options=201<PERFORMNUD,DAD>
+	media: <unknown type>
+	status: inactive
+ap1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 3e:91:80:d1:b5:f3 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=6463<RXCSUM,TXCSUM,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+	ether 1c:91:80:d1:b5:f3 
+	inet6 fe80::1c1c:742e:36f1:5009%en0 prefixlen 64 secured scopeid 0xc 
+	inet 192.168.1.121 netmask 0xffffff00 broadcast 192.168.1.255
+	inet6 2a02:3032:403:5a13:18f9:8b15:ce14:1f07 prefixlen 64 autoconf secured 
+	inet6 2a02:3032:403:5a13:c08c:9008:626c:e1da prefixlen 64 autoconf temporary 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether a6:92:64:95:e2:77 
+	inet6 fe80::a492:64ff:fe95:e277%awdl0 prefixlen 64 scopeid 0xd 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether a6:92:64:95:e2:77 
+	inet6 fe80::a492:64ff:fe95:e277%llw0 prefixlen 64 scopeid 0xe 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::b554:a497:1b64:506f%utun0 prefixlen 64 scopeid 0xf 
+	nd6 options=201<PERFORMNUD,DAD>
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+	inet6 fe80::55a6:866c:b589:1723%utun1 prefixlen 64 scopeid 0x10 
+	nd6 options=201<PERFORMNUD,DAD>
+utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
+	inet6 fe80::ce81:b1c:bd2c:69e%utun2 prefixlen 64 scopeid 0x11 
+	nd6 options=201<PERFORMNUD,DAD>
+Exit-Status: 0
 ---
 Test: 
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:         
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 			
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:   		  
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 		  		
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd
-[0;35mPaMela <3 [0mcd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:       cd    
-[0;35mPaMela <3 [0mcd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: /bin/ls -la
-[0;35mPaMela <3 [0m/bin/ls -la
-total 576
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo   2418 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   3096 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 752
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff    5163  7 Sep 14:03 out_bash.txt
+-rw-r--r--     1 patrick  staff    5168  7 Sep 14:03 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test: /bin/ls       -la
-[0;35mPaMela <3 [0m/bin/ls -la
-total 584
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo   4192 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   4930 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 752
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff    7116  7 Sep 14:03 out_bash.txt
+-rw-r--r--     1 patrick  staff    7127  7 Sep 14:03 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test:   /bin/ls      -la  
-[0;35mPaMela <3 [0m/bin/ls -la
-total 584
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo   5972 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   6767 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 768
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff    9075  7 Sep 14:03 out_bash.txt
+-rw-r--r--     1 patrick  staff    9089  7 Sep 14:03 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test:         echo     -n
-[0;35mPaMela <3 [0mecho -n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo
-[0;35mPaMela <3 [0mecho
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 			echo		
-[0;35mPaMela <3 [0mecho
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 			echo	-nnnn	
-[0;35mPaMela <3 [0mecho -nnnn
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 			echo	-n-n-n	
-[0;35mPaMela <3 [0mecho -n-n-n
 -n-n-n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 			echo	-n -nn -nnn	
-[0;35mPaMela <3 [0mecho -n -nn -nnn
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:         exit   42
-[0;35mPaMela <3 [0mexit 42
 Exit-Status: 42
 ---
 Test: exit 42
-[0;35mPaMela <3 [0mexit 42
 Exit-Status: 42
 ---
 Test: exit    -42
-[0;35mPaMela <3 [0mexit -42
 Exit-Status: 214
 ---
 Test: exit - 42
-[0;35mPaMela <3 [0mexit - 42
 bash: exit: -: numeric argument required
 Exit-Status: 255
 ---
 Test: /bin/ls -la
-[0;35mPaMela <3 [0m/bin/ls -la
-total 592
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo   8202 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo   9465 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 768
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff   11486  7 Sep 14:03 out_bash.txt
+-rw-r--r--     1 patrick  staff   11483  7 Sep 14:03 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test: echo $?
-[0;35mPaMela <3 [0mecho $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: /bin/ls -doesnotexist
-[0;35mPaMela <3 [0m/bin/ls -doesnotexist
-/bin/ls: invalid option -- 'e'
-Try '/bin/ls --help' for more information.
-[0;35mPaMela <3 [0mExit-Status: 2
+16719874 0 .
+Exit-Status: 0
 ---
 Test: echo $?
-[0;35mPaMela <3 [0mecho $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $?
-[0;35mPaMela <3 [0mecho $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: expr $? + $?
-[0;35mPaMela <3 [0mexpr $? + $?
 0
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test:      "ls -la"    
-[0;35mPaMela <3 [0m"ls -la"
 bash: ls -la: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test:  echo    "cat lol.c | cat >lol.c"    
-[0;35mPaMela <3 [0mecho "cat lol.c | cat >lol.c"
 cat lol.c | cat >lol.c
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:      "     pwd     "    
-[0;35mPaMela <3 [0m" pwd "
 bash:  pwd : command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test:      ls     '-la'    
-[0;35mPaMela <3 [0mls '-la'
-total 592
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo  10504 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo  12254 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 784
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff   13906  7 Sep 14:03 out_bash.txt
+-rw-r--r--     1 patrick  staff   13897  7 Sep 14:03 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test:      echo     '-n'    
-[0;35mPaMela <3 [0mecho '-n'
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:      echo     '   -n'    
-[0;35mPaMela <3 [0mecho ' -n'
  -n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:      echo     '-n   '    
-[0;35mPaMela <3 [0mecho '-n '
 -n 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:      echo     ''    
-[0;35mPaMela <3 [0mecho ''
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test:      ls     ''    
-[0;35mPaMela <3 [0mls ''
-/usr/bin/ls: cannot access '': No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 2
+ls: : No such file or directory
+Exit-Status: 1
 ---
-Test:  echo    'dactylo'    
-[0;35mPaMela <3 [0mecho 'dactylo'
-dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
+Test:  echo    'patrick'    
+patrick
+Exit-Status: 0
 ---
 Test:      '   '    
-[0;35mPaMela <3 [0m' '
 bash:  : command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test:  'ls    -la |     wc   -l'    
-[0;35mPaMela <3 [0m'ls -la | wc -l'
 bash: ls -la | wc -l: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test: 	unset     M 
-[0;35mPaMela <3 [0munset M
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	export     M=21 
-[0;35mPaMela <3 [0mexport M=21
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	unset     'M' 
-[0;35mPaMela <3 [0munset 'M'
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd  
-[0;35mPaMela <3 [0mcd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd  notexist
-[0;35mPaMela <3 [0mcd notexist
 bash: cd: notexist: No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: 	cd  .. 
-[0;35mPaMela <3 [0mcd ..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd..  
-[0;35mPaMela <3 [0mcd..
 bash: cd..: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test: 	cd  cd    
-[0;35mPaMela <3 [0mcd cd
 bash: cd: cd: No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: 	cd  . 
-[0;35mPaMela <3 [0mcd .
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd  '.'  
-[0;35mPaMela <3 [0mcd '.'
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd  '..'  
-[0;35mPaMela <3 [0mcd '..'
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd ".."  
-[0;35mPaMela <3 [0mcd ".."
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	cd  ../../..  
-[0;35mPaMela <3 [0mcd ../../..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	pwd 
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: 	pwd 
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: 	cd .. 
-[0;35mPaMela <3 [0mcd ..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: 	pwd 
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: cd /
-[0;35mPaMela <3 [0mcd /
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: ls -la | grep mel | wc -l
-[0;35mPaMela <3 [0mls -la | grep mel | wc -l
-0
-[0;35mPaMela <3 [0mExit-Status: 0
+       0
+Exit-Status: 0
 ---
 Test: ls -la | grep mel | wctert -l
-[0;35mPaMela <3 [0mls -la | grep mel | wctert -l
 bash: wctert: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test: ls -la | grep "mel"
-[0;35mPaMela <3 [0mls -la | grep "mel"
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: ls -la | grep mel
-[0;35mPaMela <3 [0mls -la | grep mel
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: ls -la | grep 'mel'
-[0;35mPaMela <3 [0mls -la | grep 'mel'
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: 
-[0;35mPaMela <3 [0m
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: $DONTEXIST
-[0;35mPaMela <3 [0m$DONTEXIST
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: $LESS$VAR
-[0;35mPaMela <3 [0m$LESS$VAR
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: ./minishell
-[0;35mPaMela <3 [0m./minishell
-[0;35mPaMela <3 [0m[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: /bin/echo
-[0;35mPaMela <3 [0m/bin/echo
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: /bin/echo Hola Que Tal
-[0;35mPaMela <3 [0m/bin/echo Hola Que Tal
 Hola Que Tal
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: < pwd
-[0;35mPaMela <3 [0m< pwd
 bash: pwd: No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: cat M*le
-[0;35mPaMela <3 [0mcat Makefile
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/06 22:44:37 by mschiman         ###   ########.fr        #
+#    Updated: 2022/09/07 14:02:26 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -590,6 +594,7 @@ SRC = 	./src/main.c \
 		./src/parse_input.c \
 		./src/errors.c \
 		./src/syntax_error_check.c \
+		./src/syntax_error_check2.c \
 		./src/fill_cmd_structures.c \
 		./src/expand_variables.c \
 		./src/put_temp_input_to_cmd.c \
@@ -646,19 +651,18 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
+.PHONY: clean fclean re re_bonus allExit-Status: 0
 ---
 Test: cat Make*file
-[0;35mPaMela <3 [0mcat Makefile
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/06 22:44:37 by mschiman         ###   ########.fr        #
+#    Updated: 2022/09/07 14:02:26 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -666,6 +670,7 @@ SRC = 	./src/main.c \
 		./src/parse_input.c \
 		./src/errors.c \
 		./src/syntax_error_check.c \
+		./src/syntax_error_check2.c \
 		./src/fill_cmd_structures.c \
 		./src/expand_variables.c \
 		./src/put_temp_input_to_cmd.c \
@@ -722,19 +727,18 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
+.PHONY: clean fclean re re_bonus allExit-Status: 0
 ---
 Test: cat Makefile | cat -e | cat -e
-[0;35mPaMela <3 [0mcat Makefile | cat -e | cat -e
 # **************************************************************************** #$$
 #                                                                              #$$
 #                                                         :::      ::::::::    #$$
 #    Makefile                                           :+:      :+:    :+:    #$$
 #                                                     +:+ +:+         +:+      #$$
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #$$
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #$$
 #                                                 +#+#+#+#+#+   +#+            #$$
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #$$
-#    Updated: 2022/09/06 22:44:37 by mschiman         ###   ########.fr        #$$
+#    Updated: 2022/09/07 14:02:26 by pprussen         ###   ########.fr        #$$
 #                                                                              #$$
 # **************************************************************************** #$$
 $$
@@ -742,6 +746,7 @@ SRC = 	./src/main.c \$$
 		./src/parse_input.c \$$
 		./src/errors.c \$$
 		./src/syntax_error_check.c \$$
+		./src/syntax_error_check2.c \$$
 		./src/fill_cmd_structures.c \$$
 		./src/expand_variables.c \$$
 		./src/put_temp_input_to_cmd.c \$$
@@ -798,732 +803,657 @@ fclean: clean$$
 $$
 re: fclean all$$
 $$
-.PHONY: clean fclean re re_bonus all[0;35mPaMela <3 [0mExit-Status: 0
+.PHONY: clean fclean re re_bonus allExit-Status: 0
 ---
 Test: cat Makefile | grep srcs | cat -e
-[0;35mPaMela <3 [0mcat Makefile | grep srcs | cat -e
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cat Makefile | grep srcs | grep srcs | cat -e
-[0;35mPaMela <3 [0mcat Makefile | grep srcs | grep srcs | cat -e
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cat | cat | cat | ls
-[0;35mPaMela <3 [0mcat | cat | cat | ls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd
-[0;35mPaMela <3 [0mcd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd $HOME
-[0;35mPaMela <3 [0mcd $HOME
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd $HOME $HOME
-[0;35mPaMela <3 [0mcd $HOME $HOME
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd .
-[0;35mPaMela <3 [0mcd .
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ..
-[0;35mPaMela <3 [0mcd ..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd .. | echo "hola"
-[0;35mPaMela <3 [0mcd .. | echo "hola"
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd .. | pwd
-[0;35mPaMela <3 [0mcd .. | pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: cd ../
-[0;35mPaMela <3 [0mcd ../
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ../.
-[0;35mPaMela <3 [0mcd ../.
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ../..
-[0;35mPaMela <3 [0mcd ../..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ../../../../../../..
-[0;35mPaMela <3 [0mcd ../../../../../../..
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd .././././.
-[0;35mPaMela <3 [0mcd .././././.
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ./
-[0;35mPaMela <3 [0mcd ./
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ./././.
-[0;35mPaMela <3 [0mcd ./././.
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd ././././
-[0;35mPaMela <3 [0mcd ././././
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd /
-[0;35mPaMela <3 [0mcd /
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd / | echo "hola"
-[0;35mPaMela <3 [0mcd / | echo "hola"
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: cd /etc
-[0;35mPaMela <3 [0mcd /etc
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo
-[0;35mPaMela <3 [0mecho
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo 
-[0;35mPaMela <3 [0mecho
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "" hola
-[0;35mPaMela <3 [0mecho "" hola
  hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo ""$HOME
-[0;35mPaMela <3 [0mecho ""$HOME
-/home/dactylo 
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick 
+Exit-Status: 0
 ---
 Test: echo "$DONTEXIST" "Makefile"
-[0;35mPaMela <3 [0mecho "$DONTEXIST" "Makefile"
  Makefile
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "$DONTEXIST""Makefile"
-[0;35mPaMela <3 [0mecho "$DONTEXIST""Makefile"
 Makefile 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "$DONTEXIST"Makefile
-[0;35mPaMela <3 [0mecho "$DONTEXIST"Makefile
 Makefile 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "-n" Hola
-[0;35mPaMela <3 [0mecho "-n" Hola
-Hola[0;35mPaMela <3 [0mExit-Status: 0
+HolaExit-Status: 0
 ---
 Test: echo "ME"
-[0;35mPaMela <3 [0mecho "ME"
 ME
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "echo"
-[0;35mPaMela <3 [0mecho "echo"
 echo
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "hola"
-[0;35mPaMela <3 [0mecho "hola"
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo "hola"
-[0;35mPaMela <3 [0mecho "hola"
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $
-[0;35mPaMela <3 [0mecho $
 $
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $?
-[0;35mPaMela <3 [0mecho $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $? | echo $? | echo $?
-[0;35mPaMela <3 [0mecho $? | echo $? | echo $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $DONTEXIST Hola
-[0;35mPaMela <3 [0mecho $DONTEXIST Hola
 Hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $HOLA
-[0;35mPaMela <3 [0mecho $HOLA
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $HOME
-[0;35mPaMela <3 [0mecho $HOME
-/home/dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick
+Exit-Status: 0
 ---
 Test: echo $HOME9
-[0;35mPaMela <3 [0mecho $HOME9
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo $hola
-[0;35mPaMela <3 [0mecho $hola
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo 'echo'
-[0;35mPaMela <3 [0mecho 'echo'
 echo
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo *t
-[0;35mPaMela <3 [0mecho out_bash.txt out_minishell.txt out.txt result to_do.txt
-out_bash.txt out_minishell.txt out.txt result to_do.txt
-[0;35mPaMela <3 [0mExit-Status: 0
+out.txt out_bash.txt out_minishell.txt result to_do.txt
+Exit-Status: 0
 ---
 Test: echo *t hola
-[0;35mPaMela <3 [0mecho out_bash.txt out_minishell.txt out.txt result to_do.txt hola
-out_bash.txt out_minishell.txt out.txt result to_do.txt hola
-[0;35mPaMela <3 [0mExit-Status: 0
+out.txt out_bash.txt out_minishell.txt result to_do.txt hola
+Exit-Status: 0
 ---
 Test: echo --------n
-[0;35mPaMela <3 [0mecho --------n
 --------n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -n
-[0;35mPaMela <3 [0mecho -n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -n -n
-[0;35mPaMela <3 [0mecho -n -n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -n -n Hola Que
-[0;35mPaMela <3 [0mecho -n -n Hola Que
-Hola Que[0;35mPaMela <3 [0mExit-Status: 0
+Hola QueExit-Status: 0
 ---
 Test: echo -n -nnn -nnnn
-[0;35mPaMela <3 [0mecho -n -nnn -nnnn
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -n -nnn hola -nnnn
-[0;35mPaMela <3 [0mecho -n -nnn hola -nnnn
-hola -nnnn[0;35mPaMela <3 [0mExit-Status: 0
+hola -nnnnExit-Status: 0
 ---
 Test: echo -n -nnn-nnnn
-[0;35mPaMela <3 [0mecho -n -nnn-nnnn
--nnn-nnnn[0;35mPaMela <3 [0mExit-Status: 0
+-nnn-nnnnExit-Status: 0
 ---
 Test: echo -n Hola
-[0;35mPaMela <3 [0mecho -n Hola
-Hola[0;35mPaMela <3 [0mExit-Status: 0
+HolaExit-Status: 0
 ---
 Test: echo -n-nnn -nnnn
-[0;35mPaMela <3 [0mecho -n-nnn -nnnn
 -n-nnn -nnnn
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -nHola
-[0;35mPaMela <3 [0mecho -nHola
 -nHola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -nnn --------n
-[0;35mPaMela <3 [0mecho -nnn --------n
---------n[0;35mPaMela <3 [0mExit-Status: 0
+--------nExit-Status: 0
 ---
 Test: echo -nnn --------nnnn
-[0;35mPaMela <3 [0mecho -nnn --------nnnn
---------nnnn[0;35mPaMela <3 [0mExit-Status: 0
+--------nnnnExit-Status: 0
 ---
 Test: echo -nnn -----nn---nnnn
-[0;35mPaMela <3 [0mecho -nnn -----nn---nnnn
------nn---nnnn[0;35mPaMela <3 [0mExit-Status: 0
+-----nn---nnnnExit-Status: 0
 ---
 Test: echo -nnnn $hola
-[0;35mPaMela <3 [0mecho -nnnn $hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -nnnnn
-[0;35mPaMela <3 [0mecho -nnnnn
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo -p
-[0;35mPaMela <3 [0mecho -p
 -p
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo Hola
-[0;35mPaMela <3 [0mecho Hola
 Hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo Hola -n
-[0;35mPaMela <3 [0mecho Hola -n
 Hola -n
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo Hola Que Tal
-[0;35mPaMela <3 [0mecho Hola Que Tal
 Hola Que Tal
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo Le path de mon HOME est $HOME
-[0;35mPaMela <3 [0mecho Le path de mon HOME est $HOME
-Le path de mon HOME est /home/dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
+Le path de mon HOME est /Users/patrick
+Exit-Status: 0
 ---
 Test: echo ME
-[0;35mPaMela <3 [0mecho ME
 ME
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo echo
-[0;35mPaMela <3 [0mecho echo
 echo
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola
-[0;35mPaMela <3 [0mecho hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola
-[0;35mPaMela <3 [0mecho hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola | cat
-[0;35mPaMela <3 [0mecho hola | cat
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola | cat | cat | cat | cat | cat | grep hola
-[0;35mPaMela <3 [0mecho hola | cat | cat | cat | cat | cat | grep hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola | echo que tal
-[0;35mPaMela <3 [0mecho hola | echo que tal
 que tal
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola |cat
-[0;35mPaMela <3 [0mecho hola |cat
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo hola|cat
-[0;35mPaMela <3 [0mecho hola|cat
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo my shit terminal is [$TERM4
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM4
 my shit terminal is [
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo my shit terminal is [$TERM4]
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM4]
 my shit terminal is []
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo my shit terminal is [$TERM]
-[0;35mPaMela <3 [0mecho my shit terminal is [$TERM]
 my shit terminal is [xterm-256color]
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo oui | echo non | echo hola | grep hola
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: echo oui | echo non | echo hola | grep non
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep non
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: echo oui | echo non | echo hola | grep oui
-[0;35mPaMela <3 [0mecho oui | echo non | echo hola | grep oui
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: echo | echo
-[0;35mPaMela <3 [0mecho | echo
 
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: env | echo hola
-[0;35mPaMela <3 [0menv | echo hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: exit
-[0;35mPaMela <3 [0mexit
 Exit-Status: 0
 ---
 Test: exit "666"
-[0;35mPaMela <3 [0mexit "666"
 Exit-Status: 154
 ---
 Test: exit +0
-[0;35mPaMela <3 [0mexit +0
 Exit-Status: 0
 ---
 Test: exit +42
-[0;35mPaMela <3 [0mexit +42
 Exit-Status: 42
 ---
 Test: exit +666
-[0;35mPaMela <3 [0mexit +666
 Exit-Status: 154
 ---
 Test: exit -9223372036854775808
-[0;35mPaMela <3 [0mexit -9223372036854775808
 Exit-Status: 0
 ---
 Test: exit 0
-[0;35mPaMela <3 [0mexit 0
 Exit-Status: 0
 ---
 Test: exit 000042
-[0;35mPaMela <3 [0mexit 000042
 Exit-Status: 42
 ---
 Test: exit 259
-[0;35mPaMela <3 [0mexit 259
 Exit-Status: 3
 ---
 Test: exit 26632
-[0;35mPaMela <3 [0mexit 26632
 Exit-Status: 8
 ---
 Test: exit 42
-[0;35mPaMela <3 [0mexit 42
 Exit-Status: 42
 ---
 Test: exit 666
-[0;35mPaMela <3 [0mexit 666
 Exit-Status: 154
 ---
 Test: exit | ls
-[0;35mPaMela <3 [0mexit | ls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: export HOL=A=""
-[0;35mPaMela <3 [0mexport HOL=A=""
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: export hola | unset hola | echo $?
-[0;35mPaMela <3 [0mexport hola | unset hola | echo $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: export | echo hola
-[0;35mPaMela <3 [0mexport | echo hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: ifconfig | grep ":"
-[0;35mPaMela <3 [0mifconfig | grep ":"
-eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet6 2a02:3032:403:5a13:a501:cb8e:a6a8:6ed1  prefixlen 64  scopeid 0x0<global>
-        inet6 fe80::9f7c:60a5:b4:f115  prefixlen 64  scopeid 0x20<link>
-        inet6 2a02:3032:403:5a13:865:97b7:bb4:1c06  prefixlen 64  scopeid 0x0<global>
-        ether 34:17:eb:c5:73:78  txqueuelen 1000  (Ethernet)
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-[0;35mPaMela <3 [0mExit-Status: 0
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+anpi0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f6:41:38:14:b7:ab 
+	inet6 fe80::f441:38ff:fe14:b7ab%anpi0 prefixlen 64 scopeid 0x4 
+	media: none
+	status: inactive
+anpi1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f6:41:38:14:b7:ac 
+	inet6 fe80::f441:38ff:fe14:b7ac%anpi1 prefixlen 64 scopeid 0x5 
+	media: none
+	status: inactive
+en3: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f6:41:38:14:b7:8b 
+	media: none
+	status: inactive
+en4: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f6:41:38:14:b7:8c 
+	media: none
+	status: inactive
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	ether 36:d9:b1:eb:96:00 
+	media: autoselect <full-duplex>
+	status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	ether 36:d9:b1:eb:96:04 
+	media: autoselect <full-duplex>
+	status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 36:d9:b1:eb:96:00 
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+	member: en1 flags=3<LEARNING,DISCOVER>
+	member: en2 flags=3<LEARNING,DISCOVER>
+	media: <unknown type>
+	status: inactive
+ap1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 3e:91:80:d1:b5:f3 
+	media: autoselect
+	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 1c:91:80:d1:b5:f3 
+	inet6 fe80::1c1c:742e:36f1:5009%en0 prefixlen 64 secured scopeid 0xc 
+	inet6 2a02:3032:403:5a13:18f9:8b15:ce14:1f07 prefixlen 64 autoconf secured 
+	inet6 2a02:3032:403:5a13:c08c:9008:626c:e1da prefixlen 64 autoconf temporary 
+	media: autoselect
+	status: active
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	ether a6:92:64:95:e2:77 
+	inet6 fe80::a492:64ff:fe95:e277%awdl0 prefixlen 64 scopeid 0xd 
+	media: autoselect
+	status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether a6:92:64:95:e2:77 
+	inet6 fe80::a492:64ff:fe95:e277%llw0 prefixlen 64 scopeid 0xe 
+	media: autoselect
+	status: active
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::b554:a497:1b64:506f%utun0 prefixlen 64 scopeid 0xf 
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+	inet6 fe80::55a6:866c:b589:1723%utun1 prefixlen 64 scopeid 0x10 
+utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
+	inet6 fe80::ce81:b1c:bd2c:69e%utun2 prefixlen 64 scopeid 0x11 
+Exit-Status: 0
 ---
 Test: ifconfig | grep hola
-[0;35mPaMela <3 [0mifconfig | grep hola
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: ls
-[0;35mPaMela <3 [0mls
 Doxyfile
+Makefile
+Makefile_old
+README.md
 eval.sh
 html
 incl
-Makefile
-Makefile_old
 minimalraw.log
 minishell
 minishell.dSYM
+out.txt
 out1
 out2
 out3
 out4
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 result
 src
 to_do.txt
 valgrind_leaks_file
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: ls *.*
-[0;35mPaMela <3 [0mls eval.sh minimalraw.log minishell.dSYM out_bash.txt out_minishell.txt out.txt parse_valgrind_suppressions.sh README.md to_do.txt
+README.md
 eval.sh
 minimalraw.log
+out.txt
 out_bash.txt
 out_minishell.txt
-out.txt
 parse_valgrind_suppressions.sh
-README.md
 to_do.txt
 
 minishell.dSYM:
 Contents
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: ls -la | grep "."
-[0;35mPaMela <3 [0mls -la | grep "."
-total 636
-drwxrwxr-x 7 dactylo dactylo   4096 Sep  7 13:37 .
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 ..
--rw-rw-r-- 1 dactylo dactylo      5 Sep  7 13:30 .bonus_tmp
--rw-rw-r-- 1 dactylo dactylo 112637 Sep  7 13:30 Doxyfile
--rwxrwxr-x 1 dactylo dactylo  11104 Sep  7 13:30 eval.sh
-drwxrwxr-x 8 dactylo dactylo   4096 Sep  7 13:30 .git
-drwxrwxr-x 3 dactylo dactylo  73728 Sep  7 13:30 html
-drwxrwxr-x 4 dactylo dactylo   4096 Sep  7 13:37 incl
--rwxr-xr-x 1 dactylo dactylo   2306 Sep  7 13:34 Makefile
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 Makefile_old
--rw-r--r-- 1 dactylo dactylo  68267 Sep  7 13:30 minimalraw.log
--rwxrwxr-x 1 dactylo dactylo 208896 Sep  7 13:37 minishell
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:30 minishell.dSYM
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out1
--rwxrwxr-x 1 dactylo dactylo      0 Sep  7 13:30 out2
--rwxrwxr-x 1 dactylo dactylo     17 Sep  7 13:30 out3
--rwxrwxr-x 1 dactylo dactylo   2171 Sep  7 13:30 out4
--rw-rw-r-- 1 dactylo dactylo  27753 Sep  7 13:37 out_bash.txt
--rw-rw-r-- 1 dactylo dactylo  37546 Sep  7 13:37 out_minishell.txt
--rwxrwxr-x 1 dactylo dactylo    138 Sep  7 13:30 out.txt
--rwxrwxr-x 1 dactylo dactylo   2631 Sep  7 13:30 parse_valgrind_suppressions.sh
--rw-rw-r-- 1 dactylo dactylo     11 Sep  7 13:30 README.md
--rwxrwxr-x 1 dactylo dactylo    624 Sep  7 13:30 result
-drwxrwxr-x 3 dactylo dactylo   4096 Sep  7 13:37 src
--rw-rw-r-- 1 dactylo dactylo   3582 Sep  7 13:30 to_do.txt
--rw-rw-r-- 1 dactylo dactylo    171 Sep  7 13:30 .valgrind_commands
--rw-r--r-- 1 dactylo dactylo  13585 Sep  7 13:30 valgrind_leaks_file
--rw-rw-r-- 1 dactylo dactylo    116 Sep  7 13:30 .valgrindrc
--rw-rw-r-- 1 dactylo dactylo   9301 Sep  7 13:30 .valgrind_readline.supp
-[0;35mPaMela <3 [0mExit-Status: 0
+total 864
+drwxr-xr-x    30 patrick  staff     960  7 Sep 14:03 .
+drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
+-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
+-rw-r--r--     1 patrick  staff       5  7 Sep 14:00 .bonus_tmp
+drwxr-xr-x    12 patrick  staff     384  7 Sep 14:00 .git
+-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
+-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
+-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
+-rw-r--r--     1 patrick  staff  112637  7 Sep 14:00 Doxyfile
+-rwxr-xr-x     1 patrick  staff    2338  7 Sep 14:02 Makefile
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 Makefile_old
+-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
+-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
+drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
+drwxr-xr-x     8 patrick  staff     256  7 Sep 14:03 incl
+-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
+-rwxr-xr-x     1 patrick  staff   85398  7 Sep 14:03 minishell
+drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
+-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out1
+-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
+-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
+-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
+-rw-r--r--     1 patrick  staff   33640  7 Sep 14:04 out_bash.txt
+-rw-r--r--     1 patrick  staff   33574  7 Sep 14:04 out_minishell.txt
+-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
+-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
+drwxr-xr-x    48 patrick  staff    1536  7 Sep 14:03 src
+-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
+-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
+Exit-Status: 0
 ---
 Test: ls hola
-[0;35mPaMela <3 [0mls hola
-/usr/bin/ls: cannot access 'hola': No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 2
+ls: hola: No such file or directory
+Exit-Status: 1
 ---
 Test: ls | exit
-[0;35mPaMela <3 [0mls | exit
 Exit-Status: 0
 ---
 Test: ls | ls hola
-[0;35mPaMela <3 [0mls | ls hola
-/usr/bin/ls: cannot access 'hola': No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 2
+ls: hola: No such file or directory
+Exit-Status: 1
 ---
 Test: ls | ls | echo hola | rev
-[0;35mPaMela <3 [0mls | ls | echo hola | rev
 aloh
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: pwd
-[0;35mPaMela <3 [0mpwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd hola
-[0;35mPaMela <3 [0mpwd hola
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd hola que tal
-[0;35mPaMela <3 [0mpwd hola que tal
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd ls
-[0;35mPaMela <3 [0mpwd ls
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd ls env
-[0;35mPaMela <3 [0mpwd ls env
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd pwd pwd
-[0;35mPaMela <3 [0mpwd pwd pwd
-/home/dactylo/Desktop/42Wolfsburg/minishell/patrick copy
-[0;35mPaMela <3 [0mExit-Status: 0
+/Users/patrick/Desktop/C-Projects/patrick_minishell
+Exit-Status: 0
 ---
 Test: pwd | echo hola
-[0;35mPaMela <3 [0mpwd | echo hola
 hola
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset $HOLA
-[0;35mPaMela <3 [0munset $HOLA
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset HOL$?A
-[0;35mPaMela <3 [0munset HOL$?A
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset HOLA9
-[0;35mPaMela <3 [0munset HOLA9
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset HOLA_
-[0;35mPaMela <3 [0munset HOLA_
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset HOL_A
-[0;35mPaMela <3 [0munset HOL_A
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset INEXISTANT
-[0;35mPaMela <3 [0munset INEXISTANT
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset _HOLA
-[0;35mPaMela <3 [0munset _HOLA
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset _______
-[0;35mPaMela <3 [0munset _______
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset cd
-[0;35mPaMela <3 [0munset cd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset echo
-[0;35mPaMela <3 [0munset echo
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset export
-[0;35mPaMela <3 [0munset export
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset pwd
-[0;35mPaMela <3 [0munset pwd
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset sudo
-[0;35mPaMela <3 [0munset sudo
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: unset unset
-[0;35mPaMela <3 [0munset unset
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: whoami | grep $USER
-[0;35mPaMela <3 [0mwhoami | grep $USER
-dactylo
-[0;35mPaMela <3 [0mExit-Status: 0
+patrick
+Exit-Status: 0
 ---
 Test: < Makefile grep main
-[0;35mPaMela <3 [0m< Makefile grep main
 SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: < src/main.c < eval.sh < Makefile grep main
-[0;35mPaMela <3 [0m< src/main.c < eval.sh < Makefile grep main
 SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: < eval.sh grep main < src/main.c < Makefile
-[0;35mPaMela <3 [0m< eval.sh grep main < src/main.c < Makefile
 SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: < "Makefile" grep main
-[0;35mPaMela <3 [0m< "Makefile" grep main
 SRC = 	./src/main.c \
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---
 Test: < "Makefile " grep main
-[0;35mPaMela <3 [0m< "Makefile " grep main
 bash: Makefile : No such file or directory
-[0;35mPaMela <3 [0mExit-Status: 1
+Exit-Status: 1
 ---
 Test: "<" Makefile grep main
-[0;35mPaMela <3 [0m"<" Makefile grep main
 bash: <: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test: $?
-[0;35mPaMela <3 [0m$?
 bash: 0: command not found
-[0;35mPaMela <3 [0mExit-Status: 127
+Exit-Status: 127
 ---
 Test: echo $?
-[0;35mPaMela <3 [0mecho $?
 0
-[0;35mPaMela <3 [0mExit-Status: 0
+Exit-Status: 0
 ---

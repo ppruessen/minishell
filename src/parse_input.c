@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:21:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/04 12:02:50 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:06:28 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static int	check_quotes(t_var *var)
 
 	var->squotes = FALSE;
 	var->dquotes = FALSE;
-	var->input_escape = (char *)malloc(sizeof(char) *
-		(ft_strlen(var->input) + 1));
+	var->input_escape = (char *)malloc(sizeof(char)
+			* (ft_strlen(var->input) + 1));
 	i = 0;
 	while (var->input[i])
 	{

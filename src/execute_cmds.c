@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_cmds.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 22:40:33 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:08:37 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	catch_inbuilts(t_var *var, int i)
 	else if (var->cmds[i]->write_to_pipe == 1 && (var->cmds[i]->inbuilt >= 5
 			|| var->cmds[i]->inbuilt == 1))
 		return (1);
-	return(-1);
+	return (-1);
 }
 
 /* Removes <, > and Filenames from the String to feed it then into execve*/
@@ -33,7 +33,7 @@ char	**generate_execve_input(t_cmd *cmd, int input_members)
 	int		j;
 	int		k;
 
-	execve_input = (char **) malloc(((input_members + 1) * sizeof(char*)) + 1);
+	execve_input = (char **) malloc(((input_members + 1) * sizeof(char *)) + 1);
 	if (execve_input == NULL)
 		return (NULL);
 	execve_input[input_members] = NULL;
@@ -57,6 +57,7 @@ char	**generate_execve_input(t_cmd *cmd, int input_members)
 static void	wait_function(pid_t pid)
 {
 	int			status;
+	const int	es;
 
 	if (waitpid(pid, &status, 0) == -1)
 	{
@@ -65,7 +66,7 @@ static void	wait_function(pid_t pid)
 	}
 	if (WIFEXITED(status))
 	{
-		const int es = WEXITSTATUS(status);
+		es = WEXITSTATUS(status);
 		if (es == 255)
 			g_status = 127;
 		g_status = es;

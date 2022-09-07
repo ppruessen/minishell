@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/06 22:44:37 by mschiman         ###   ########.fr        #
+#    Updated: 2022/09/07 14:02:26 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ SRC = 	./src/main.c \
 		./src/parse_input.c \
 		./src/errors.c \
 		./src/syntax_error_check.c \
+		./src/syntax_error_check2.c \
 		./src/fill_cmd_structures.c \
 		./src/expand_variables.c \
 		./src/put_temp_input_to_cmd.c \

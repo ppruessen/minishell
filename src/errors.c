@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:44:56 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 17:00:50 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:03:30 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	print_error_not_available(t_var *var, int error_code)
 }
 
 /* Prints unexpected syntax near token messages. */
-void	print_error(t_var *var, int error_code)
+int	print_error(t_var *var, int error_code)
 {
 	if (error_code == TOO_MANY_REDIR_IN_ONE)
 		printf("bash: syntax error near unexpected token `<'\n");
@@ -58,6 +58,7 @@ void	print_error(t_var *var, int error_code)
 		g_status = 258;
 		var->cmd_check = FALSE;
 	}
+	return (1);
 }
 
 void	print_file_error(t_var *var, int error_code)
