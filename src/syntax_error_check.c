@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   syntax_error_check.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:30:11 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/05 17:03:12 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/07 11:27:25 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
 
-/* Catches ||	;	&	(	) */
+/**
+ * @brief Catches ||	;	&	(	)
+ * 
+ * @param var 
+ * @return int 
+ */
 static int	syntax_error_check_not_available_1(t_var *var)
 {
 	int	i;
@@ -21,33 +26,26 @@ static int	syntax_error_check_not_available_1(t_var *var)
 	while (var->input[i] != '\0')
 	{
 		if (var->input[i] == '|' && var->input[i + 1] == '|'
-		&& var->input_escape[i] == '3' && var->input_escape[i + 1] == '3')
-		{
-			print_error(var, DOUBLE_PIPES);
-			return (1);
-		}
+			&& var->input_escape[i] == '3' && var->input_escape[i + 1] == '3')
+			return (print_error(var, DOUBLE_PIPES));
 		else if (var->input[i] == ';' && var->input_escape[i] == '3')
-		{
-			print_error(var, SEMICOLON);
-			return (1);
-		}
+			return (print_error(var, SEMICOLON));
 		else if (var->input[i] == '&' && var->input_escape[i] == '3')
-		{
-			print_error(var, AMPERSAND);
-			return (1);
-		}
+			return (print_error(var, AMPERSAND));
 		else if ((var->input[i] == '(' || var->input[i] == ')')
 			&& var->input_escape[i] == '3')
-		{
-			print_error(var, BRACES);
-			return (1);
-		}
+			return (print_error(var, BRACES));
 		i++;
 	}
 	return (0);
 }
 
-/* Catches	*	and	!	*/
+/**
+ * @brief Catches	*	and	!
+ * 
+ * @param var [t_var *]
+ * @return int 1 if * or ! is found, else 0
+ */
 static int	syntax_error_check_not_available_2(t_var *var)
 {
 	int	i;
@@ -67,60 +65,16 @@ static int	syntax_error_check_not_available_2(t_var *var)
 		}
 		i++;
 	}
-//	g_status = -42;
 	var->cmd_check = TRUE;
 	return (0);
 }
 
-/* Catches more than two << or >> */
-static int	syntax_error_check_redir(t_var *var)
-{
-	int	i;
-
-	i = 0;
-	if (debug_mode < -3)
-		printf("Syntax Error Check 82:\n%s\n%s\n", var->input, var->input_escape);
-	while (var->input[i] != '\0')
-	{
-		if (var->input[i] == '>' && var->input_escape[i] == '3')
-		{
-			if (var->input[i + 1] == '>' && var->input_escape[i + 1] == '3')
-			{
-				if (var->input[i + 2] == '>' && var->input_escape[i] == '3')
-				{
-					print_error(var, TOO_MANY_REDIR_OUT_TWO);
-					return (1);
-				}
-				i += 2;
-			}
-			else
-				i += 1;
-		}
-		if (ft_iswhitespace(var->input[i]) == 1 && var->input_escape[i] == '3')
-			i = whitespace_runner(var->input, var->input_escape, i) + 1;
-		if (var->input[i] == '<' && var->input_escape[i] == '3')
-		{
-			if (var->input[i + 1] == '<' && var->input_escape[i + 1] == '3')
-				i += 2;
-			else
-				i += 1;
-		}
-		if (ft_iswhitespace(var->input[i]) == 1 && var->input_escape[i] == '3')
-			i = whitespace_runner(var->input, var->input_escape, i) + 1;
-		if (var->input[i] == '<' && var->input_escape[i] == '3')
-		{
-			if (var->input[i + 1] == '<' && var->input_escape[i + 1] == '3')
-				print_error(var, TOO_MANY_REDIR_IN_TWO);
-			else
-				g_status = 1;
-			return (1);
-		}
-		i++;
-	}
-	return (0);
-}
-
-/* Catches <	>	and single | with nothing after them */
+/**
+ * @brief Catches <	>	and single | with nothing after them
+ * 
+ * @param var [t_var *]
+ * @return int 
+ */
 static int	syntax_error_check_newline(t_var *var)
 {
 	int	i;
@@ -149,7 +103,12 @@ static int	syntax_error_check_newline(t_var *var)
 	return (0);
 }
 
-/* Checks for syntax errors in the cmd line input und prints error messages. */
+/**
+ * @brief Checks for syntax errors in the cmd line input und prints
+ * error messages.
+ * 
+ * @param var 
+ */
 void	syntax_error_check(t_var *var)
 {
 	if (syntax_error_check_not_available_1(var) == 1)

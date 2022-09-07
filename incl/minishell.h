@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 11:21:41 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/07 11:29:06 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,12 +154,15 @@ int		g_status;
 int		parse_input(t_var *var);
 
 /* src/errors.c */
-void	print_error(t_var *var, int error_code);
+int		print_error(t_var *var, int error_code);
 void	print_file_error(t_var *var, int error_code);
 void	print_cmd_error(t_var *var, int error_code, char *cmd);
 
 /* src/syntax_error_check.c */
 void	syntax_error_check(t_var *var);
+
+/* src/syntax_error_check2.c */
+int	syntax_error_check_redir(t_var *var);
 
 /* src/fill_cmd_structures.c */
 void	fill_cmd_structures(t_var *var);
