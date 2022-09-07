@@ -1,3 +1,0 @@
-Execute_cmds.c/297: Das wird ins excecve gegeben: |ls>|
-Execute_cmds.c/297: Das wird ins excecve gegeben: ||
-bash: ls>: command not found

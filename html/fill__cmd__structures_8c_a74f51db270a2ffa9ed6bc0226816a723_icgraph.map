@@ -1,7 +1,0 @@
-<map id="set_pipe_status" name="set_pipe_status">
-<area shape="rect" id="node1" title=" " alt="" coords="627,5,751,31"/>
-<area shape="rect" id="node2" href="$fill__cmd__structures_8c.html#a944c485646f46cbff8eb16a82e744ed5" title=" " alt="" coords="448,5,579,31"/>
-<area shape="rect" id="node3" href="$fill__cmd__structures_8c.html#aaa1991bb520ec22344dbe1f1979d866a" title=" " alt="" coords="255,5,400,31"/>
-<area shape="rect" id="node4" href="$parse__input_8c.html#a0c42a6e0dc1e48f7ea705046b2e32ff4" title=" " alt="" coords="108,5,207,31"/>
-<area shape="rect" id="node5" href="$main_8c.html#a7b26396c9888d66d997b0007e8ff1e60" title=" " alt="" coords="5,5,60,31"/>
-</map>
