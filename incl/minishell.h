@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/07 11:29:06 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/07 12:31:14 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,10 +197,13 @@ void	export_var(t_var *var, char **cmd, char **cmd_esc);
 void	clean_up(t_var *var);
 void	ms_exit(t_var *var, char **cmd);
 void	clean_env(t_var *var);
+
 /* unset.c */
 void	unset_env(t_var *var, char **cmd);
+
 /* cd.c */
 void	change_directory(char **str);
+
 /* find_inbuilts.c */
 void	find_inbuilts(t_var *var, t_cmd *cmd, char *str);
 

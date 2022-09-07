@@ -6,11 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:44:56 by mschiman          #+#    #+#             */
-<<<<<<< Updated upstream
-/*   Updated: 2022/09/06 17:00:50 by mschiman         ###   ########.fr       */
-=======
-/*   Updated: 2022/09/07 11:23:39 by pprussen         ###   ########.fr       */
->>>>>>> Stashed changes
+/*   Updated: 2022/09/07 12:29:03 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
