@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   handle_here_doc.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:39:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 10:50:23 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/06 22:41:47 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
+
+static void	free_line_and_limiter(char *line, char *limiter)
+{
+	free(line);
+	line = NULL;
+	free(limiter);
+	limiter = NULL;
+}
 
 static void	get_next_line_minishell(t_cmd *cmd)
 {
@@ -39,10 +47,7 @@ static void	get_next_line_minishell(t_cmd *cmd)
 		else
 			write(cmd->fd_to_read, line, ft_strlen(line));
 	}
-	free(line);
-	line = NULL;
-	free(cmd->limiter);
-	cmd->limiter = NULL;
+	free_line_and_limiter(line, cmd->limiter);
 }
 
 void	handle_here_doc(t_cmd *cmd)
