@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_variables.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 13:13:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 21:55:28 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/08 13:24:34 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,13 @@ static void	extract_dollar_var(t_var *var)
 	int	i;
 
 	i = 0;
-	if (var->dollar_var != NULL)
-	{
-		free(var->dollar_var);
-		var->dollar_var = NULL;
-	}
+	free(var->dollar_var);
+	var->dollar_var = NULL;
 	while (var->t_escape[i])
 	{
 		if (var->t_escape[i] == '$')
 		{
-			var->dollar_var = ft_strjoin_char(var->dollar_var,
-					var->t_input[i]);
+			var->dollar_var = ft_strjoin_char(var->dollar_var, var->t_input[i]);
 			var->dollar_esc = ft_strjoin_char(var->dollar_esc,
 					var->t_escape[i]);
 			i++;
