@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/07 14:08:37 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 09:53:54 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**generate_execve_input(t_cmd *cmd, int input_members)
 static void	wait_function(pid_t pid)
 {
 	int			status;
-	const int	es;
+	int	es;
 
 	if (waitpid(pid, &status, 0) == -1)
 	{

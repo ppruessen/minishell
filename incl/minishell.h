@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/07 14:03:43 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 10:29:46 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,6 +146,12 @@ typedef struct	s_replace
 	int		strlen_new_str;
 }	t_replace;
 
+typedef struct	s_split
+{
+	int		start;
+	int		end;
+}	t_split;
+
 /* -------- Global Variable(s) -------- */
 int		g_status;
 
@@ -187,8 +193,12 @@ void	copy_env(t_var *var, char **env);
 /* src/replace_str.c */
 char	*replace_str(char *full_str, char *old_part, char *new_part);
 
-/* incl/str_split.c */
+/* src/str_split.c */
 void	str_split(t_var *var, t_cmd *cmd, size_t word_num);
+
+/* src/str_split_utils.c */
+int	find_start(t_var *var, int start);
+int	find_end(t_var *var, int end);
 
 /*incl/dir_list.c*/
 void	free_dir_list_cmd(char **dir_list, char *cmd);

@@ -6,7 +6,7 @@
 #    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/07 14:02:26 by pprussen         ###   ########.fr        #
+#    Updated: 2022/09/08 10:30:06 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = 	./src/main.c \
 		./src/replace_str.c \
 		./src/copy_env.c \
 		./src/str_split.c \
+		./src/str_split_utils.c \
 		./src/execute_cmds.c \
 		./src/create_env_from_list.c \
 		./src/handle_here_doc.c \
