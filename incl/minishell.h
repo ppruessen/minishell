@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 10:29:46 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 11:37:11 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,14 @@ typedef struct	s_split
 	int		end;
 }	t_split;
 
+typedef struct	s_redir
+{
+	char	*input;
+	char	*escape;
+	int		start;
+	int		i;
+}	t_redir;
+
 /* -------- Global Variable(s) -------- */
 int		g_status;
 
@@ -171,7 +179,7 @@ void	syntax_error_check(t_var *var);
 int	syntax_error_check_redir(t_var *var);
 
 /* src/fill_cmd_structures.c */
-char	*extract_next_word(char *full_str, char *esc_str, int start);
+char	*get_next_word(char *full_str, char *esc_str, int start);
 void	fill_cmd_structures(t_var *var);
 
 /* src/expand_variables.c */

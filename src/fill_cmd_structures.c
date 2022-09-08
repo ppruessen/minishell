@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_cmd_structures.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:46:25 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 22:12:03 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/08 11:35:43 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* Returns the next word within a string cutting off whitespaces and sets */
 /* the escape string to zero on the equivalent spaces of that word. */
-char	*extract_next_word(char *full_str, char *esc_str, int start)
+char	*get_next_word(char *full_str, char *esc_str, int start)
 {
 	int		stop;
 	int		quotes;
