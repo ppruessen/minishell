@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 13:52:01 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:02:00 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,6 +192,9 @@ char	*get_next_word(char *full_str, char *esc_str, int start);
 
 /* src/expand_variables.c */
 void	expand_variables(t_var *var);
+
+/* src/mark_variables_to_expand.c */
+int		mark_variables_to_expand(t_var *var);
 
 /*src/expand_var_utils.c*/
 char	*expand_env(t_var *var);

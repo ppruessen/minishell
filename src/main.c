@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 12:56:52 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:42:49 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,17 +76,10 @@ int	main(int argc, char **argv, char **env)
 	g_status = 0;
 	while (1)
 	{
-		if (debug_mode < -3)
-			printf("\nMain.c/83 G_STATUS: %d\n", g_status);
 		var.cmd_check = TRUE;
 		var.input = readline(var.prompt);
 		if (!var.input)
 		{
-//			clean_env(&var);
-//			free (var.prompt);
-//			var.prompt = NULL;
-			if (debug_mode < -3)
-				write(1, "Main.c/89 raus gesprungen.\n", 27);
 			accurat_var_cleaner(&var);
 			accurat_env_cleaner(&var);
 			exit(g_status);
@@ -98,10 +91,6 @@ int	main(int argc, char **argv, char **env)
 			if (var.cmd_check == TRUE)
 				execute_cmds(&var);
 		}
-		if (debug_mode < -3)
-			printf("Main.c/100: Input string alt:\t|%s|\n", var.input);
-		if (debug_mode < -3)
-			printf("Main.c/102: Exit status:\t %i\n", g_status);
 		accurat_var_cleaner(&var);
 	}
 	return (g_status);

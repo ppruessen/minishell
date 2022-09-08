@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 13:50:19 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/08 13:50:31 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:41:53 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*get_next_word(char *full_str, char *esc_str, int start)
 		start++;
 	if (esc_str[start] == '0')
 	{	
-		stop = null_finder(esc_str, start);
+		start = null_finder(esc_str, start);
 		quotes = 1;
 	}
 	stop = start;
