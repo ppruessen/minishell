@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 11:37:11 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:39:33 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,6 +160,12 @@ typedef struct	s_redir
 	int		i;
 }	t_redir;
 
+typedef struct	s_count
+{
+	int		i;
+	int		count;
+}	t_count;
+
 /* -------- Global Variable(s) -------- */
 int		g_status;
 
@@ -191,9 +197,12 @@ char	*expand_special_dollar(t_var *var);
 int		mark_variables_to_expand(t_var *var);
 
 /* src/put_temp_input_to_cmd.c */
-int		whitespace_runner(char *input, char *escaped, int i);
-int		word_runner(char *input, char *escaped, int i);
+int		word_runner(char *input, char *escaped, t_count *c);
 void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd);
+
+/* src/put_temp_input_to_cmd_utils.c */
+int	next_char_tester(char *input, char *escaped, t_count *cnt, char c);
+int	next_char_runner(char c, char *input, char *escaped, t_count *cnt);
 
 /* src/copy_env.c */
 void	copy_env(t_var *var, char **env);
