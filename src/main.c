@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 09:54:46 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:56:52 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,6 @@ int	main(int argc, char **argv, char **env)
 				write(1, "Main.c/89 raus gesprungen.\n", 27);
 			accurat_var_cleaner(&var);
 			accurat_env_cleaner(&var);
-			if (debug_mode < 0)
-				accurat_finder(&var);
-			if (debug_mode < -1)
-				check_leaks();
 			exit(g_status);
 		}
 		if (var.input[0] != '\0')
@@ -107,8 +103,6 @@ int	main(int argc, char **argv, char **env)
 		if (debug_mode < -3)
 			printf("Main.c/102: Exit status:\t %i\n", g_status);
 		accurat_var_cleaner(&var);
-//		if (debug_mode < 0)
-//			accurat_finder(&var);
 	}
 	return (g_status);
 }
