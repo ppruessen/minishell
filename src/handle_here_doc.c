@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_here_doc.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:39:08 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 22:41:47 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/08 14:49:47 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@ static void	free_line_and_limiter(char *line, char *limiter)
 	line = NULL;
 	free(limiter);
 	limiter = NULL;
+}
+
+static	int	keyword_finder(char *limiter, char *line)
+{
+	if (ft_strlen(limiter) == ft_strlen(line) - 1
+		&& ft_strncmp(limiter, line, ft_strlen(limiter)) == 0)
+		return (TRUE);
+	return (FALSE);
 }
 
 static void	get_next_line_minishell(t_cmd *cmd)
@@ -41,8 +49,7 @@ static void	get_next_line_minishell(t_cmd *cmd)
 				found_nl = 1;
 			line = ft_strjoin_char(line, rd_char[0]);
 		}
-		if (ft_strlen(cmd->limiter) == ft_strlen(line) - 1
-			&& ft_strncmp(cmd->limiter, line, ft_strlen(cmd->limiter)) == 0)
+		if (keyword_finder(cmd->limiter, line) == TRUE)
 			found_keyword = 1;
 		else
 			write(cmd->fd_to_read, line, ft_strlen(line));

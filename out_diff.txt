@@ -205,11 +205,11 @@ Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: /bin/ls -la						Test: /bin/ls -la
 total 760							total 760
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -219,31 +219,31 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    5142  8 Sep 14:42 out_bash |	-rw-r--r--     1 patrick  staff    5124  8 Sep 14:42 out_bash
--rw-r--r--     1 patrick  staff    7059  8 Sep 14:42 out_mini |	-rw-r--r--     1 patrick  staff    5129  8 Sep 14:42 out_mini
+-rw-r--r--     1 patrick  staff    5142  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff    5124  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff    7059  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff    5129  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: /bin/ls       -la						Test: /bin/ls       -la
 total 768						      |	total 760
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -253,31 +253,31 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    7096  8 Sep 14:42 out_bash |	-rw-r--r--     1 patrick  staff    7072  8 Sep 14:42 out_bash
--rw-r--r--     1 patrick  staff    9013  8 Sep 14:42 out_mini |	-rw-r--r--     1 patrick  staff    7083  8 Sep 14:42 out_mini
+-rw-r--r--     1 patrick  staff    7096  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff    7072  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff    9013  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff    7083  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0
 ---								---
 Test:   /bin/ls      -la  					Test:   /bin/ls      -la  
 total 776							total 776
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -287,20 +287,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    9053  8 Sep 14:42 out_bash |	-rw-r--r--     1 patrick  staff    9026  8 Sep 14:42 out_bash
--rw-r--r--     1 patrick  staff   10970  8 Sep 14:42 out_mini |	-rw-r--r--     1 patrick  staff    9040  8 Sep 14:42 out_mini
+-rw-r--r--     1 patrick  staff    9053  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff    9026  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff   10970  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff    9040  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0
@@ -341,11 +341,11 @@ Exit-Status: 255						Exit-Status: 255
 ---								---
 Test: /bin/ls -la						Test: /bin/ls -la
 total 784						      |	total 776
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -355,20 +355,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   11450  8 Sep 14:43 out_bash |	-rw-r--r--     1 patrick  staff   11432  8 Sep 14:43 out_bash
--rw-r--r--     1 patrick  staff   13359  8 Sep 14:43 out_mini |	-rw-r--r--     1 patrick  staff   11429  8 Sep 14:43 out_mini
+-rw-r--r--     1 patrick  staff   11450  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff   11432  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff   13359  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff   11429  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0
@@ -407,11 +407,11 @@ Exit-Status: 127						Exit-Status: 127
 ---								---
 Test:      ls     '-la'    					Test:      ls     '-la'    
 total 792							total 792
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -421,20 +421,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   13875  8 Sep 14:43 out_bash |	-rw-r--r--     1 patrick  staff   13847  8 Sep 14:43 out_bash
--rw-r--r--     1 patrick  staff   15768  8 Sep 14:43 out_mini |	-rw-r--r--     1 patrick  staff   13838  8 Sep 14:43 out_mini
+-rw-r--r--     1 patrick  staff   13875  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff   13847  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff   15768  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff   13838  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0
@@ -1311,11 +1311,11 @@ Exit-Status: 0							Exit-Status: 0
 ---								---
 Test: ls -la | grep "."						Test: ls -la | grep "."
 total 872							total 872
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .		drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..		drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor	-rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Stor
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t	-rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_t
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git	drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrin
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin	-rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrin
@@ -1325,20 +1325,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode	drwxr-xr-x     3 pa
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m	-rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.m
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh	-rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html	drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl	drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr	-rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalr
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel	-rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishel
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel	-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishel
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel	drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishel
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt	-rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1	-rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2	-rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3	-rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4	-rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   33962  8 Sep 14:43 out_bash |	-rw-r--r--     1 patrick  staff   33938  8 Sep 14:43 out_bash
--rw-r--r--     1 patrick  staff   35802  8 Sep 14:43 out_mini |	-rw-r--r--     1 patrick  staff   33872  8 Sep 14:43 out_mini
+-rw-r--r--     1 patrick  staff   33962  8 Sep 14:50 out_bash |	-rw-r--r--     1 patrick  staff   33938  8 Sep 14:50 out_bash
+-rw-r--r--     1 patrick  staff   35802  8 Sep 14:50 out_mini |	-rw-r--r--     1 patrick  staff   33872  8 Sep 14:50 out_mini
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va	-rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_va
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result	-rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src	drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx	-rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.tx
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind	-rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind
 Exit-Status: 0							Exit-Status: 0

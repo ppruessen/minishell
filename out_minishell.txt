@@ -204,11 +204,11 @@ Exit-Status: 0
 ---
 Test: /bin/ls -la
 total 760
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -218,31 +218,31 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    5124  8 Sep 14:42 out_bash.txt
--rw-r--r--     1 patrick  staff    5129  8 Sep 14:42 out_minishell.txt
+-rw-r--r--     1 patrick  staff    5124  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff    5129  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test: /bin/ls       -la
 total 760
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -252,31 +252,31 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    7072  8 Sep 14:42 out_bash.txt
--rw-r--r--     1 patrick  staff    7083  8 Sep 14:42 out_minishell.txt
+-rw-r--r--     1 patrick  staff    7072  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff    7083  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
 ---
 Test:   /bin/ls      -la  
 total 776
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -286,20 +286,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff    9026  8 Sep 14:42 out_bash.txt
--rw-r--r--     1 patrick  staff    9040  8 Sep 14:42 out_minishell.txt
+-rw-r--r--     1 patrick  staff    9026  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff    9040  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
@@ -340,11 +340,11 @@ Exit-Status: 255
 ---
 Test: /bin/ls -la
 total 776
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -354,20 +354,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   11432  8 Sep 14:43 out_bash.txt
--rw-r--r--     1 patrick  staff   11429  8 Sep 14:43 out_minishell.txt
+-rw-r--r--     1 patrick  staff   11432  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff   11429  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
@@ -406,11 +406,11 @@ Exit-Status: 127
 ---
 Test:      ls     '-la'    
 total 792
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -420,20 +420,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   13847  8 Sep 14:43 out_bash.txt
--rw-r--r--     1 patrick  staff   13838  8 Sep 14:43 out_minishell.txt
+-rw-r--r--     1 patrick  staff   13847  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff   13838  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
@@ -1310,11 +1310,11 @@ Exit-Status: 0
 ---
 Test: ls -la | grep "."
 total 872
-drwxr-xr-x    30 patrick  staff     960  8 Sep 14:42 .
+drwxr-xr-x    30 patrick  staff     960  8 Sep 14:50 .
 drwxr-xr-x@   12 patrick  staff     384  7 Sep 14:00 ..
 -rw-r--r--@    1 patrick  staff    6148  7 Sep 14:01 .DS_Store
 -rw-r--r--     1 patrick  staff       5  8 Sep 11:44 .bonus_tmp
-drwxr-xr-x    15 patrick  staff     480  8 Sep 14:06 .git
+drwxr-xr-x    15 patrick  staff     480  8 Sep 14:43 .git
 -rw-r--r--     1 patrick  staff     171  7 Sep 14:00 .valgrind_commands
 -rw-r--r--     1 patrick  staff    9301  7 Sep 14:00 .valgrind_readline.supp
 -rw-r--r--     1 patrick  staff     116  7 Sep 14:00 .valgrindrc
@@ -1324,20 +1324,20 @@ drwxr-xr-x     3 patrick  staff      96  8 Sep 14:16 .vscode
 -rw-r--r--     1 patrick  staff      11  7 Sep 14:00 README.md
 -rwxr-xr-x     1 patrick  staff   11104  7 Sep 14:00 eval.sh
 drwxr-xr-x  1026 patrick  staff   32832  7 Sep 14:00 html
-drwxr-xr-x     8 patrick  staff     256  8 Sep 14:27 incl
+drwxr-xr-x     8 patrick  staff     256  8 Sep 14:50 incl
 -rw-r--r--     1 patrick  staff   68267  7 Sep 14:00 minimalraw.log
--rwxr-xr-x     1 patrick  staff   87718  8 Sep 14:42 minishell
+-rwxr-xr-x     1 patrick  staff   87830  8 Sep 14:50 minishell
 drwxr-xr-x     3 patrick  staff      96  7 Sep 14:00 minishell.dSYM
 -rwxr-xr-x     1 patrick  staff     138  7 Sep 14:00 out.txt
 -rwxr-xr-x     1 patrick  staff     104  8 Sep 11:44 out1
 -rwxr-xr-x     1 patrick  staff       0  7 Sep 14:00 out2
 -rwxr-xr-x     1 patrick  staff      17  7 Sep 14:00 out3
 -rwxr-xr-x     1 patrick  staff    2171  7 Sep 14:00 out4
--rw-r--r--     1 patrick  staff   33938  8 Sep 14:43 out_bash.txt
--rw-r--r--     1 patrick  staff   33872  8 Sep 14:43 out_minishell.txt
+-rw-r--r--     1 patrick  staff   33938  8 Sep 14:50 out_bash.txt
+-rw-r--r--     1 patrick  staff   33872  8 Sep 14:50 out_minishell.txt
 -rwxr-xr-x     1 patrick  staff    2631  7 Sep 14:00 parse_valgrind_suppressions.sh
 -rwxr-xr-x     1 patrick  staff     624  7 Sep 14:00 result
-drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:42 src
+drwxr-xr-x    55 patrick  staff    1760  8 Sep 14:50 src
 -rw-r--r--     1 patrick  staff    3582  7 Sep 14:00 to_do.txt
 -rw-r--r--     1 patrick  staff   13585  7 Sep 14:00 valgrind_leaks_file
 Exit-Status: 0
