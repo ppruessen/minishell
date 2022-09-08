@@ -6,52 +6,11 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:46:25 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 11:35:43 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 13:50:55 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
-
-/* Returns the next word within a string cutting off whitespaces and sets */
-/* the escape string to zero on the equivalent spaces of that word. */
-char	*get_next_word(char *full_str, char *esc_str, int start)
-{
-	int		stop;
-	int		quotes;
-	char	*res_str;
-
-	res_str = NULL;
-	quotes = 0;
-	while (ft_iswhitespace(full_str[start]) == 1)
-		start++;
-	if (esc_str[start] == '0')
-	{
-		while (esc_str[start] == '0')
-			start++;
-		quotes = 1;
-	}
-	stop = start;
-	if (quotes == 0)
-	{
-		while (full_str[stop] && ft_iswhitespace(full_str[stop]) == 0)
-			stop++;
-	}
-	else
-	{
-		while (esc_str[stop] != '0')
-			stop++;
-	}
-	if (start != stop)
-		res_str = ft_substr(full_str, (unsigned int) start, (stop - start));
-	else
-		res_str = NULL;
-	while (start < stop)
-	{
-		esc_str[start] = 'W';
-		start++;
-	}
-	return (res_str);
-}
 
 /* Function splits string at pipes into substrings,
 // sets redirection flags accordingly

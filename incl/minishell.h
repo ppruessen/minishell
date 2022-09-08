@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 12:56:33 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/08 13:52:01 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,8 +185,10 @@ void	syntax_error_check(t_var *var);
 int	syntax_error_check_redir(t_var *var);
 
 /* src/fill_cmd_structures.c */
-char	*get_next_word(char *full_str, char *esc_str, int start);
 void	fill_cmd_structures(t_var *var);
+
+/* src/get_nex_word.c */
+char	*get_next_word(char *full_str, char *esc_str, int start);
 
 /* src/expand_variables.c */
 void	expand_variables(t_var *var);

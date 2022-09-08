@@ -6,7 +6,7 @@
 #    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/08 12:38:42 by pprussen         ###   ########.fr        #
+#    Updated: 2022/09/08 13:51:23 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ SRC = 	./src/main.c \
 		./src/syntax_error_check.c \
 		./src/syntax_error_check2.c \
 		./src/fill_cmd_structures.c \
+		./src/get_next_word.c \
 		./src/expand_variables.c \
 		./src/put_temp_input_to_cmd.c \
 		./src/put_temp_input_to_cmd_utils.c \
