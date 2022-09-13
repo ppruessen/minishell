@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   path.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 15:50:03 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 22:43:13 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/13 09:15:28 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char	*check_and_set_path(char *cmd, t_var *var)
 			free_dir_list_cmd(var->dir_list, cmd);
 			return (valid_cmd_path);
 		}
+		free (valid_cmd_path);
 		i++;
 	}
 	return (cmd);

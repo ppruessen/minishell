@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipes.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 15:54:31 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/06 16:54:55 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:28:32 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	close_all_read_pipes(t_var *var)
 /* Function set the pipes in the child process */
 void	set_pipes_in_child(t_var *var, t_cmd *cmd, int i)
 {
-	if (cmd->write_to_pipe == 1 && cmd->read_from_pipe == 1)
+	if (cmd->write_to_pipe == TRUE && cmd->read_from_pipe == TRUE)
 	{
 		if (dup2(var->fd[i - 1][READ], STDIN_FILENO) == -1)
 			printf("Unable to dup2 var->fd[%i][READ]\n", i - 1);
@@ -58,13 +58,13 @@ void	set_pipes_in_child(t_var *var, t_cmd *cmd, int i)
 			printf("Unable to dup2 var->fd[%i][WRITE]\n", i);
 		close_all_read_pipes(var);
 	}
-	else if (cmd->write_to_pipe == 1)
+	else if (cmd->write_to_pipe == TRUE)
 	{
 		if (dup2(var->fd[i][WRITE], STDOUT_FILENO) == -1)
 			printf("Unable to dup2 var->fd[%i][WRITE]\n", i);
 		close_all_read_pipes(var);
 	}
-	else if (cmd->read_from_pipe == 1)
+	else if (cmd->read_from_pipe == TRUE)
 	{
 		if (dup2(var->fd[i - 1][READ], STDIN_FILENO) == -1)
 			printf("Unable to dup2 var->fd[%i][READ]\n", i - 1);

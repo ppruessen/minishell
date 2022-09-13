@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_cmds.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 14:15:15 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:28:07 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,9 @@ static void	wait_function(pid_t pid)
 	int			status;
 	int			es;
 
-	if (waitpid(pid, &status, 0) == -1)
-	{
-		perror("waitpid failed");
-		return ;
-	}
+	(void)pid;
+	while ((wait(&status)) > 0)
+		;
 	if (WIFEXITED(status))
 	{
 		es = WEXITSTATUS(status);
@@ -98,6 +96,7 @@ void	execute_cmd(t_cmd *cmd, t_var *var, int i)
 	if (execve(*execve_input, execve_input, var->env) == -1)
 	{
 		print_cmd_error(var, CMD_NOT_FOUND, execve_input[0]);
+		accurat_child_cleaner(execve_input, var);
 		exit(127);
 	}
 }
@@ -127,8 +126,8 @@ void	execute_cmds(t_var *var)
 		{
 			if (var->pipes > 0)
 				close_pipes_in_parent(var, i);
-			wait_function(pid);
 		}
 		i++;
 	}
+	wait_function(pid);
 }

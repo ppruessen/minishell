@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
+#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/08 14:02:31 by pprussen         ###   ########.fr        #
+#    Updated: 2022/09/13 09:20:49 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ SRC = 	./src/main.c \
 		./src/inbuilts_functions/unset.c \
 		./src/inbuilts_functions/find_inbuilts.c \
 		./src/accurat_cleaner.c \
-		./incl/leaks_checker.c
+		./src/accurat_child_cleaner.c
 
 NAME = minishell
 CC = gcc

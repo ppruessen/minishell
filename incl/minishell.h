@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:09:10 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 14:02:00 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/13 12:30:06 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-
-// GLOBAL VARIABEL NEEDS TO BE REMOVED BEFORE SUBMITTING
-int	debug_mode;
-void check_leaks();
 
 # include <unistd.h>
 # include <sys/wait.h>
@@ -133,7 +129,7 @@ typedef struct s_var
 	int		cmd_check;
 }	t_var;
 
-typedef struct	s_replace
+typedef struct s_replace
 {
 	int		i;
 	int		j;
@@ -146,13 +142,13 @@ typedef struct	s_replace
 	int		strlen_new_str;
 }	t_replace;
 
-typedef struct	s_split
+typedef struct s_split
 {
 	int		start;
 	int		end;
 }	t_split;
 
-typedef struct	s_redir
+typedef struct s_redir
 {
 	char	*input;
 	char	*escape;
@@ -160,7 +156,7 @@ typedef struct	s_redir
 	int		i;
 }	t_redir;
 
-typedef struct	s_count
+typedef struct s_count
 {
 	int		i;
 	int		count;
@@ -182,7 +178,7 @@ void	print_cmd_error(t_var *var, int error_code, char *cmd);
 void	syntax_error_check(t_var *var);
 
 /* src/syntax_error_check2.c */
-int	syntax_error_check_redir(t_var *var);
+int		syntax_error_check_redir(t_var *var);
 
 /* src/fill_cmd_structures.c */
 void	fill_cmd_structures(t_var *var);
@@ -206,8 +202,8 @@ int		word_runner(char *input, char *escaped, t_count *c);
 void	put_temp_input_to_cmd(t_var *var, t_cmd *cmd);
 
 /* src/put_temp_input_to_cmd_utils.c */
-int	next_char_tester(char *input, char *escaped, t_count *cnt, char c);
-int	next_char_runner(char c, char *input, char *escaped, t_count *cnt);
+int		next_char_tester(char *input, char *escaped, t_count *cnt, char c);
+int		next_char_runner(char c, char *input, char *escaped, t_count *cnt);
 
 /* src/copy_env.c */
 void	copy_env(t_var *var, char **env);
@@ -219,8 +215,8 @@ char	*replace_str(char *full_str, char *old_part, char *new_part);
 void	str_split(t_var *var, t_cmd *cmd, size_t word_num);
 
 /* src/str_split_utils.c */
-int	find_start(t_var *var, int start);
-int	find_end(t_var *var, int end);
+int		find_start(t_var *var, int start);
+int		find_end(t_var *var, int end);
 
 /*incl/dir_list.c*/
 void	free_dir_list_cmd(char **dir_list, char *cmd);
@@ -238,7 +234,8 @@ void	open_read_from_file(t_cmd *cmd);
 void	open_write_to_file(t_cmd *cmd);
 
 /*src/redir.c*/
-int		set_redirections(char *temp_input, char *temp_escaped, t_cmd *cmd, t_var *var);
+int		set_redirections(char *temp_input, char *temp_escaped,
+			t_cmd *cmd, t_var *var);
 void	open_redirections(t_cmd *cmd);
 
 /*src/path.c*/
@@ -277,4 +274,8 @@ void	handle_here_doc(t_cmd *cmd);
 /* accurat_cleaner.c */
 void	accurat_var_cleaner(t_var *var);
 void	accurat_env_cleaner(t_var *var);
+
+/* accurat_child_cleaner.c */
+void	accurat_child_cleaner(char **execve_input, t_var *var);
+
 #endif
