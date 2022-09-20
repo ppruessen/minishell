@@ -6,7 +6,7 @@
 /*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/20 13:53:12 by mschiman         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:56:46 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,6 @@ void	execute_cmds(t_var *var)
 	i = 0;
 	if (var->cmds == NULL)
 		return ;
-	while (var->cmds[i] != NULL)
 	while (var->cmds[i - 1] != NULL)
 	{
 		if (catch_inbuilts(var, i) == 0)
