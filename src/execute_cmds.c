@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_cmds.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/13 12:28:07 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:53:12 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ void	execute_cmd(t_cmd *cmd, t_var *var, int i)
 		j++;
 	}
 	execve_input = generate_execve_input(cmd, input_members);
+	//printf("Kommen wir bis hierher?\n");
 	if (execve(*execve_input, execve_input, var->env) == -1)
 	{
 		print_cmd_error(var, CMD_NOT_FOUND, execve_input[0]);
@@ -114,6 +115,7 @@ void	execute_cmds(t_var *var)
 	if (var->cmds == NULL)
 		return ;
 	while (var->cmds[i] != NULL)
+	while (var->cmds[i - 1] != NULL)
 	{
 		if (catch_inbuilts(var, i) == 0)
 			break ;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   accurat_child_cleaner.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 09:19:44 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/13 10:12:18 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/20 11:27:23 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

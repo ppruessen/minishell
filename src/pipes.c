@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipes.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 15:54:31 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/13 12:28:32 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:32:28 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,25 +50,55 @@ void	close_all_read_pipes(t_var *var)
 /* Function set the pipes in the child process */
 void	set_pipes_in_child(t_var *var, t_cmd *cmd, int i)
 {
+	pid_t	pid;
+
+	pid = getpid();
 	if (cmd->write_to_pipe == TRUE && cmd->read_from_pipe == TRUE)
 	{
+		printf("Mittlerer Teil: pid = %d\n", pid);
 		if (dup2(var->fd[i - 1][READ], STDIN_FILENO) == -1)
+		{
 			printf("Unable to dup2 var->fd[%i][READ]\n", i - 1);
+			return ;
+		}
+		//if (var->fd[i - 1][READ] != STDIN_FILENO)
+		//	close(var->fd[i - 1][READ]);
 		if (dup2(var->fd[i][WRITE], STDOUT_FILENO) == -1)
+		{
 			printf("Unable to dup2 var->fd[%i][WRITE]\n", i);
+			return ;
+		}
+		//if (var->fd[i][WRITE] != STDOUT_FILENO)
+		//	close (var->fd[i][WRITE]);
 		close_all_read_pipes(var);
+		
 	}
 	else if (cmd->write_to_pipe == TRUE)
 	{
+		pid = getpid();
+		printf("Startteil: pid %d\n", pid);
 		if (dup2(var->fd[i][WRITE], STDOUT_FILENO) == -1)
+		{
 			printf("Unable to dup2 var->fd[%i][WRITE]\n", i);
+			return ;
+		}
+	//	if (var->fd[i][WRITE] != STDOUT_FILENO)
+			close (var->fd[i][WRITE]);
+		
 		close_all_read_pipes(var);
 	}
 	else if (cmd->read_from_pipe == TRUE)
 	{
+		pid = getpid();
+		printf("Endteil : pid: %d\n", pid);
 		if (dup2(var->fd[i - 1][READ], STDIN_FILENO) == -1)
+		{
 			printf("Unable to dup2 var->fd[%i][READ]\n", i - 1);
-		close_all_read_pipes(var);
+			return ;
+		}
+		//if (var->fd[i - 1][READ] != STDIN_FILENO)
+		//	close(var->fd[i - 1][READ]);
+//		close_all_read_pipes(var);
 	}
 }
 

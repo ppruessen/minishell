@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
+/*   By: mschiman <mschiman@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:12:23 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/07 09:30:23 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/20 11:20:54 by mschiman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	non_numeric_exit(t_var *var, char *cmd)
  */
 static void	print_to_many_arguments(void)
 {
-	write(2, "exit\nbash: exit: too many arguments\n", 39);
+	write(2, "exit\nbash: exit: too many arguments\n", 37);
 	g_status = 1;
 }
 
