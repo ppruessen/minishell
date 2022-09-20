@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 14:42:49 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/19 12:22:59 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,6 @@ static void	sig_handler(int signo)
 int	main(int argc, char **argv, char **env)
 {
 	t_var	var;
-
-	if (argc == 2)
-		debug_mode = atoi(argv[1]); // REMOVE BEFORE SUBMITTING - more debug-infos for smaler numbers
-									// -1 shows leak informations
-	else
-		debug_mode = 0;
 
 	init_var(&var, argc, argv, env);
 	signal(SIGINT, sig_handler);
