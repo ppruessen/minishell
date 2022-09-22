@@ -12,15 +12,6 @@
 
 #include "../incl/minishell.h"
 
-//echo $USER$HOME			// Hendrik interpretiert nur den ersten Teil
-//<out3<out4 grep main		// kann Hendrik auch nicht
-//SRC =   ./src/main.c 
-//<  <"Makefile" grep main
-//bash: syntax error near unexpected token `<'
-// cat | cat | ls läuft nicht wie in bash
-//PATH="ls -la export vergisst die schließenden "
-
-
 /* Initialise the var-struct variables */
 static void	init_var(t_var *var, int argc, 
 	char **argv, char **env)
