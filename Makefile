@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+         #
+#    By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 11:48:46 by mschiman          #+#    #+#              #
-#    Updated: 2022/09/13 09:20:49 by pprussen         ###   ########.fr        #
+#    Updated: 2022/09/23 11:08:44 by pprussen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,4 +75,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re re_bonus all
+.PHONY: clean fclean re all
