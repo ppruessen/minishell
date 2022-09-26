@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   fill_cmd_structures.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 10:46:25 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/08 13:50:55 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:21:08 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
+
+/* Function to call other functions */
+static void	make_cmd(t_var *var, t_cmd *cmd, int cmd_nb)
+{
+	set_pipe_status(var, cmd, cmd_nb);
+	expand_variables(var);
+	put_temp_input_to_cmd(var, cmd);
+}
 
 /* Function splits string at pipes into substrings,
 // sets redirection flags accordingly
@@ -28,18 +36,18 @@ void	put_str_to_struct(t_var *var, t_cmd *cmd, int cmd_nb)
 			break ;
 		i++;
 	}
+	if (var->t_input != NULL)
+		free(var->t_input);
 	var->t_input = (char *)malloc(sizeof(char) * (i - var->index) + 1);
 	ft_strlcpy(var->t_input, &var->input[var->index], i - var->index + 1);
+	if (var->t_escape != NULL)
+		free(var->t_escape);
 	var->t_escape = (char *)malloc(sizeof(char) * (i - var->index) + 1);
 	ft_strlcpy(var->t_escape, &var->input_escape[var->index],
 		i - var->index + 1);
 	var->index = i;
 	if (set_redirections(var->t_input, var->t_escape, cmd, var) == 0)
-	{
-		set_pipe_status(var, cmd, cmd_nb);
-		expand_variables(var);
-		put_temp_input_to_cmd(var, cmd);
-	}
+		make_cmd(var, cmd, cmd_nb);
 }
 
 /*

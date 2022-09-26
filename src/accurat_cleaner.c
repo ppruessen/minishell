@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 14:29:40 by pprussen          #+#    #+#             */
-/*   Updated: 2022/09/13 08:45:46 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:14:11 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ static void	string_free(char **str)
 
 static void	free_var(t_var *var)
 {
+	if (var->fd != NULL)
+	{
+		free (var->fd);
+		var->fd = NULL;
+	}
 	if (var->cmds != NULL)
 	{
 		free (var->cmds);

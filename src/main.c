@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprussen <pprussen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:40:13 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/19 12:22:59 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:17:35 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/minishell.h"
 
 /* Initialise the var-struct variables */
-static void	init_var(t_var *var, int argc, 
+static void	init_var(t_var *var, int argc,
 	char **argv, char **env)
 {
 	var->argc = argc;
@@ -37,6 +37,7 @@ static void	init_var(t_var *var, int argc,
 	ft_bzero(var->pwd, 500);
 	getcwd(var->pwd, 500);
 	var->prompt = ft_strdup(PAMELA_PROMPT);
+	g_status = 0;
 }
 
 /* Transforming the SIGINT signal to a newline in the prompt */
@@ -44,9 +45,9 @@ static void	sig_handler(int signo)
 {
 	if (signo == SIGINT)
 	{
-		g_status = 1; // strg C hat exit status 1 in der bash, Strg D hat 127
+		g_status = 1;
 		ioctl(STDIN_FILENO, TIOCSTI, "\n");
-//		rl_replace_line("", 0);
+		rl_replace_line("", 0);
 		rl_on_new_line();
 	}
 }
@@ -58,7 +59,6 @@ int	main(int argc, char **argv, char **env)
 	init_var(&var, argc, argv, env);
 	signal(SIGINT, sig_handler);
 	signal(SIGQUIT, SIG_IGN);
-	g_status = 0;
 	while (1)
 	{
 		var.cmd_check = TRUE;

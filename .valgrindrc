@@ -1,3 +1,6 @@
 --memcheck: --leak-check=full
 --memcheck: --show-leak-kinds=all
+--memcheck: --trace-children=yes
+--memcheck: --quiet
+--memcheck: --track-fds=yes
 --memcheck: --suppressions=./.valgrind_readline.supp

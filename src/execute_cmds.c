@@ -6,7 +6,7 @@
 /*   By: pprussen <pprussen@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:43:18 by mschiman          #+#    #+#             */
-/*   Updated: 2022/09/13 12:28:07 by pprussen         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:14:37 by pprussen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,12 +122,9 @@ void	execute_cmds(t_var *var)
 		pid = fork();
 		if (pid == 0)
 			execute_cmd(var->cmds[i], var, i);
-		else
-		{
-			if (var->pipes > 0)
-				close_pipes_in_parent(var, i);
-		}
 		i++;
 	}
+	if (var->pipes > 0)
+		close_pipes_in_parent(var, i);
 	wait_function(pid);
 }
